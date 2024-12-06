@@ -164,7 +164,7 @@ export const useFetchCareers = () => {
 
 // team start
 
-interface TeamMember {
+export interface TeamMember {
     designation: ReactNode;
     id: number;
     name: string;
@@ -174,7 +174,7 @@ interface TeamMember {
     email?: string;
 }
 
-interface TeamCategory {
+export interface TeamCategory {
     department: string;
     description: string;
     members: TeamMember[];

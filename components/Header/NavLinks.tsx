@@ -43,7 +43,7 @@ const NavLinks = () => {
     { href: "/blogs", text: "blogs" },
     { href: "/about", text: "about" },
     { href: "/team", text: "team" },
-    { href: "/careers", text: "careers" }
+    { href: "/careers", text: "careers" },
   ];
 
   const renderLinks = (isDropdown = false) =>
@@ -62,7 +62,6 @@ const NavLinks = () => {
           {renderLinks()}
         </div>
         <div style={{ display: scrolled ? "unset" : "unset" }} className={`header-menu-icon ${isOpen ? "active" : ""} ${scrolled ? "show" : "hide"}`} >
-          {/* <svg onMouseEnter={toggleDropdown} onClick={toggleDropdown} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> */}
           <svg onClick={toggleDropdown} width="25" height="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M4.5 12H19.5" className="showBurger" strokeWidth="1.5" strokeLinecap="round" />
             <path d="M4.5 17.7692H19.5" className="showBurger" strokeLinecap="round" />

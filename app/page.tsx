@@ -1,3 +1,5 @@
+// "use client"
+
 import Head from "next/head";
 import Home from "../components/Home/Home";
 import "./globals.css"
@@ -8,6 +10,8 @@ export const metadata: { title: string; description: string } = {
 };
 
 export default function HomePage() {
+  // useLenis();
+
   return (
     <main>
       <Head>

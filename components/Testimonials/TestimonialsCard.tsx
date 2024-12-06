@@ -1,5 +1,5 @@
 
-const TestimonialsCard = ({ item }: { item: any, width: string }) => {
+const TestimonialsCard = ({ item }: { item: { text: string; name: string; jobTitle: string }, width: string }) => {
     return (
         <div className='testimonials-card'>
             <p>“</p>

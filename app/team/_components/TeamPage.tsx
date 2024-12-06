@@ -8,7 +8,6 @@ const TeamPage = () => {
         <div className="team-section page-transition" >
             <InnerBanner nextSection={'.team-section'} text={'<span>team</span> <br> wisbato'} icons={["careersIcon1", "careersIcon2", "careersIcon3"]} />
 
-
             <div className="team-banner-section" >
                 <div className="banner-content-wrapper" >
                     <img className="team-banner-image" src="/images/image.webp" alt="team image" />
@@ -27,7 +26,7 @@ const TeamPage = () => {
                 <div className="team-moments">
                     <div className="team-content">
                         <h2>Together We Celebrate</h2>
-                        <p>"Highlighting our teamwork and joyous moments."</p>
+                        <p>&quot;Highlighting our teamwork and joyous moments&quot;</p>
                     </div>
 
                     <div className="gallery">

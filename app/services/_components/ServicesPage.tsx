@@ -25,7 +25,7 @@ const ServicesPage = () => {
             ) : (
                 <div className="services-page-cards" >
                     {
-                        services?.map((item: any) => (
+                        services?.map((item: { id: number; title: string; description: string; slug: string; width: string; style: { backgroundColor: string }; }) => (
                             <div key={item?.id} className={`services-page-card custom-width-${item?.width}`} style={{ backgroundColor: item?.style?.backgroundColor, position: "relative" }}>
                                 <p>{item?.title}</p>
                                 <p>{item?.description}</p>

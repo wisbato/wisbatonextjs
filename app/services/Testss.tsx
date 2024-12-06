@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react';
 
 const SectionWithAutoScroll = () => {
-    const sectionRef: any = useRef(null);
+    const sectionRef = useRef<HTMLElement | null>(null);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -14,7 +14,10 @@ const SectionWithAutoScroll = () => {
             { threshold: 0.5 } // Adjust threshold as needed
         );
 
-        observer.observe(sectionRef.current);
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
+        }
+
 
         return () => {
             observer.disconnect();
@@ -25,7 +28,7 @@ const SectionWithAutoScroll = () => {
         <section ref={sectionRef}>
             <h1>Title</h1>
             <div style={{ height: "1500px", backgroundColor: "red" }} >
-                
+
             </div>
         </section>
     );

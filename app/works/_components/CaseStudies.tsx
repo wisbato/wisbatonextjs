@@ -1,7 +1,7 @@
 import useScrollAnimation from "../../../Hooks/useScrollAnimation";
 
 const CaseStudies = ({ item }: { item: { type: string; title: string; description: string; image: string; } }) => {
-    const animateRef: any = useScrollAnimation();
+    const animateRef: React.RefObject<HTMLDivElement> = useScrollAnimation();
 
     return (
         <div className="case-studies-section visible-section" ref={animateRef}>

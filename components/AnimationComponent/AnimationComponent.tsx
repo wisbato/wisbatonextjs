@@ -1,12 +1,55 @@
+// "use client";
+
+// import React, { useEffect, useRef } from "react";
+// import lottie, { AnimationItem } from "lottie-web";
+
+// const AnimationComponent: React.FC = () => {
+//     const containerRef = useRef<HTMLDivElement>(null);
+//     const animationRef = useRef<AnimationItem | null>(null);
+
+//     useEffect(() => {
+//         // Ensure the code runs only in the browser
+//         if (typeof window !== "undefined" && containerRef.current) {
+//             import("../../assets/Lottie/buttonLoading.json")
+//                 .then((animationData) => {
+//                     animationRef.current = lottie.loadAnimation({
+//                         container: containerRef.current,
+//                         renderer: "svg",
+//                         loop: true,
+//                         autoplay: true,
+//                         animationData: animationData.default || animationData,
+//                     });
+//                 })
+//                 .catch((err) => console.error("Failed to load Lottie animation:", err));
+//         }
+
+//         return () => {
+//             if (animationRef.current) {
+//                 animationRef.current.destroy();
+//             }
+//         };
+//     }, []);
+
+//     return <div ref={containerRef} style={{ height: "50px", width: "50px" }} />;
+// };
+
+// export default AnimationComponent;
+
+
+/////////////////////////////////////////
+
+"use client"
+
 import React, { useEffect, useRef } from 'react';
-import lottie from 'lottie-web';
+import lottie, { AnimationItem } from 'lottie-web';
 
 const AnimationComponent: React.FC = () => {
     const containerRef = useRef<HTMLDivElement>(null);
-    const animationRef = useRef<any>(null);
+    const animationRef = useRef<AnimationItem | null>(null);
 
     useEffect(() => {
-        if (containerRef.current) {
+        // if (containerRef.current) {
+        if (typeof window !== "undefined" && containerRef.current) {
             import('../../assets/Lottie/buttonLoading.json').then((animationData) => {
                 animationRef.current = lottie.loadAnimation({
                     container: containerRef.current!,
@@ -29,22 +72,3 @@ const AnimationComponent: React.FC = () => {
 };
 
 export default AnimationComponent;
-
-// import React from 'react';
-// import Lottie from 'react-lottie';
-// import animationData from '../../assets/Lottie/buttonLoading.json';
-
-// const AnimationComponent: React.FC = () => {
-//     const defaultOptions = {
-//         loop: true,
-//         autoplay: true,
-//         animationData: animationData,
-//         rendererSettings: {
-//             preserveAspectRatio: 'xMidYMid slice',
-//         },
-//     };
-
-//     return <div style={{ height: "50px", width: "50px" }} ><Lottie options={defaultOptions} /></div>;
-// };
-
-// export default AnimationComponent;

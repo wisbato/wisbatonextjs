@@ -17,7 +17,7 @@ const WorkDetailed = () => {
 
     const { workId: title } = useParams()
 
-    const animateRef: any = useScrollAnimation();
+    const animateRef: React.RefObject<HTMLDivElement> = useScrollAnimation();
     const worksIdValue = title ? title : "Default value";
     const [workCaseStudy, setWorkCaseStudy] = useState<Work | undefined>();
     const { works, isLoading } = useFetchWorks();
@@ -91,8 +91,8 @@ const WorkDetailed = () => {
                                 {
                                     workCaseStudy?.servicesProvides.map((item) => <li key={item} style={{ display: "flex", alignItems: "center", gap: "8px" }} >
                                         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M8.05078 14.1009L11.1581 17.2083C11.2674 17.3188 11.3976 17.4066 11.5412 17.4666C11.6846 17.5266 11.8386 17.5575 11.9941 17.5575C12.1496 17.5575 12.3036 17.5266 12.4471 17.4666C12.5906 17.4066 12.7208 17.3188 12.8302 17.2083L19.0921 10.9462" stroke="#0DA500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M14.0013 25.0833C20.1225 25.0833 25.0846 20.1211 25.0846 14C25.0846 7.87881 20.1225 2.91663 14.0013 2.91663C7.88015 2.91663 2.91797 7.87881 2.91797 14C2.91797 20.1211 7.88015 25.0833 14.0013 25.0833Z" stroke="#0DA500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M8.05078 14.1009L11.1581 17.2083C11.2674 17.3188 11.3976 17.4066 11.5412 17.4666C11.6846 17.5266 11.8386 17.5575 11.9941 17.5575C12.1496 17.5575 12.3036 17.5266 12.4471 17.4666C12.5906 17.4066 12.7208 17.3188 12.8302 17.2083L19.0921 10.9462" stroke="#0DA500" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                            <path d="M14.0013 25.0833C20.1225 25.0833 25.0846 20.1211 25.0846 14C25.0846 7.87881 20.1225 2.91663 14.0013 2.91663C7.88015 2.91663 2.91797 7.87881 2.91797 14C2.91797 20.1211 7.88015 25.0833 14.0013 25.0833Z" stroke="#0DA500" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                         </svg>
                                         {item}
                                     </li>)
@@ -122,7 +122,7 @@ const WorkDetailed = () => {
             </div> :
                 <div className="case-studies-sections">
                     {
-                        workCaseStudy?.caseStudies.map((item) => <CaseStudies item={item} />)
+                        workCaseStudy?.caseStudies.map((item, i) => <CaseStudies key={i} item={item} />)
                     }
                 </div>}
 
@@ -144,7 +144,7 @@ const WorkDetailed = () => {
                     )}
                 </div> :
                     <div className="works-card-list">
-                        {works.filter?.((item: any) => item.slug !== worksIdValue).slice(0, 2).map((item: any, i: number) =>
+                        {works.filter?.((item: Work) => item.slug !== worksIdValue).slice(0, 2).map((item: Work, i: number) =>
                             <WorksCard key={i} data={item} />
                         )}
                     </div>

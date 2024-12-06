@@ -4,22 +4,46 @@ import { workProcessCard } from "../../utils/WorkProcessCard";
 import { useEffect, useRef, useState } from "react";
 import "./WorkProcess.css"
 
+interface WorkProcessCardItem {
+    id: number;
+    title: string;
+    content: string[];
+    color: string;
+    x: number;
+    y: number;
+}
+
+interface PointPosition {
+    x: number;
+    y: number;
+}
+
+interface PopupPositions {
+    id?: number | string;
+    x: number;
+    y: number;
+    content: WorkProcessCardItem;
+}
+
 const Test = () => {
-    const pathRef: any = useRef();
-    const containerRef: any = useRef();
-    const [progress, setProgress] = useState(0);
-    const [pointPosition, setPointPosition] = useState({ x: 209.771, y: 0 });
-    const [popupPositions, setPopupPositions] = useState<any>([]);
+    const pathRef = useRef<SVGPathElement>(null);
+    const containerRef = useRef<HTMLDivElement>(null);
+
+    const [progress, setProgress] = useState<number>(0);
+    const [pointPosition, setPointPosition] = useState<PointPosition>({ x: 209.771, y: 0 });
+    const [popupPositions, setPopupPositions] = useState<PopupPositions[] | null>(null);
 
     useEffect(() => {
         const handleScroll = () => {
-            const containerWidth = containerRef.current.clientHeight;
-            const scrollLeft = containerRef.current.scrollTop;
-            const scrollWidth = containerRef.current.scrollHeight;
+            if (containerRef.current) {
+                const containerWidth = containerRef.current.clientHeight;
+                const scrollLeft = containerRef.current.scrollTop;
+                const scrollWidth = containerRef.current.scrollHeight;
 
-            const scrollProgress = (scrollLeft / (scrollWidth - containerWidth)) * 100;
-            setProgress(scrollProgress);
-            updatePointPosition(scrollProgress);
+                const scrollProgress = (scrollLeft / (scrollWidth - containerWidth)) * 100;
+                setProgress(scrollProgress);
+                updatePointPosition(scrollProgress);
+            }
         };
 
         containerRef?.current?.addEventListener('scroll', handleScroll);
@@ -40,23 +64,25 @@ const Test = () => {
     }, [progress]);
 
     const updatePointPosition = (newProgress: number) => {
-        const pathLength = pathRef.current.getTotalLength();
-        const newPathLength = pathLength * (newProgress / 100);
+        if (pathRef.current) {
+            const pathLength = pathRef.current.getTotalLength();
+            const newPathLength = pathLength * (newProgress / 100);
 
-        const { x, y } = pathRef.current.getPointAtLength(newPathLength);
+            const { x, y } = pathRef.current.getPointAtLength(newPathLength);
 
-        setPointPosition({ x, y });
+            setPointPosition({ x, y });
 
-        checkCollisionWithBlackCircles(x, y);
+            checkCollisionWithBlackCircles(x, y);
+        }
     };
 
     const MAX_POPUP_POSITIONS = 5;
 
     const checkCollisionWithBlackCircles = (x: number, y: number) => {
         const circles = document.querySelectorAll('circle[id^="point"]');
-        circles.forEach((circle: any) => {
-            const cx = parseFloat(circle.getAttribute("cx"));
-            const cy = parseFloat(circle.getAttribute("cy"));
+        circles.forEach((circle) => {
+            const cx = parseFloat(circle.getAttribute("cx") || "0");
+            const cy = parseFloat(circle.getAttribute("cy") || ")");
             const circleId = circle.id;
             const distance = Math.sqrt((x - cx) ** 2 + (y - cy) ** 2);
 
@@ -66,18 +92,39 @@ const Test = () => {
                 );
 
                 if (popupContent) {
-                    setPopupPositions((prevPositions: any) => {
-                        if (prevPositions.length >= MAX_POPUP_POSITIONS) {
-                            return prevPositions;
+                    setPopupPositions((prevPositions) => {
+                        const currentPositions = prevPositions || [];
+
+                        if (currentPositions.length >= MAX_POPUP_POSITIONS) {
+                            return currentPositions;
                         }
 
-                        const updatedPositions = prevPositions.filter(
-                            (position: any) => position.id !== circleId
+                        const updatedPositions = currentPositions.filter(
+                            (position) => position.id !== circleId
                         );
 
-                        return [...updatedPositions, { x: cx, y: cy, id: circleId, content: popupContent }];
+                        return [...updatedPositions, {
+                            x: cx,
+                            y: cy,
+                            id: circleId,
+                            content: popupContent
+                        }];
                     });
                 }
+
+                // if (popupContent) {
+                //     setPopupPositions((prevPositions: any) => {
+                //         if (prevPositions.length >= MAX_POPUP_POSITIONS) {
+                //             return prevPositions;
+                //         }
+
+                //         const updatedPositions = prevPositions.filter(
+                //             (position: { id: string }) => position.id !== circleId
+                //         );
+
+                //         return [...updatedPositions, { x: cx, y: cy, id: circleId, content: popupContent }];
+                //     });
+                // }
             }
         });
     };
@@ -91,7 +138,7 @@ const Test = () => {
                 <div className="boxes">
 
                     <svg style={{ transform: "rotate(-90deg)" }} width="452" height="4975" viewBox="-50 -50 502 4975" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path ref={pathRef} d="M209.771 1C209.771 1 397.308 267.09 400.945 474C404.749 690.37 209.771 974 209.771 974C209.771 974 1 1253.74 1 1474C1 1694.26 209.771 1974 209.771 1974C209.771 1974 400.945 2257.58 400.945 2474C400.945 2690.42 209.771 2974 209.771 2974C209.771 2974 1 3253.74 1 3474C1 3694.26 209.771 3974 209.771 3974C209.771 3974 400.945 4257.58 400.945 4474C400.945 4690.42 209.771 4974 209.771 4974" stroke-dasharray="8 8" stroke="black" />
+                        <path ref={pathRef} d="M209.771 1C209.771 1 397.308 267.09 400.945 474C404.749 690.37 209.771 974 209.771 974C209.771 974 1 1253.74 1 1474C1 1694.26 209.771 1974 209.771 1974C209.771 1974 400.945 2257.58 400.945 2474C400.945 2690.42 209.771 2974 209.771 2974C209.771 2974 1 3253.74 1 3474C1 3694.26 209.771 3974 209.771 3974C209.771 3974 400.945 4257.58 400.945 4474C400.945 4690.42 209.771 4974 209.771 4974" strokeDasharray="8 8" stroke="black" />
 
                         <g className="check-point-icon" fill="#C3DFFF">
                             <circle id="pointA 1" cx="209.771" cy="0" r="50" />
@@ -124,9 +171,9 @@ const Test = () => {
                         </g>
 
                         {
-                            popupPositions?.map((item: any) => {
+                            popupPositions?.map((item: PopupPositions, i) => {
                                 return (
-                                    <foreignObject x={item.x - item.content.x} y={item.y - item.content.y} style={{
+                                    <foreignObject key={i} x={item.x - item.content.x} y={item.y - item.content.y} style={{
                                         width: "500px", height: "500px", borderRadius: "8px", position: "relative", padding: "10px",
                                     }}>
                                         <div className="work-process-card" style={{ backgroundColor: item.content.color }}>
@@ -136,7 +183,7 @@ const Test = () => {
                                             </div>
                                             <div className="work-process-points" >
                                                 {
-                                                    item.content.content.map((itm: any, i: number) => <ul key={i}>
+                                                    item.content.content.map((itm: string, i: number) => <ul key={i}>
                                                         <li>{itm}</li>
                                                     </ul>)
                                                 }

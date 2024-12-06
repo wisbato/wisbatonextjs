@@ -48,8 +48,8 @@ const CareersRequirement = () => {
                     url: window.location.href
                 });
                 console.log('Successfully shared');
-            } catch (error: any) {
-                console.error('Error sharing:', error.message);
+            } catch (error) {
+                console.error('Error sharing:', error);
             }
         } else {
             console.log('Web Share API not supported');
@@ -118,12 +118,12 @@ const CareersRequirement = () => {
 
                 {isLoading || error || !data ?
                     <div className="requirements-content-section">
-                        {Array.from({ length: 2 }).map((_) => (
-                            <div className="requirements-content-card">
+                        {Array.from({ length: 2 }).map((_, i) => (
+                            <div key={i} className="requirements-content-card">
                                 <p><Skeleton width={200} /></p>
                                 {
-                                    Array.from({ length: 4 }).map((_) => (
-                                        <div className='requirements-content-card' ><Skeleton width={300} /></div>
+                                    Array.from({ length: 4 }).map((_, k) => (
+                                        <div key={k} className='requirements-content-card' ><Skeleton width={300} /></div>
                                     ))
                                 }
                             </div>

@@ -1,4 +1,4 @@
-const DefaultFilesInput = ({ labelName, placeHolder, onChange }: { labelName: string; placeHolder: string; onChange: (e: any) => void }) => {
+const DefaultFilesInput = ({ labelName, placeHolder, onChange }: { labelName: string; placeHolder: string; onChange: (e: File | undefined) => void }) => {
     return (
         <div className="default-input">
             <label htmlFor="">{labelName}</label>
@@ -6,7 +6,7 @@ const DefaultFilesInput = ({ labelName, placeHolder, onChange }: { labelName: st
                 className="files-input"
                 type="file"
                 placeholder={placeHolder}
-                onChange={(e) => onChange(e.target.files?.[0])}
+                onChange={(e) => onChange?.(e.target.files?.[0])}
             />
         </div>
     );

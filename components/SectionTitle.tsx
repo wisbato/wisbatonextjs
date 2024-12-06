@@ -1,3 +1,5 @@
+"use client"
+
 const SectionTitle = ({ title }: { title: string }) => {
     return (
         <div className="section-title">
@@ -6,4 +8,4 @@ const SectionTitle = ({ title }: { title: string }) => {
     )
 }
 
-export default SectionTitle
+export default SectionTitle;

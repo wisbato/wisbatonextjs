@@ -43,7 +43,7 @@ export type Service = {
     id: number;
     title: string;
     description: string[];
-    servicePlatform:boolean,
+    servicePlatform: boolean;
     subContent: {
       title: string;
       description: string[];
@@ -94,11 +94,11 @@ export const outcomes = [
 `,
       // "Our web development services include defining your purpose and goals, all types of website design, Front-end development, back-end development, content management system (CMS), custom software development, testing & launching, maintenance and updates.",
       `The Wisbato team uses high-end web development tools like   <a href="https://react.dev/" target="_blank" > ReactJS,</a> <a href="https://angular.dev/" target="_blank">Angular,</a><a href="https://wordpress.com/" target="_blank"> Wordpress</a>
- VueJS, Django, Svelte, jQuery to develop the most responsive websites for every business. We provide web development services are Front-end development, back-end development, content management system (CMS), custom software development, testing & launching.` ,
+ VueJS, Django, Svelte, jQuery to develop the most responsive websites for every business. We provide web development services are Front-end development, back-end development, content management system (CMS), custom software development, testing & launching.`,
 
       `Today's 5.45 billion people are engaged in the digital world so a website with your digital presence is a powerful tool for your business. Wisbato, the best web development company in Calicut, is here to help to create websites with<a href="https://www.wisbato.com/blogs/website-design-cost-in-kerala" target="_blank" > affordable prices </a>and assure that every business can get ahead and grow through a strong online presence that satisfies its customers.`,
     ],
-    servicePlatform:true,
+    servicePlatform: true,
     subContent: {
       title: "Custom Solutions for Every Business",
       description: [
@@ -220,8 +220,7 @@ export const outcomes = [
   },
   {
     id: 2,
-    title:
-      "Leading E-commerce Web Development Company in Calicut.",
+    title: "Leading E-commerce Web Development Company in Calicut.",
     description: [
       `Our team specializes in delivering creative e-commerce solutions that enable businesses to arrive in the marketplace. Being the leading e-commerce web development company in Calicut,We aim to create best e-commerce websites for <a href="https://en.wikipedia.org/wiki/Kozhikode" target="_blank">Kozhikode</a>  business owners and that help to increase sales, online visibility and improve the user experience.
 
@@ -229,9 +228,9 @@ export const outcomes = [
       `Our ecommerce web developers and designers work together to deliver customized, sector-specific e-commerce platforms according to your business's needs. We service all businesses-from start-ups to well-established enterprises-by providing responsive, user-friendly, feature rich and <a href="https://www.wisbato.com/blogs/website-design-cost-in-kerala" target="_blank" > cost effective e- commerce websites</a>`,
       "At Wisbato, we understand how challenging the e-commerce world is today and how important it is for your business to stay ahead in a highly competitive market. We use the integration of advanced features such as secure gateways for payments e.g.(PayPal, Amazon Pay, Stripe etc…) product management systems, inventory tracking, and SEO optimization so that it ranks high on the search engines and converts best.",
       `Are you looking for a new online store or upgrading an existing one? Let <a href="https://www.wisbato.com/" target="_blank" >Wisbato</a>  be your partner for designing and developing high-performing, scalable e-commerce websites in Calicut, Kerala that meet your business needs. We can help you grow your business in this ever-changing world of online commerce.
- `
+ `,
     ],
-    servicePlatform:false,
+    servicePlatform: false,
     subContent: {
       title: "Custom Solutions for Every Business",
       description: [
@@ -354,9 +353,9 @@ export const outcomes = [
       "We deliver infrastructure management, network security, data backup solutions, and cloud services to ensure your systems run smoothly and securely. We help startups set up their IT platform or support established organizations in the improvement of performance and security capabilities. Our experienced team is ready to provide tailored solutions that can meet the specific goals you may have for your organization.",
       "Having been a leading IT support and solution provider in Calicut, we take pride in ensuring round-the-clock support to determine as many technical challenges as one may face. From troubleshooting software-related issues to optimizing hardware systems, prompt and reliable services ensure minimal downtime and uninterrupted operations.",
       `We at <a href="https://www.wisbato.com/" target="_blank">Wisbato</a>  believe in long-term relations with our clients, thus providing proactive solutions not just to current issues but also problems expected to arise in the future. Trust us as your IT partner in empowering your business today with cutting-edge technology and superior support within the highly competitive market.
-`
+`,
     ],
-    servicePlatform:true,
+    servicePlatform: true,
     subContent: {
       title: "Unique solution for every business",
       description: [
@@ -467,7 +466,7 @@ export const outcomes = [
       title: "Get your IT issues resolved quickly",
       description: [
         `Wisbato supports all IT-related problems and their solutions. If you run a firm, you need reliable IT support to ensure smooth operations. From software installation to hardware; configuration of network, cyber security system, and Wisbato also covers  <a href="https://www.wisbato.com/services/web-development-company-in-calicut" target="_blank">website development</a>, <a href="https://www.wisbato.com/services/mobile-app-development" target="_blank">mobile app development</a>, <a href="https://www.wisbato.com/services/ecommerce-development-company-in-calicut" target="_blank">e-commerce website development</a> and all IT support . Our team of professionals can get those issues related to your IT solved without taking too much of your time and keep your business running. Choose Wisbato, the no.1 IT support and solution company in Calicut to fulfill all your IT needs. We help your business grow today. Contact us now.
-`
+`,
       ],
     },
   },
@@ -480,7 +479,7 @@ export const outcomes = [
       "usability with all  of  Apple’s devices. Additionally, we have mastered Flutter and it can be used to develop cross-platform applications for both iOS and Android platforms, thus reaching more users while maintaining uniform results.",
       `<span>We keep ourselves informed about recent developments in technology hence bring expert solutions to our clients. Our approach to mobile application design is open, effective and directed at meeting your business objectives. and we know <a href="https://www.wisbato.com/blogs/why-people-uninstall-your-mobile-apps" target="_blank" >why users uninstall apps</a>, so we will leverage new trends and excellent UX. Wisbato, which is one of the leading Mobile App Development Company in Calicut where the best mobile solutions drive outcomes. Get ahead today with Wisbato for a triumph in your business dreams.</span>`,
     ],
-    servicePlatform:true,
+    servicePlatform: true,
     subContent: {
       title: "Unique ideas for every business",
       description: [
@@ -596,7 +595,7 @@ export const outcomes = [
 `,
       "At Wisbato, we specialize in SEO, focusing on-page SEO, off-page SEO, local SEO, and technical SEO to ensure comprehensive optimization of your website. Our expert team creates website content based on the latest EEAT (Experience, Expertise, Authoritativeness, Trustworthiness) factors to build trust with visitors and improve search rankings. We implement best SEO strategies, such as building relevant, high-quality backlinks, focusing on customer search intent, including case studies and testimonials, AI-driven SEO, voice search optimization, and mobile-first indexing etc... Our SEO specialists stay updated with Google algorithm changes and adapt strategies accordingly to ensure top performance. Choose Wisbato, the leading SEO company in Calicut, and let your online presence bloom into an instrument of growth and success.",
     ],
-    servicePlatform:false,
+    servicePlatform: false,
     subContent: {
       title: "Personalized SEO Strategies for Long-Term Growth",
       description: [
@@ -609,7 +608,6 @@ export const outcomes = [
         // description: "A well-designed website offers a multitude of benefits",
         points: [
           {
-
             id: 1,
             title: "Increased visibility on search engines",
             // description:
@@ -724,9 +722,9 @@ Our comprehensive branding capabilities start with an intensive consultation and
 
 `,
       "We feel branding is not just an aesthetic but creating an emotion towards your audience. Our approach is toward understanding the needs and tastes of your customers, which we can then build into a brand personality that talks to them exactly. This personal contact not only increases customer loyalty but also helps in engaging and selling more.",
-      `But that's not all. We also offer brand positioning, <a href="https://www.wisbato.com/services/web-development-company-in-calicut" target="_blank">web development</a>,<a href="https://www.wisbato.com/services/ecommerce-development-company-in-calicut" target="_blank">e-commerce web development</a>, market research, and <a href="https://angular.dev/" target="_blank">social media strategy </a> to ensure your brand stands out on every platform. Whether you're a new startup looking to create your mark or an old business seeking a rebranding strategy, Wisbato, a leading branding agency in Calicut is ready for you.`
+      `But that's not all. We also offer brand positioning, <a href="https://www.wisbato.com/services/web-development-company-in-calicut" target="_blank">web development</a>,<a href="https://www.wisbato.com/services/ecommerce-development-company-in-calicut" target="_blank">e-commerce web development</a>, market research, and <a href="https://angular.dev/" target="_blank">social media strategy </a> to ensure your brand stands out on every platform. Whether you're a new startup looking to create your mark or an old business seeking a rebranding strategy, Wisbato, a leading branding agency in Calicut is ready for you.`,
     ],
-    servicePlatform:false,
+    servicePlatform: false,
     subContent: {
       title: "Custom Solutions for Every Business",
       description: [
@@ -740,7 +738,6 @@ Our comprehensive branding capabilities start with an intensive consultation and
         // description: "A well-designed website offers a multitude of benefits",
         points: [
           {
-
             id: 1,
             title: "Builds Recognition and Trust",
             // description:
@@ -845,19 +842,15 @@ Our comprehensive branding capabilities start with an intensive consultation and
   },
   {
     id: 7,
-    title:
-      "Best software development company in Calicut.",
+    title: "Best software development company in Calicut.",
     description: [
       `As the best software development company in Calicut, we offer a wide range of services to meet the needs of businesses looking for customized software solutions.<a href="https://www.wisbato.com/team" target="_blank"> Our team</a>  specializes in creating, designing, programming, testing, and maintaining software applications that enhance efficiency and drive growth. Whether you need software for managing internal operations or customer-facing applications, we have the expertise to deliver results. Our goal is to help you bring your ideas to life by developing software that fits perfectly with your business goals.
 `,
       `We follow the <a href="https://en.wikipedia.org/wiki/Software_development_process" target="_blank">Software Development Life Cycle</a> (SDLC) to ensure that every project is carefully planned and executed. Our team is skilled in popular programming languages like C, C++, Java, JavaScript, PHP, and Python, allowing us to create diverse applications that meet modern business demands.
  `,
       `Staying updated with the latest industry trends, we also incorporate agile software methodologies and DevOps practices into our software development process. Many leading companies now adopt these methods to ensure faster delivery and more efficient updates to their software. At our company, we prioritize innovation and flexibility, providing Calicut-based businesses with best solutions that align with the latest software trends and technologies.<a href="https://youtu.be/wUGiIdqjDdk?si=qXjzF6XdHo6_oyve" target="_blank">Watch how to calculate software development cost</a>  `,
-     
-      
-      
     ],
-    servicePlatform:true,
+    servicePlatform: true,
     subContent: {
       title: "Custom software for every business",
       description: [
@@ -967,25 +960,21 @@ Our comprehensive branding capabilities start with an intensive consultation and
       title: "why we are different",
       description: [
         `At  <a href="https://www.wisbato.com/" target="_blank">Wisbato</a>,  we differentiate ourselves by offering a comprehensive range of software development services to Calicut business owners and companies, all powered by the latest technologies. Our professional software developers understand <a href="https://www.wisbato.com/blogs/why-need-a-custom-software-development" target="_blank">why your business needs a software solution</a>, and we work to fulfill that purpose.From custom software development and mobility solutions to cloud computing, embedded systems, blockchain, and system integration, we have the expertise to create your unique business needs.<a href="https://www.wisbato.com/team" target="_blank">Our team</a> is passionate about staying at the forefront of technological advancements, implementing AI, big data, and augmented reality to create innovative and effective solutions. We are committed to delivering exceptional results, building long-term partnerships, and exceeding your expectations. Choose Wisbato as your trusted software development partner in Calicut and experience the difference.
-`
+`,
       ],
     },
   },
   {
     id: 8,
-    title:
-      "Best Digital Marketing Agency In Calicut",
+    title: "Best Digital Marketing Agency In Calicut",
     description: [
       `Are you looking for the best digital marketing agency in Calicut to improve your business? Look no further than Wisbato. We specialize in providing best digital marketing services to meet your business needs.<a href="https://www.wisbato.com/team" target="_blank">Our team of digital marketing experts</a>  understands why having a strong online presence is essential for your business success. That’s why we offer a wide range of services, including <a href="https://www.wisbato.com/services/social-media-marketing-agency-in-calicut" target="_blank"> social media marketing</a>, <a href="https://www.wisbato.com/services/search-engine-optimization-company-in-calicut" target="_blank">SEO</a>, Google Ads,<a href="https://www.wisbato.com/services/branding-agency-in-calicut" target="_blank">branding</a>, YouTube ads, video shoots, email marketing, <a href="https://www.wisbato.com/services/web-development-company-in-calicut" target="_blank">web development</a>, and content marketing. Whether you want to boost your brand visibility or drive more leads, Wisbato is here to help.
  
 `,
-    "At Wisbato, we know that each business is unique, and a one-size-fits-all approach simply won’t work. That's why we customize our strategies based on your business goals and target audience. For businesses looking to improve their search engine rankings, we offer expert Search Engine Optimization (SEO) services that help you rank higher on Google and attract organic traffic. We also specialize in Search Engine Marketing (SEM), ensuring that your business gets noticed by potential customers when they search for products or services you offer. If social media is your focus, we create engaging content that resonates with your audience across platforms like Facebook, Instagram, and LinkedIn."  
- ,`With Wisbato, you’ll get a holistic approach to digital marketing that drives results. From content marketing that tells your brand story to video shoots that bring your products to life, we cover all aspects of your digital marketing needs. When you partner with <a href="https://www.wisbato.com/" target="_blank"> Wisbato</a>, you’re choosing a team dedicated to growing your business in the competitive online world.  `,
-     
-      
-      
+      "At Wisbato, we know that each business is unique, and a one-size-fits-all approach simply won’t work. That's why we customize our strategies based on your business goals and target audience. For businesses looking to improve their search engine rankings, we offer expert Search Engine Optimization (SEO) services that help you rank higher on Google and attract organic traffic. We also specialize in Search Engine Marketing (SEM), ensuring that your business gets noticed by potential customers when they search for products or services you offer. If social media is your focus, we create engaging content that resonates with your audience across platforms like Facebook, Instagram, and LinkedIn.",
+      `With Wisbato, you’ll get a holistic approach to digital marketing that drives results. From content marketing that tells your brand story to video shoots that bring your products to life, we cover all aspects of your digital marketing needs. When you partner with <a href="https://www.wisbato.com/" target="_blank"> Wisbato</a>, you’re choosing a team dedicated to growing your business in the competitive online world.  `,
     ],
-    servicePlatform:true,
+    servicePlatform: true,
     subContent: {
       title: "Unique Digital Marketing Ideas for Every Business",
       description: [
@@ -1096,29 +1085,25 @@ Our comprehensive branding capabilities start with an intensive consultation and
       title: "Why we are different from others.",
       description: [
         `At  <a href="https://www.wisbato.com/" target="_blank">Wisbato</a>,  we pride ourselves on being different from other digital marketing service providers. Our approach is centered around creating customized digital marketing strategies that align with your unique business goals. Unlike the one-size-fits-all methods many companies use, we offer a variety of marketing techniques, from SEO and social media marketing to Google Ads and content marketing, ensuring that each campaign is customized  to drive the best results for your brand. As the <a href="https://www.wisbato.com/services/social-media-marketing-agency-in-calicut" target="_blank"> best digital marketing company in Calicut</a>, we focus on innovation, data-driven insights, and delivering measurable growth, making us the ideal partner for businesses looking to stand out in the crowded online space. Check out our <a href="https://www.google.com/search?q=Wisbato+Pvt.+Ltd&sca_esv=c64c958eaf0dca0a&sca_upv=1&hl=en-GB&authuser=0&biw=1366&bih=657&sxsrf=ADLYWIIU_1em3_OpIBzuiSTEmB9iLP2Chg%3A1726641860982&ei=xHbqZtjSO7mmvr0PnJaXoAU&ved=0ahUKEwjYxJyW8suIAxU5k68BHRzLBVQQ4dUDCA8&uact=5&oq=Wisbato+Pvt.+Ltd&gs_lp=Egxnd3Mtd2l6LXNlcnAaAhgBIhBXaXNiYXRvIFB2dC4gTHRkMgQQIxgnMgQQIxgnMgIQJjIIEAAYgAQYogQyCBAAGIsDGO8FMgsQABiABBiiBBiLAzILEAAYgAQYogQYiwNIwglQ7QRY7QRwAXgAkAEAmAHVAaAB1QGqAQMyLTG4AQPIAQD4AQGYAgGgAuwBmAMAiAYBkgcDMi0xoAejBw&sclient=gws-wiz-serp#lrd=0x3ba65f32732f18a7:0xf2c3846272a4ddcd,1,,,," target="_blank">client words</a>.
-`
+`,
       ],
     },
   },
   {
     id: 9,
-    title:
-      "Web Application Company in Calicut",
+    title: "Web Application Company in Calicut",
     description: [
       `As a leading web application company in Kerala, Wisbato specializes in custom <a href="https://www.wisbato.com/services/web-development-company-in-calicut" target="_blank"> web development </a>  solutions to meet the needs of various industries. Our emphasis on web application development makes us serve you with innovative and user-friendly applications that will always improve your digital presence. We understand how a reliable web application can make all the difference in this competitive marketplace in gaining hold of customers, streamlining operations, and going global.
 
  
 `,
-    `We have successfully developed so many web applications at <a href="https://www.wisbato.com/" target="_blank"> Wisbato </a>, including e-commerce platforms, CRM, and CMS. Our <a href="https://www.wisbato.com/services/ecommerce-development-company-in-calicut" target="_blank"> e-commerce solutions </a>  enable businesses to sell products or services online without any discomfort and properly secure payment gateways. Our CRM systems enable companies to manage customer interactions efficiently for customer satisfaction and retention.
- `  
- ,"Another significant aspect, which remains the same in all the web applications we design, is security. We ensure huge security measures protecting all of your data and ensuring smooth-running business operations. Besides, with continuous maintenance and support, we keep your web application updated so that your website continues at its best performance. With scalable solutions, we march alongside your growing business and welcome new features and functionalities easily. With the technical expertise and  deep understanding of our client's business goals, we provide result-oriented solutions for encouraging business growth.",
- "Wisbato is proud of delivering high-quality web application development services at costs allowing customers an exceptional value for their money invested. Have Wisbato become your partner, allowing you to gain the power of web applications and propel your business up the digital ladder. In this way, we can build web applications that position you in the marketplace."
- ,,
-     
-      
-      
+      `We have successfully developed so many web applications at <a href="https://www.wisbato.com/" target="_blank"> Wisbato </a>, including e-commerce platforms, CRM, and CMS. Our <a href="https://www.wisbato.com/services/ecommerce-development-company-in-calicut" target="_blank"> e-commerce solutions </a>  enable businesses to sell products or services online without any discomfort and properly secure payment gateways. Our CRM systems enable companies to manage customer interactions efficiently for customer satisfaction and retention.
+ `,
+      "Another significant aspect, which remains the same in all the web applications we design, is security. We ensure huge security measures protecting all of your data and ensuring smooth-running business operations. Besides, with continuous maintenance and support, we keep your web application updated so that your website continues at its best performance. With scalable solutions, we march alongside your growing business and welcome new features and functionalities easily. With the technical expertise and  deep understanding of our client's business goals, we provide result-oriented solutions for encouraging business growth.",
+      "Wisbato is proud of delivering high-quality web application development services at costs allowing customers an exceptional value for their money invested. Have Wisbato become your partner, allowing you to gain the power of web applications and propel your business up the digital ladder. In this way, we can build web applications that position you in the marketplace.",
+      ,
     ],
-    servicePlatform:true,
+    servicePlatform: true,
     subContent: {
       title: "Unique Solutions for Every Business",
       description: [
@@ -1202,7 +1187,8 @@ Our comprehensive branding capabilities start with an intensive consultation and
       },
     },
     question: {
-      title: "Why should one choose Wisbato for website application development?",
+      title:
+        "Why should one choose Wisbato for website application development?",
       cards: [
         {
           id: 1,
@@ -1230,11 +1216,10 @@ Our comprehensive branding capabilities start with an intensive consultation and
       description: [
         `<a href="https://www.wisbato.com/" target="_blank">Wisbato</a> lets you make your business shine above the rest by developing the best of our applications with top web application development. We are a <a href="https://www.wisbato.com/team" target="_blank"> team of professionals</a> who have rich expertise in developing customized solutions relevant to your particular business needs, emphasizing innovative designs, user-friendly interfaces, and efficient functionality that makes your web application much more than what is expected. We are always up-to-date with the latest technologies and trends in industries and styles so that you are assured that the best solutions will help bring growth and engagement to your business. Do not settle for less; partner with the best web application development company in Kerala today and change your digital presence.<a href="https://www.wisbato.com/contact" target="_blank">Call us now</a> to talk about your project.
 
-`
+`,
       ],
     },
   },
-
 ];
 
 export const services = [
@@ -1476,9 +1461,7 @@ export const services = [
       {
         id: 4,
         title: "Why need a website for my business?",
-        content:
-          `In 2024, over 5.35 billion people will use the internet globally. So think of your website as your online store, open 24/7 and easy to access. It builds credibility, showcases your products and service offerings, and attracts customers even when you're not working. It's essential for reaching new audiences, generating leads, and staying competitive in today's online world. This is the reason <a href="https://www.wisbato.com/blogs/why-every-business-needs-a-professional-website" target="_blank">why you need a website for your website</a>.`
-
+        content: `In 2024, over 5.35 billion people will use the internet globally. So think of your website as your online store, open 24/7 and easy to access. It builds credibility, showcases your products and service offerings, and attracts customers even when you're not working. It's essential for reaching new audiences, generating leads, and staying competitive in today's online world. This is the reason <a href="https://www.wisbato.com/blogs/why-every-business-needs-a-professional-website" target="_blank">why you need a website for your website</a>.`,
       },
       {
         id: 5,
@@ -1495,25 +1478,21 @@ export const services = [
       },
       {
         id: 7,
-        title:
-          "How can a professional website benefit my business in Calicut?",
+        title: "How can a professional website benefit my business in Calicut?",
         content:
           " A professional website will make a huge difference for your business in terms of efficiency in creating awareness of your business and can easily be accessed by many potential customers. It sets your business credibility and presents your products or services to a bigger market. Hence, with the localized SEO services, your web site can attract local consumers in Calicut in Kerala. The use of an effective website creates favorable opportunities for engaging your company’s customers and fosters trustful cooperation in the long term.",
       },
       {
         id: 8,
-        title:
-          "How much is the website development cost in Calicut?",
-        content:
-          `The cost of website development in Calicut varies based on the size and complexity of the project. For a small dynamic website, prices start from RS: 5,500 to RS: 42,500. Mid-level websites typically range from RS: 8,500 to RS: 85,000. For large business websites, costs begin at RS: 15,000 and can go up to RS: 1,70,000. The final price depends on the client's specific requirements and features they want to include. Check out full details on <a href="https://www.wisbato.com/blogs/website-design-cost-in-kerala" target="_blank">website development cost.</a>
+        title: "How much is the website development cost in Calicut?",
+        content: `The cost of website development in Calicut varies based on the size and complexity of the project. For a small dynamic website, prices start from RS: 5,500 to RS: 42,500. Mid-level websites typically range from RS: 8,500 to RS: 85,000. For large business websites, costs begin at RS: 15,000 and can go up to RS: 1,70,000. The final price depends on the client's specific requirements and features they want to include. Check out full details on <a href="https://www.wisbato.com/blogs/website-design-cost-in-kerala" target="_blank">website development cost.</a>
 `,
       },
       {
         id: 9,
         title:
           " Why should I choose a Calicut-based company for my web development?",
-        content:
-          `Choosing a Calicut-based web development company offers several benefits. Local companies understand the unique business environment and customer preferences in the region, allowing them to create best solutions that resonate with your target audience.They also provide more personalized support, with easier communication and quicker response times.It reduces the <a href="https://www.wisbato.com/blogs/what-is-the-bounce-rate-how-to-improve-it" target="_blank"> bounce rates</a>, keeps visitors engaged with the website, and increases the rate of conversion.
+        content: `Choosing a Calicut-based web development company offers several benefits. Local companies understand the unique business environment and customer preferences in the region, allowing them to create best solutions that resonate with your target audience.They also provide more personalized support, with easier communication and quicker response times.It reduces the <a href="https://www.wisbato.com/blogs/what-is-the-bounce-rate-how-to-improve-it" target="_blank"> bounce rates</a>, keeps visitors engaged with the website, and increases the rate of conversion.
 `,
       },
     ],
@@ -1538,17 +1517,18 @@ export const services = [
     context: {
       mainTitle:
         "<span>Boost productivity and engagement</span> with expertly developed web applications",
-      subTitle: "Why Every Business Needs Web Application Development for Success",
-      content:
-        ` <a href="https://en.wikipedia.org/wiki/Web_application" target="_blank">Web application</a> development is crucial for any business, as it helps business houses sell their products or services on the internet, provide access to very important information, as well as also reach diverse audiences. Additionally, it avails features of consumer engagement, cross-platform compatibility, and centralized data that web applications have in streamlining all operations related to increasing customer experience. They also provide an inexpensive solution for businesses looking to increase their online presence and market scope.
+      subTitle:
+        "Why Every Business Needs Web Application Development for Success",
+      content: ` <a href="https://en.wikipedia.org/wiki/Web_application" target="_blank">Web application</a> development is crucial for any business, as it helps business houses sell their products or services on the internet, provide access to very important information, as well as also reach diverse audiences. Additionally, it avails features of consumer engagement, cross-platform compatibility, and centralized data that web applications have in streamlining all operations related to increasing customer experience. They also provide an inexpensive solution for businesses looking to increase their online presence and market scope.
 `,
     },
     workingProcess: [
       {
         id: 1,
         title: "Idea Generation and Planning",
-        image: "/images/workingProcess/application development/Idea Generation and Planning.jpg",
-        alt:"Idea Generation and Planning",
+        image:
+          "/images/workingProcess/application development/Idea Generation and Planning.jpg",
+        alt: "Idea Generation and Planning",
         list: [
           {
             id: 1,
@@ -1579,8 +1559,9 @@ export const services = [
       {
         id: 2,
         title: "Wireframing and Prototyping",
-        image: "/images/workingProcess/application development/Wireframing and Prototyping.jpg",
-        alt:"Wireframing and Prototyping",
+        image:
+          "/images/workingProcess/application development/Wireframing and Prototyping.jpg",
+        alt: "Wireframing and Prototyping",
         list: [
           {
             id: 5,
@@ -1612,7 +1593,7 @@ export const services = [
         id: 3,
         title: "Design",
         image: "/images/workingProcess/application development/Design.jpg",
-        alt:"Design",
+        alt: "Design",
         list: [
           {
             id: 9,
@@ -1643,7 +1624,7 @@ export const services = [
         id: 4,
         title: "Development",
         image: "/images/workingProcess/application development/Development.jpg",
-        alt:"Development",
+        alt: "Development",
         list: [
           {
             id: 13,
@@ -1674,8 +1655,9 @@ export const services = [
       {
         id: 5,
         title: "Testing and Deployment",
-        image: "/images/workingProcess/application development/Testing and Deployment.jpg",
-        alt:"Testing and Deployment",
+        image:
+          "/images/workingProcess/application development/Testing and Deployment.jpg",
+        alt: "Testing and Deployment",
         list: [
           {
             id: 17,
@@ -1706,8 +1688,9 @@ export const services = [
       {
         id: 6,
         title: "Maintenance and Updates",
-        image: "/images/workingProcess/application development/Maintenance and Updates.jpg",
-        alt:"Maintenance and Updates",
+        image:
+          "/images/workingProcess/application development/Maintenance and Updates.jpg",
+        alt: "Maintenance and Updates",
         list: [
           {
             id: 21,
@@ -1746,13 +1729,15 @@ export const services = [
       },
       {
         id: 3,
-        title: " Can the web application be tailored to fulfill my custom business requirements?",
+        title:
+          " Can the web application be tailored to fulfill my custom business requirements?",
         content:
           "Absolutely. Our company provides customized web application solutions that are absolutely tailored to satisfy your business needs. We can provide you with one-of-a-kind features, industry-specific solutions, or any feature that you may want on the web that would give your users a personal touch. We work closely with you to ensure the application aligns with your goals and enhances operational efficiency.",
       },
       {
         id: 4,
-        title: " Can you provide support and maintenance after the completion of the project?",
+        title:
+          " Can you provide support and maintenance after the completion of the project?",
         content:
           "Yes, we provide support and maintenance services after the successful delivery of your project. for your app. This is achieved through performance monitoring, bug fixes, security updates, feature enhancements, etc. We use the industry's best technology for your project based on your requirements. It will ensure speed, security and optimized performance of your app.  ",
       },
@@ -1764,7 +1749,8 @@ export const services = [
       },
       {
         id: 6,
-        title: "  What technology do you use in the development of your web application?",
+        title:
+          "  What technology do you use in the development of your web application?",
         content:
           "We use the best technologies from React, Angular, Node.js, Laravel, and PHP to create scalable and highly-performing web applications. Based on the specific requirements of your project, we determine the best technology stack for your project. We ensure speed, security, and optimization for the growth of the developed application.",
       },
@@ -1791,8 +1777,7 @@ export const services = [
       mainTitle:
         "Create a Distinct Identity for <span>your Brand</span> with Us",
       subTitle: "How important is Branding?",
-      content:
-        ` <a href="https://en.wikipedia.org/wiki/Branding" target="_blank">Branding </a>is an important part of your business, because it gives your business a unique identity that sets it apart from competitors.A <a href="https://en.wikipedia.org/wiki/Brand" target="_blank">brand </a>isn't just a logo or a name; it's the entire experience your customers have with your product or service. Whether it's a name, a design, or a symbol, these elements come together to create an image that people recognize and trust. In a crowded marketplace, having a strong brand helps your business stand out, communicate its values, and build lasting relationships with customers. It’s how customers remember you and choose you over others.
+      content: ` <a href="https://en.wikipedia.org/wiki/Branding" target="_blank">Branding </a>is an important part of your business, because it gives your business a unique identity that sets it apart from competitors.A <a href="https://en.wikipedia.org/wiki/Brand" target="_blank">brand </a>isn't just a logo or a name; it's the entire experience your customers have with your product or service. Whether it's a name, a design, or a symbol, these elements come together to create an image that people recognize and trust. In a crowded marketplace, having a strong brand helps your business stand out, communicate its values, and build lasting relationships with customers. It’s how customers remember you and choose you over others.
 `,
     },
     workingProcess: [
@@ -1800,7 +1785,7 @@ export const services = [
         id: 1,
         title: "Research and Analysis",
         image: "/images/workingProcess/branding/Research and Analysis.jpg",
-        alt:"branding agency in Calicut",
+        alt: "branding agency in Calicut",
         list: [
           {
             id: 1,
@@ -1832,7 +1817,7 @@ export const services = [
         id: 2,
         title: "Defining Brand Strategy",
         image: "/images/workingProcess/branding/Defining Brand Strategy.jpg",
-        alt:"best branding company in Kozhikode",
+        alt: "best branding company in Kozhikode",
         list: [
           {
             id: 5,
@@ -1863,8 +1848,9 @@ export const services = [
       {
         id: 3,
         title: "Creation of Brand Identity and Messaging",
-        image: "/images/workingProcess/branding/Creation of Brand Identity and Messaging.jpg",
-        alt:"branding agency for your business growth",
+        image:
+          "/images/workingProcess/branding/Creation of Brand Identity and Messaging.jpg",
+        alt: "branding agency for your business growth",
         list: [
           {
             id: 9,
@@ -1895,8 +1881,9 @@ export const services = [
       {
         id: 4,
         title: "Brand Implementation and Activation",
-        image: "/images/workingProcess/branding/Brand Implementation and Activation.jpg",
-        alt:"Brand Implementation and Activation",
+        image:
+          "/images/workingProcess/branding/Brand Implementation and Activation.jpg",
+        alt: "Brand Implementation and Activation",
         list: [
           {
             id: 13,
@@ -1927,8 +1914,9 @@ export const services = [
       {
         id: 5,
         title: "Monitor and Manage Brand Perception",
-        image: "/images/workingProcess/branding/Monitor and Manage Brand Perception.jpg",
-        alt:"Monitor and Manage Brand Perception",
+        image:
+          "/images/workingProcess/branding/Monitor and Manage Brand Perception.jpg",
+        alt: "Monitor and Manage Brand Perception",
 
         list: [
           {
@@ -1954,8 +1942,9 @@ export const services = [
       {
         id: 6,
         title: "Brand Evolution and Adaptation",
-        image: "/images/workingProcess/branding/Brand Evolution and Adaptation.jpg",
-        alt:"Brand Evolution and Adaptation",
+        image:
+          "/images/workingProcess/branding/Brand Evolution and Adaptation.jpg",
+        alt: "Brand Evolution and Adaptation",
         list: [
           {
             id: 20,
@@ -1988,16 +1977,15 @@ export const services = [
       },
       {
         id: 2,
-        title:
-          "How can branding improve my business presence in Calicut?",
+        title: "How can branding improve my business presence in Calicut?",
         content:
           "Effective branding boosts your visibility and reputation in Calicut by creating a consistent and professional image. It helps you communicate your business values and promises clearly, whether through logos, color schemes, or messaging. This leads to increased customer trust and a stronger market presence, both locally and online.",
       },
       {
         id: 3,
-        title: "What branding services are essential for small businesses in Calicut?",
-        content:
-          `Small or high businesses in Calicut should focus on essential branding services such as logo design, brand messaging, <a href="https://www.wisbato.com/services/web-development-company-in-calicut" target="_blank">website development</a>, <a href="https://www.wisbato.com/services/social-media-marketing-agency-in-calicut" target="_blank">social media branding</a>, and business card design. These elements create a cohesive brand identity that reflects your company's values and helps attract and retain customers.
+        title:
+          "What branding services are essential for small businesses in Calicut?",
+        content: `Small or high businesses in Calicut should focus on essential branding services such as logo design, brand messaging, <a href="https://www.wisbato.com/services/web-development-company-in-calicut" target="_blank">website development</a>, <a href="https://www.wisbato.com/services/social-media-marketing-agency-in-calicut" target="_blank">social media branding</a>, and business card design. These elements create a cohesive brand identity that reflects your company's values and helps attract and retain customers.
 `,
       },
       {
@@ -2014,7 +2002,6 @@ export const services = [
         content:
           "Branding is a long-term investment, and it takes time to see full results. However, local businesses in Calicut can start seeing increased awareness and customer engagement within a few months if branding efforts are consistent across digital and physical platforms. Over time, a well-executed brand strategy builds trust and leads to lasting customer relationships.",
       },
-      
     ],
   },
   {
@@ -2037,15 +2024,14 @@ export const services = [
       mainTitle:
         "Be the Exact Virtual face of <span>your Business</span> through eCommerce development",
       subTitle: "Why do businesses need Ecommerce?",
-      content:
-        `In 2024 having an <a href="https://en.wikipedia.org/wiki/E-commerce" target="_blank">e-commerce website</a> is an essential part for any business looking to grow and stay competitive. A good e-commerce web development company allows your business to reach all over customers 24/7, and access your website everywhere and expand your market beyond local limits. It offers an easy shopping experience for customers, allowing them to browse and buy from the comfort of their homes or everywhere. And we add client reviews and rating sections that get a trust for your customers. Additionally, an online e-store helps increase your brand’s visibility and credibility while providing valuable insights into customer behavior and preferences. By having an e-commerce website in Calicut, your business can increase sales, improve customer engagement, and trust. So build an Ecommerce website.`,
+      content: `In 2024 having an <a href="https://en.wikipedia.org/wiki/E-commerce" target="_blank">e-commerce website</a> is an essential part for any business looking to grow and stay competitive. A good e-commerce web development company allows your business to reach all over customers 24/7, and access your website everywhere and expand your market beyond local limits. It offers an easy shopping experience for customers, allowing them to browse and buy from the comfort of their homes or everywhere. And we add client reviews and rating sections that get a trust for your customers. Additionally, an online e-store helps increase your brand’s visibility and credibility while providing valuable insights into customer behavior and preferences. By having an e-commerce website in Calicut, your business can increase sales, improve customer engagement, and trust. So build an Ecommerce website.`,
     },
     workingProcess: [
       {
         id: 1,
         title: "Requirement Analysis",
         image: "/images/workingProcess/Ecommerce/RequirementAnalysis.jpg",
-        alt:"Ecommerce development company in Calicut",
+        alt: "Ecommerce development company in Calicut",
         list: [
           {
             id: 1,
@@ -2089,7 +2075,7 @@ export const services = [
         id: 2,
         title: "Planning and Strategy",
         image: "/images/workingProcess/Ecommerce/Planning and Strategy new.jpg",
-        alt:" Ecommerce website development company in calicut ",
+        alt: " Ecommerce website development company in calicut ",
         list: [
           {
             id: 7,
@@ -2132,8 +2118,9 @@ export const services = [
       {
         id: 3,
         title: "Design and User Experience (UX)",
-        image: "/images/workingProcess/Ecommerce/Design and User Experience (UX).jpg",
-        alt:" Develop ecommerce website with best UX ",
+        image:
+          "/images/workingProcess/Ecommerce/Design and User Experience (UX).jpg",
+        alt: " Develop ecommerce website with best UX ",
 
         list: [
           {
@@ -2177,8 +2164,9 @@ export const services = [
       {
         id: 4,
         title: "Development and Implementation",
-        image: "/images/workingProcess/Ecommerce/Development and Implementation.jpg",
-        alt:" Ecommerce designers in Calicut  ",
+        image:
+          "/images/workingProcess/Ecommerce/Development and Implementation.jpg",
+        alt: " Ecommerce designers in Calicut  ",
 
         list: [
           {
@@ -2222,12 +2210,13 @@ export const services = [
       {
         id: 5,
         title: "Testing and Quality Assurance (QA)",
-        image: "/images/workingProcess/Ecommerce/Testing and Quality Assurance (QA).jpg",
-        alt:"best ecommerce web development company in Calicut  ",
+        image:
+          "/images/workingProcess/Ecommerce/Testing and Quality Assurance (QA).jpg",
+        alt: "best ecommerce web development company in Calicut  ",
 
         list: [
           {
-            id: 25, 
+            id: 25,
             title: "Functional Testing",
             content:
               "Testing each feature and functionality to ensure they work as intended according to the requirements.",
@@ -2267,8 +2256,9 @@ export const services = [
       {
         id: 6,
         title: "Deployment and Maintenance",
-        image: "/images/workingProcess/Ecommerce/Deployment and Maintenance.jpg",
-        alt:"Deployment and Maintenance for ecommerce website",
+        image:
+          "/images/workingProcess/Ecommerce/Deployment and Maintenance.jpg",
+        alt: "Deployment and Maintenance for ecommerce website",
         list: [
           {
             id: 31,
@@ -2315,13 +2305,13 @@ export const services = [
         id: 1,
         title:
           " What services does an e-commerce web development company in Calicut offer?",
-        content:
-          `An e-commerce web development company in Calicut typically offers a range of services customized for online businesses. These services include custom e-commerce website design, payment gateway integration, secure shopping cart development, SEO optimization for online stores, and ongoing maintenance. Many companies also provide solutions for inventory management and  <a href="https://www.wisbato.com/services/mobile-app-development" target="_blank">mobile app development</a> to complement the e-commerce platform.
+        content: `An e-commerce web development company in Calicut typically offers a range of services customized for online businesses. These services include custom e-commerce website design, payment gateway integration, secure shopping cart development, SEO optimization for online stores, and ongoing maintenance. Many companies also provide solutions for inventory management and  <a href="https://www.wisbato.com/services/mobile-app-development" target="_blank">mobile app development</a> to complement the e-commerce platform.
 `,
       },
       {
         id: 2,
-        title: " Why should I choose a Calicut-based company for my e-commerce web development?",
+        title:
+          " Why should I choose a Calicut-based company for my e-commerce web development?",
         content:
           "Choosing a Calicut-based e-commerce web development company provides you with the advantage of localized expertise. These companies are well-versed in the regional market trends, business culture, and customer preferences, allowing them to create best solutions that resonate with local and global audiences. Additionally, they offer affordable rates without compromising on quality, making them a cost-effective option for businesses of all sizes.",
       },
@@ -2341,8 +2331,7 @@ export const services = [
       },
       {
         id: 5,
-        title:
-          " How does e-commerce web development ensure website security?",
+        title: " How does e-commerce web development ensure website security?",
         content:
           "Website security is our top priority for e-commerce development. We implement multiple layers of security, such as SSL certificates for encrypted communication, secure payment gateways, and regular software updates. Additionally, companies follow best practices for data protection and PCI-DSS compliance to ensure that customer transactions and data are secure from cyber threats.",
       },
@@ -2369,84 +2358,76 @@ export const services = [
       mainTitle:
         "Transform <span>your Buisness</span> with Best Digital Marketing Solutions",
       subTitle: "Why digital marketing is important",
-      content:
-        `Every business needs <a href="https://en.wikipedia.org/wiki/Digital_marketing" target="_blank"> digital marketing</a>  strategies. With more consumers relying on the internet to discover products and services, digital marketing helps businesses reach their target audience where they spend most of their time online. From social media to search engines, digital marketing allows companies to boost visibility, attract potential customers, and engage with their audience in real-time. It also provides valuable data to measure performance, optimize strategies, and increase <a href="https://en.wikipedia.org/wiki/Return_on_investment" target="_blank"> ROI</a>. Without a strong digital marketing strategy, businesses risk falling behind their competitors and missing out on growth opportunities.
+      content: `Every business needs <a href="https://en.wikipedia.org/wiki/Digital_marketing" target="_blank"> digital marketing</a>  strategies. With more consumers relying on the internet to discover products and services, digital marketing helps businesses reach their target audience where they spend most of their time online. From social media to search engines, digital marketing allows companies to boost visibility, attract potential customers, and engage with their audience in real-time. It also provides valuable data to measure performance, optimize strategies, and increase <a href="https://en.wikipedia.org/wiki/Return_on_investment" target="_blank"> ROI</a>. Without a strong digital marketing strategy, businesses risk falling behind their competitors and missing out on growth opportunities.
 `,
     },
     workingProcess: [
       {
         title: "Research & Strategy Development",
         image: "/images/workingProcess/digital marketing/Research Analysis.jpg",
-        alt:"Best digital marketing agency in Calicut",
+        alt: "Best digital marketing agency in Calicut",
 
         list: [
           {
             id: 1,
             title: "Market Research",
-            content:
-              "Analyze industry trends and competitor strategies.",
+            content: "Analyze industry trends and competitor strategies.",
           },
           {
             id: 2,
             title: " Audience Identification",
-            content:
-              "Define target audience demographics and behaviors.",
+            content: "Define target audience demographics and behaviors.",
           },
           {
             id: 3,
             title: " Goal Setting",
-            content:
-              " Establish clear, measurable objectives for campaigns.",
+            content: " Establish clear, measurable objectives for campaigns.",
           },
           {
             id: 4,
             title: "Content Planning",
-            content:
-              "Develop a roadmap for content creation and promotion.",
+            content: "Develop a roadmap for content creation and promotion.",
           },
         ],
       },
       {
         title: "Content Creation & Optimization",
-        image: "/images/workingProcess/digital marketing/Content Creation & Optimization.jpg",
-        alt:"Digital marketing company in Calicut create best content for marketing",
+        image:
+          "/images/workingProcess/digital marketing/Content Creation & Optimization.jpg",
+        alt: "Digital marketing company in Calicut create best content for marketing",
         list: [
           {
             id: 1,
             title: "SEO Optimization",
-            content:
-              "Ensure all content is optimized for search engines.",
+            content: "Ensure all content is optimized for search engines.",
           },
           {
             id: 2,
             title: "  Engaging Copywriting",
-            content:
-              "Create compelling, audience-focused content.",
+            content: "Create compelling, audience-focused content.",
           },
           {
             id: 3,
             title: " Visual Content",
-            content:
-              "  Design attention-grabbing visuals and graphics.",
+            content: "  Design attention-grabbing visuals and graphics.",
           },
           {
             id: 4,
             title: " Multi-Platform Content",
-            content:
-              " Adapt content for social media, blogs, and websites.",
+            content: " Adapt content for social media, blogs, and websites.",
           },
         ],
       },
       {
         title: "Campaign Execution & Monitoring",
-        image: "/images/workingProcess/digital marketing/Campaign Execution & Monitoring.jpg",
-        alt:" Execute a good ad campaign",
+        image:
+          "/images/workingProcess/digital marketing/Campaign Execution & Monitoring.jpg",
+        alt: " Execute a good ad campaign",
         list: [
           {
             id: 1,
             title: " Social Media Management",
-            content:
-              "Launch and manage social media campaigns.",
+            content: "Launch and manage social media campaigns.",
           },
           {
             id: 2,
@@ -2457,32 +2438,29 @@ export const services = [
           {
             id: 3,
             title: " Email Marketing ",
-            content:
-              "   Implement targeted email campaigns to nurture leads.",
+            content: "   Implement targeted email campaigns to nurture leads.",
           },
           {
             id: 4,
             title: "  Performance Tracking",
-            content:
-              " Monitor campaign performance with analytics tools.",
+            content: " Monitor campaign performance with analytics tools.",
           },
         ],
       },
       {
         title: "Analysis & Continuous Improvement",
-        image: "/images/workingProcess/digital marketing/Analysis & Continuous Improvement.jpg",
+        image:
+          "/images/workingProcess/digital marketing/Analysis & Continuous Improvement.jpg",
         list: [
           {
             id: 1,
             title: "  Data Analysis",
-            content:
-              "Review key performance indicators (KPIs) and metrics.",
+            content: "Review key performance indicators (KPIs) and metrics.",
           },
           {
             id: 2,
             title: " A/B Testing",
-            content:
-              "  Test variations of campaigns to optimize performance.",
+            content: "  Test variations of campaigns to optimize performance.",
           },
           {
             id: 3,
@@ -2493,18 +2471,17 @@ export const services = [
           {
             id: 4,
             title: "  Strategy Refinement",
-            content:
-              "Adjust strategies based on data for better results.",
+            content: "Adjust strategies based on data for better results.",
           },
         ],
       },
-
     ],
     outcomes: outcomes[7],
     FAQData: [
       {
         id: 1,
-        title: "What digital marketing services do you offer for Calicut businesses?",
+        title:
+          "What digital marketing services do you offer for Calicut businesses?",
         content:
           "We offer a range of digital marketing services for Calicut business owners, including SEO, social media marketing, pay-per-click (PPC) advertising, content marketing, web development, email marketing, and online reputation management. Our goal is to create customized strategies that fit your business needs and drive real results.",
       },
@@ -2516,7 +2493,8 @@ export const services = [
       },
       {
         id: 3,
-        title: "How do you measure the success of a digital marketing campaign?",
+        title:
+          "How do you measure the success of a digital marketing campaign?",
         content:
           "We measure success through key performance indicators (KPIs) such as website traffic, conversion rates, lead generation, customer engagement, and return on investment (ROI). We provide regular reports so you can see the impact of each campaign on your business growth.",
       },
@@ -2529,8 +2507,7 @@ export const services = [
       {
         id: 5,
         title: "How much does your digital marketing service cost per month?",
-        content:
-          `Our digital marketing services start at ₹25,000 per month, which includes social media page management, the creation of 15 posters, and 4 to 5 engaging reel videos, along with effective branding strategies. Please note that pricing may vary based on specific client requirements. If you're interested in paid campaigns or additional packages, feel free to  <a href="https://www.wisbato.com/contact" target="_blank">contact us</a> for more details!
+        content: `Our digital marketing services start at ₹25,000 per month, which includes social media page management, the creation of 15 posters, and 4 to 5 engaging reel videos, along with effective branding strategies. Please note that pricing may vary based on specific client requirements. If you're interested in paid campaigns or additional packages, feel free to  <a href="https://www.wisbato.com/contact" target="_blank">contact us</a> for more details!
 `,
       },
     ],
@@ -2554,15 +2531,14 @@ export const services = [
     context: {
       mainTitle: "We guarantee <span>your placement</span> in high SERPs",
       subTitle: "Why do businesses need SEO?",
-      content:
-        `<a href="https://en.wikipedia.org/wiki/Search_engine_optimization">Search engine optimization</a>(SEO) is a great tool guiding potential customers through the buying process. This impacts positively on how effective your SEO strategies will be implemented to increase your SERPs visibility as well as traffic on your website, and makes your company a trusted and authoritative voice in your industry. It builds more brand loyalty through credibility in the customer's minds and trust with the customers.`,
+      content: `<a href="https://en.wikipedia.org/wiki/Search_engine_optimization">Search engine optimization</a>(SEO) is a great tool guiding potential customers through the buying process. This impacts positively on how effective your SEO strategies will be implemented to increase your SERPs visibility as well as traffic on your website, and makes your company a trusted and authoritative voice in your industry. It builds more brand loyalty through credibility in the customer's minds and trust with the customers.`,
     },
     workingProcess: [
       {
         id: 1,
         title: "Keyword Research",
         image: "/images/workingProcess/seo/Keyword Research.jpg",
-        alt:"Keyword Research",
+        alt: "Keyword Research",
         list: [
           {
             id: 1,
@@ -2594,7 +2570,7 @@ export const services = [
         id: 2,
         title: "Competitive Research",
         image: "/images/workingProcess/seo/Competitive Research.jpg",
-        alt:"Competitive Research",
+        alt: "Competitive Research",
         list: [
           {
             id: 5,
@@ -2620,7 +2596,7 @@ export const services = [
         id: 3,
         title: "On-Page Optimization",
         image: "/images/workingProcess/seo/On-Page Optimization.jpg",
-        git:"On-Page Optimization",
+        git: "On-Page Optimization",
 
         list: [
           {
@@ -2653,7 +2629,7 @@ export const services = [
         id: 4,
         title: "Technical SEO",
         image: "/images/workingProcess/seo/Technical SEO.jpg",
-        git:"Technical SEO",
+        git: "Technical SEO",
         list: [
           {
             id: 12,
@@ -2685,7 +2661,7 @@ export const services = [
         id: 5,
         title: "Off-Page Optimization",
         image: "/images/workingProcess/seo/Off-Page Optimization.jpg",
-        git:"Off-Page Optimization",
+        git: "Off-Page Optimization",
         list: [
           {
             id: 16,
@@ -2717,7 +2693,7 @@ export const services = [
         id: 6,
         title: "Monitoring and Analysis",
         image: "/images/workingProcess/seo/Monitoring and Analysis.jpg",
-        git:"Monitoring and Analysis",
+        git: "Monitoring and Analysis",
         list: [
           {
             id: 20,
@@ -3036,15 +3012,15 @@ export const services = [
       mainTitle:
         "Your one-stop answer for all of <span>your technical</span> concerns",
       subTitle: "What is IT Support and how are they crucial?",
-      content:
-        `IT support is the approach to manage and solve technical problems. It ensures the system runs in an efficient and secure manner. It is crucial for businesses because it offers to reduce downtime while increasing efficiency of productivity and secures data against the dangers of losing it. Wisbato's IT support team offers a comprehensive range of services, from fixing issues activities through to system maintenance in operations, ensuring your business thrives worry-free of any technical issues in its way. Trust Wisbato and get your business secure, streamlined, and focused on growth minus all the <a href="https://en.wikipedia.org/wiki/Technical_support" target="_blank">technical support</a>.`,
+      content: `IT support is the approach to manage and solve technical problems. It ensures the system runs in an efficient and secure manner. It is crucial for businesses because it offers to reduce downtime while increasing efficiency of productivity and secures data against the dangers of losing it. Wisbato's IT support team offers a comprehensive range of services, from fixing issues activities through to system maintenance in operations, ensuring your business thrives worry-free of any technical issues in its way. Trust Wisbato and get your business secure, streamlined, and focused on growth minus all the <a href="https://en.wikipedia.org/wiki/Technical_support" target="_blank">technical support</a>.`,
     },
     workingProcess: [
       {
         id: 1,
         title: "Issue Identification & Categorization",
-        image: "/images/workingProcess/IT support/Issue Identification & Categorization.jpg",
-        alt:" IT support in calicut",
+        image:
+          "/images/workingProcess/IT support/Issue Identification & Categorization.jpg",
+        alt: " IT support in calicut",
         list: [
           {
             id: 1,
@@ -3075,8 +3051,9 @@ export const services = [
       {
         id: 2,
         title: "Diagnosis and Troubleshooting",
-        image: "/images/workingProcess/IT support/Diagnosis and Troubleshooting.jpg",
-        alt:"IT support for calicut business owners",
+        image:
+          "/images/workingProcess/IT support/Diagnosis and Troubleshooting.jpg",
+        alt: "IT support for calicut business owners",
         list: [
           {
             id: 5,
@@ -3108,7 +3085,7 @@ export const services = [
         id: 3,
         title: "Further communication",
         image: "/images/workingProcess/IT support/Further communication.jpg",
-        alt:"further communication for IT support",
+        alt: "further communication for IT support",
         list: [
           {
             id: 9,
@@ -3140,7 +3117,7 @@ export const services = [
         id: 4,
         title: "Closure and Follow-up",
         image: "/images/workingProcess/IT support/Closure and Follow-up.jpg",
-        alt:" follow up for works",
+        alt: " follow up for works",
         list: [
           {
             id: 13,
@@ -3173,7 +3150,8 @@ export const services = [
     FAQData: [
       {
         id: 1,
-        title: " What types of IT support services do you offer for businesses in Calicut?        ",
+        title:
+          " What types of IT support services do you offer for businesses in Calicut?        ",
         content:
           "We offer a wide range of IT and technical support services to businesses in Calicut, including network setup and management, hardware and software troubleshooting, cybersecurity solutions, data backup and recovery, technical support and IT consultancy services. Our team ensures that your business runs smoothly with minimal technical disruptions.",
       },
@@ -3191,7 +3169,8 @@ export const services = [
       },
       {
         id: 4,
-        title: " Is your IT support service affordable for small businesses in Calicut?",
+        title:
+          " Is your IT support service affordable for small businesses in Calicut?",
         content:
           "Absolutely! We offer flexible and affordable IT support plans specifically designed for small businesses in Calicut. Whether you need occasional assistance or ongoing support, we have cost-effective solutions that fit your budget without compromising on quality.",
       },
@@ -3216,16 +3195,17 @@ export const services = [
       mainTitle:
         "Simplify Your Business with <span>Customized Software</span> Solutions",
       subTitle: "WHY BUSINESS NEED A CUSTOMIZED SOFTWARE.",
-      content:
-        `<a href="https://en.wikipedia.org/wiki/Software_development" target="_blank">Software development</a> is key to business success because it helps companies streamline operations, reduce time, enhance customer experiences, and Be competitive in the online marketplace .Custom software solutions allow businesses to automate processes, improve efficiency, and offer custom services to their clients. For businesses in Kerala, partnering with a reliable software development company in Calicut ensures access to new technology and expert guidance, helping them grow and innovate effectively.
+      content: `<a href="https://en.wikipedia.org/wiki/Software_development" target="_blank">Software development</a> is key to business success because it helps companies streamline operations, reduce time, enhance customer experiences, and Be competitive in the online marketplace .Custom software solutions allow businesses to automate processes, improve efficiency, and offer custom services to their clients. For businesses in Kerala, partnering with a reliable software development company in Calicut ensures access to new technology and expert guidance, helping them grow and innovate effectively.
 `,
     },
     workingProcess: [
       {
         id: 1,
-        title: "Customized Software Solutions to Simplify Your Business and Drive To Success.",
-        image: "/images/workingProcess/software/Requirement Gathering and Analysis.jpg",
-        alt:"software company in Calicut",
+        title:
+          "Customized Software Solutions to Simplify Your Business and Drive To Success.",
+        image:
+          "/images/workingProcess/software/Requirement Gathering and Analysis.jpg",
+        alt: "software company in Calicut",
         list: [
           {
             id: 1,
@@ -3256,8 +3236,9 @@ export const services = [
       {
         id: 2,
         title: "Project Planning and Management",
-        image: "/images/workingProcess/software/Project Planning and Management.jpg",
-        alt:" software project planning and manage",
+        image:
+          "/images/workingProcess/software/Project Planning and Management.jpg",
+        alt: " software project planning and manage",
         list: [
           {
             id: 5,
@@ -3289,7 +3270,7 @@ export const services = [
         id: 3,
         title: "System Design",
         image: "/images/workingProcess/software/system design.jpg",
-        alt:"design your software project ",
+        alt: "design your software project ",
         list: [
           {
             id: 9,
@@ -3321,7 +3302,7 @@ export const services = [
         id: 4,
         title: " Implementation (Coding)",
         image: "/images/workingProcess/software/Implementation.jpg",
-        alt:"best software development company in Calicut",
+        alt: "best software development company in Calicut",
         list: [
           {
             id: 13,
@@ -3352,8 +3333,9 @@ export const services = [
       {
         id: 5,
         title: "Testing and Quality Assurance (QA)",
-        image: "/images/workingProcess/software/Testing and Quality Assurance.jpg",
-        alt:"software developers in Calicut test your quality and mistakes",
+        image:
+          "/images/workingProcess/software/Testing and Quality Assurance.jpg",
+        alt: "software developers in Calicut test your quality and mistakes",
 
         list: [
           {
@@ -3385,8 +3367,9 @@ export const services = [
       {
         id: 6,
         title: " Deployment and Maintenance",
-        image: "/images/workingProcess/software/Deployment and Maintenance (2).jpg",
-        alt:"software Deployment and Maintenance",
+        image:
+          "/images/workingProcess/software/Deployment and Maintenance (2).jpg",
+        alt: "software Deployment and Maintenance",
         list: [
           {
             id: 13,
@@ -3414,26 +3397,27 @@ export const services = [
           },
         ],
       },
-
     ],
     outcomes: outcomes[6],
     FAQData: [
       {
         id: 1,
-        title: "What types of software solutions do you offer for businesses in Calicut?     ",
-        content:
-          ` We offer all types of software solutions custom to meet the unique needs of businesses in Calicut. Our services include custom software development, <a href="https://www.wisbato.com/services/mobile-app-development" target="_blank">mobile applications</a>,<a href="https://www.wisbato.com/services/web-development-company-in-calicut" target="_blank">web applications</a>, cloud computing, system integration, and more. Whether you're a small startup or a large enterprise, we can create solutions that enhance your operations and drive growth.
+        title:
+          "What types of software solutions do you offer for businesses in Calicut?     ",
+        content: ` We offer all types of software solutions custom to meet the unique needs of businesses in Calicut. Our services include custom software development, <a href="https://www.wisbato.com/services/mobile-app-development" target="_blank">mobile applications</a>,<a href="https://www.wisbato.com/services/web-development-company-in-calicut" target="_blank">web applications</a>, cloud computing, system integration, and more. Whether you're a small startup or a large enterprise, we can create solutions that enhance your operations and drive growth.
 `,
       },
       {
         id: 2,
-        title: " How long does the software development process typically take?",
+        title:
+          " How long does the software development process typically take?",
         content:
           "The duration of the software development process varies based on the complexity and scope of the project. Generally, smaller projects may take a few weeks, while larger, more complex systems can take several months. We prioritize thorough planning and communication, so we'll provide you with a detailed timeline during the initial consultation to ensure you know what to expect.",
       },
       {
         id: 3,
-        title: "How do you ensure the software meets our specific business needs?",
+        title:
+          "How do you ensure the software meets our specific business needs?",
         content:
           " We follow a comprehensive approach to understand your business requirements fully. This includes initial consultations, requirement analysis, and ongoing feedback throughout the development process. Our goal is to create a solution that aligns perfectly with your objectives, and we encourage collaboration to ensure we meet your expectations at every stage.",
       },
@@ -3445,7 +3429,8 @@ export const services = [
       },
       {
         id: 5,
-        title: " How do I know if custom software is the right choice for my business?",
+        title:
+          " How do I know if custom software is the right choice for my business?",
         content:
           " Custom software is an excellent choice if your business has specific needs that off-the-shelf solutions cannot meet. It allows for tailored functionality, better integration with existing systems, and scalability as your business grows. If you’re unsure, we offer consultations to discuss your unique challenges and how custom software can address them effectively. This way, you can make an informed decision that aligns with your business goals.",
       },
@@ -3457,13 +3442,13 @@ export type ServicePlatformData = {
   id: number;
   icon: string;
   title?: string;
-}
+};
 
 export const servicePlatformData: ServicePlatformData[] = [
   {
     id: 1,
     icon: `<svg width="32" height="32" viewBox="0 0 58 59" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M44.375 1.3125V44.875L29 37.1875L13.625 44.875V1.3125M44.375 1.3125H49.5C51.5389 1.3125 53.4942 2.1224 54.9359 3.5641C56.3776 5.0058 57.1875 6.9611 57.1875 9V50C57.1875 52.0389 56.3776 53.9942 54.9359 55.4359C53.4942 56.8776 51.5389 57.6875 49.5 57.6875H8.5C6.4611 57.6875 4.5058 56.8776 3.0641 55.4359C1.6224 53.9942 0.8125 52.0389 0.8125 50V9C0.8125 6.9611 1.6224 5.0058 3.0641 3.5641C4.5058 2.1224 6.4611 1.3125 8.5 1.3125H13.625M44.375 1.3125H13.625" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M44.375 1.3125V44.875L29 37.1875L13.625 44.875V1.3125M44.375 1.3125H49.5C51.5389 1.3125 53.4942 2.1224 54.9359 3.5641C56.3776 5.0058 57.1875 6.9611 57.1875 9V50C57.1875 52.0389 56.3776 53.9942 54.9359 55.4359C53.4942 56.8776 51.5389 57.6875 49.5 57.6875H8.5C6.4611 57.6875 4.5058 56.8776 3.0641 55.4359C1.6224 53.9942 0.8125 52.0389 0.8125 50V9C0.8125 6.9611 1.6224 5.0058 3.0641 3.5641C4.5058 2.1224 6.4611 1.3125 8.5 1.3125H13.625M44.375 1.3125H13.625" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
 `,
     title: "booking",
@@ -3471,7 +3456,7 @@ export const servicePlatformData: ServicePlatformData[] = [
   {
     id: 2,
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="63" viewBox="0 0 64 63" fill="none">
-  <path d="M34.5628 0.852603V2.7933C34.5628 3.9344 35.0678 5.0141 35.9458 5.7452L39.5948 8.7861C41.1048 10.0468 41.4228 12.2369 40.3328 13.8769L38.5908 16.4941C37.6418 17.9161 36.2458 18.9813 34.6238 19.5213L34.1348 19.6852C33.5838 19.8696 33.0828 20.1785 32.6698 20.588C32.2578 20.9976 31.9448 21.4967 31.7568 22.0466C31.5678 22.5966 31.5088 23.1825 31.5838 23.759C31.6588 24.3355 31.8658 24.8869 32.1878 25.3706C33.4488 27.2668 32.7648 29.8362 30.7288 30.8543L21.7498 35.3438L23.1948 38.9621C23.4868 39.697 23.5018 40.5126 23.2378 41.2578C22.9738 42.0029 22.4478 42.6269 21.7588 43.0141C21.0698 43.4013 20.2628 43.5254 19.4888 43.3633C18.7158 43.2012 18.0268 42.764 17.5508 42.1328L15.2308 39.0373C14.8378 38.5133 14.3168 38.0985 13.7188 37.8323C13.1198 37.5661 12.4638 37.4572 11.8108 37.5161C11.1588 37.575 10.5318 37.7996 9.99079 38.1687C9.44979 38.5378 9.01179 39.039 8.71879 39.6249L6.37479 44.3126L4.28379 44.8353M34.5628 0.852603C29.1608 0.399303 23.7358 1.3854 18.8358 3.7043C13.9368 6.0232 9.73679 9.5961 6.66279 14.0608C3.58979 18.5256 1.75079 23.7235 1.33279 29.1279C0.914786 34.5323 1.93279 39.9512 4.28379 44.8353M34.5628 0.852603C39.9188 1.2993 45.0638 3.1456 49.4868 6.2009C53.9088 9.2562 57.4518 13.4172 59.7648 18.2692C62.0778 23.1211 63.0778 28.4944 62.6668 33.8535C62.2548 39.2126 60.4458 44.3703 57.4198 48.8123L56.8148 47.0049C56.3048 45.4743 55.3248 44.1431 54.0158 43.2C52.7068 42.2569 51.1338 41.7496 49.5208 41.7501H47.3748L46.2678 40.6431C45.7118 40.0861 45.0308 39.6693 44.2828 39.4271C43.5338 39.1848 42.7378 39.1241 41.9608 39.25C41.1838 39.3758 40.4478 39.6845 39.8138 40.1507C39.1798 40.6169 38.6658 41.2272 38.3138 41.9312L38.1908 42.1806C37.8558 42.8524 37.3838 43.4472 36.8058 43.9271C36.2288 44.4071 35.5578 44.7617 34.8358 44.9686L31.4528 45.9321C29.5738 46.4685 28.3988 48.3306 28.7198 50.261L28.9688 51.7575C29.2428 53.377 30.6438 54.5626 32.2838 54.5626C35.1738 54.5626 37.7428 56.4144 38.6558 59.158L39.3898 61.3549M4.28379 44.8353C7.34679 51.2033 12.5088 56.3222 18.9028 59.3308C25.2968 62.3394 32.5308 63.0542 39.3898 61.3549M39.3898 61.3549C46.7358 59.5326 53.1528 55.0688 57.4168 48.8158M44.8128 21.2501C44.8128 24.3114 43.4698 27.0584 41.3408 28.9376" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M34.5628 0.852603V2.7933C34.5628 3.9344 35.0678 5.0141 35.9458 5.7452L39.5948 8.7861C41.1048 10.0468 41.4228 12.2369 40.3328 13.8769L38.5908 16.4941C37.6418 17.9161 36.2458 18.9813 34.6238 19.5213L34.1348 19.6852C33.5838 19.8696 33.0828 20.1785 32.6698 20.588C32.2578 20.9976 31.9448 21.4967 31.7568 22.0466C31.5678 22.5966 31.5088 23.1825 31.5838 23.759C31.6588 24.3355 31.8658 24.8869 32.1878 25.3706C33.4488 27.2668 32.7648 29.8362 30.7288 30.8543L21.7498 35.3438L23.1948 38.9621C23.4868 39.697 23.5018 40.5126 23.2378 41.2578C22.9738 42.0029 22.4478 42.6269 21.7588 43.0141C21.0698 43.4013 20.2628 43.5254 19.4888 43.3633C18.7158 43.2012 18.0268 42.764 17.5508 42.1328L15.2308 39.0373C14.8378 38.5133 14.3168 38.0985 13.7188 37.8323C13.1198 37.5661 12.4638 37.4572 11.8108 37.5161C11.1588 37.575 10.5318 37.7996 9.99079 38.1687C9.44979 38.5378 9.01179 39.039 8.71879 39.6249L6.37479 44.3126L4.28379 44.8353M34.5628 0.852603C29.1608 0.399303 23.7358 1.3854 18.8358 3.7043C13.9368 6.0232 9.73679 9.5961 6.66279 14.0608C3.58979 18.5256 1.75079 23.7235 1.33279 29.1279C0.914786 34.5323 1.93279 39.9512 4.28379 44.8353M34.5628 0.852603C39.9188 1.2993 45.0638 3.1456 49.4868 6.2009C53.9088 9.2562 57.4518 13.4172 59.7648 18.2692C62.0778 23.1211 63.0778 28.4944 62.6668 33.8535C62.2548 39.2126 60.4458 44.3703 57.4198 48.8123L56.8148 47.0049C56.3048 45.4743 55.3248 44.1431 54.0158 43.2C52.7068 42.2569 51.1338 41.7496 49.5208 41.7501H47.3748L46.2678 40.6431C45.7118 40.0861 45.0308 39.6693 44.2828 39.4271C43.5338 39.1848 42.7378 39.1241 41.9608 39.25C41.1838 39.3758 40.4478 39.6845 39.8138 40.1507C39.1798 40.6169 38.6658 41.2272 38.3138 41.9312L38.1908 42.1806C37.8558 42.8524 37.3838 43.4472 36.8058 43.9271C36.2288 44.4071 35.5578 44.7617 34.8358 44.9686L31.4528 45.9321C29.5738 46.4685 28.3988 48.3306 28.7198 50.261L28.9688 51.7575C29.2428 53.377 30.6438 54.5626 32.2838 54.5626C35.1738 54.5626 37.7428 56.4144 38.6558 59.158L39.3898 61.3549M4.28379 44.8353C7.34679 51.2033 12.5088 56.3222 18.9028 59.3308C25.2968 62.3394 32.5308 63.0542 39.3898 61.3549M39.3898 61.3549C46.7358 59.5326 53.1528 55.0688 57.4168 48.8158M44.8128 21.2501C44.8128 24.3114 43.4698 27.0584 41.3408 28.9376" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
 `,
     title: "Real estate",
@@ -3479,7 +3464,7 @@ export const servicePlatformData: ServicePlatformData[] = [
   {
     id: 3,
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="63" viewBox="0 0 64 63" fill="none">
-  <path d="M32 62.25V34.0625M44.813 62.25V34.0625M19.188 62.25V34.0625M1.25 21.25L32 0.75L62.75 21.25M57.625 62.25V25.801C49.148 24.4738 40.58 23.809 32 23.8125C23.284 23.8125 14.725 24.4958 6.375 25.801V62.25M1.25 62.25H62.75M32 13.5625H32.027V13.5898H32V13.5625Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M32 62.25V34.0625M44.813 62.25V34.0625M19.188 62.25V34.0625M1.25 21.25L32 0.75L62.75 21.25M57.625 62.25V25.801C49.148 24.4738 40.58 23.809 32 23.8125C23.284 23.8125 14.725 24.4958 6.375 25.801V62.25M1.25 62.25H62.75M32 13.5625H32.027V13.5898H32V13.5625Z" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
 `,
     title: "E-learning",
@@ -3487,7 +3472,7 @@ export const servicePlatformData: ServicePlatformData[] = [
   {
     id: 4,
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="69" height="63" viewBox="0 0 69 63" fill="none">
-  <path d="M1.6875 0.75H6.42249C8.16449 0.75 9.68554 1.9219 10.1365 3.6029L11.4455 8.5127M11.4455 8.5127C30.4785 7.9793 49.4925 10.0951 67.9435 14.7993C65.1275 23.1838 61.7825 31.3292 57.9525 39.1875H19.6245M11.4455 8.5127L19.6245 39.1875M19.6245 39.1875C16.9065 39.1875 14.2985 40.2674 12.3765 42.1897C10.4545 44.1119 9.37451 46.719 9.37451 49.4375H63.1875M14.4995 59.6875C14.4995 60.3671 14.2295 61.0189 13.7485 61.4995C13.2685 61.98 12.6165 62.25 11.9375 62.25C11.2575 62.25 10.6055 61.98 10.1255 61.4995C9.64449 61.0189 9.37451 60.3671 9.37451 59.6875C9.37451 59.0079 9.64449 58.3561 10.1255 57.8755C10.6055 57.395 11.2575 57.125 11.9375 57.125C12.6165 57.125 13.2685 57.395 13.7485 57.8755C14.2295 58.3561 14.4995 59.0079 14.4995 59.6875ZM58.0625 59.6875C58.0625 60.3671 57.7925 61.0189 57.3115 61.4995C56.8305 61.98 56.1795 62.25 55.4995 62.25C54.8195 62.25 54.1685 61.98 53.6875 61.4995C53.2065 61.0189 52.9375 60.3671 52.9375 59.6875C52.9375 59.0079 53.2065 58.3561 53.6875 57.8755C54.1685 57.395 54.8195 57.125 55.4995 57.125C56.1795 57.125 56.8305 57.395 57.3115 57.8755C57.7925 58.3561 58.0625 59.0079 58.0625 59.6875Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1.6875 0.75H6.42249C8.16449 0.75 9.68554 1.9219 10.1365 3.6029L11.4455 8.5127M11.4455 8.5127C30.4785 7.9793 49.4925 10.0951 67.9435 14.7993C65.1275 23.1838 61.7825 31.3292 57.9525 39.1875H19.6245M11.4455 8.5127L19.6245 39.1875M19.6245 39.1875C16.9065 39.1875 14.2985 40.2674 12.3765 42.1897C10.4545 44.1119 9.37451 46.719 9.37451 49.4375H63.1875M14.4995 59.6875C14.4995 60.3671 14.2295 61.0189 13.7485 61.4995C13.2685 61.98 12.6165 62.25 11.9375 62.25C11.2575 62.25 10.6055 61.98 10.1255 61.4995C9.64449 61.0189 9.37451 60.3671 9.37451 59.6875C9.37451 59.0079 9.64449 58.3561 10.1255 57.8755C10.6055 57.395 11.2575 57.125 11.9375 57.125C12.6165 57.125 13.2685 57.395 13.7485 57.8755C14.2295 58.3561 14.4995 59.0079 14.4995 59.6875ZM58.0625 59.6875C58.0625 60.3671 57.7925 61.0189 57.3115 61.4995C56.8305 61.98 56.1795 62.25 55.4995 62.25C54.8195 62.25 54.1685 61.98 53.6875 61.4995C53.2065 61.0189 52.9375 60.3671 52.9375 59.6875C52.9375 59.0079 53.2065 58.3561 53.6875 57.8755C54.1685 57.395 54.8195 57.125 55.4995 57.125C56.1795 57.125 56.8305 57.395 57.3115 57.8755C57.7925 58.3561 58.0625 59.0079 58.0625 59.6875Z" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
 `,
     title: "Shopping",
@@ -3495,7 +3480,7 @@ export const servicePlatformData: ServicePlatformData[] = [
   {
     id: 5,
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="60" height="65" viewBox="0 0 60 65" fill="none">
-  <path d="M34.2199 2.62705C34.7739 3.18435 35.2119 3.84555 35.5099 4.57275C35.8089 5.29985 35.9599 6.07865 35.9569 6.86445V25.2728L56.1709 33.9561C56.3929 34.0436 56.5919 34.1792 56.7539 34.3535C56.9159 34.5277 57.0369 34.736 57.1089 34.9632L58.8799 40.2428C58.9739 40.5352 58.9889 40.8479 58.9229 41.1482C58.8569 41.4485 58.7119 41.7256 58.5039 41.9518C58.2959 42.178 58.0309 42.3447 57.7369 42.4349C57.4429 42.5251 57.1299 42.5357 56.8309 42.4656L35.9909 37.2211L34.9839 55.1432L38.9779 58.13V64.1041C33.9939 62.7852 29.9819 61.6851 29.9819 61.6851C29.9819 61.6851 26.3159 62.693 21.0219 64.1041V58.13L25.0159 55.1432L24.0079 37.2211L3.16889 42.4656C2.86889 42.5357 2.55689 42.5251 2.26289 42.4349C1.96889 42.3447 1.70386 42.178 1.49586 41.9518C1.28786 41.7256 1.14291 41.4485 1.07691 41.1482C1.01091 40.8479 1.02488 40.5352 1.11988 40.2428L2.89088 34.9632C2.96188 34.736 3.08386 34.5277 3.24586 34.3535C3.40786 34.1792 3.60687 34.0436 3.82887 33.9561L24.0429 25.2728V6.86445C24.0399 6.07865 24.1919 5.29985 24.4899 4.57275C24.7869 3.84555 25.2259 3.18435 25.7799 2.62705C26.9039 1.51765 28.4199 0.895752 29.9999 0.895752C31.5789 0.895752 33.0949 1.51765 34.2199 2.62705Z" stroke="black" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M34.2199 2.62705C34.7739 3.18435 35.2119 3.84555 35.5099 4.57275C35.8089 5.29985 35.9599 6.07865 35.9569 6.86445V25.2728L56.1709 33.9561C56.3929 34.0436 56.5919 34.1792 56.7539 34.3535C56.9159 34.5277 57.0369 34.736 57.1089 34.9632L58.8799 40.2428C58.9739 40.5352 58.9889 40.8479 58.9229 41.1482C58.8569 41.4485 58.7119 41.7256 58.5039 41.9518C58.2959 42.178 58.0309 42.3447 57.7369 42.4349C57.4429 42.5251 57.1299 42.5357 56.8309 42.4656L35.9909 37.2211L34.9839 55.1432L38.9779 58.13V64.1041C33.9939 62.7852 29.9819 61.6851 29.9819 61.6851C29.9819 61.6851 26.3159 62.693 21.0219 64.1041V58.13L25.0159 55.1432L24.0079 37.2211L3.16889 42.4656C2.86889 42.5357 2.55689 42.5251 2.26289 42.4349C1.96889 42.3447 1.70386 42.178 1.49586 41.9518C1.28786 41.7256 1.14291 41.4485 1.07691 41.1482C1.01091 40.8479 1.02488 40.5352 1.11988 40.2428L2.89088 34.9632C2.96188 34.736 3.08386 34.5277 3.24586 34.3535C3.40786 34.1792 3.60687 34.0436 3.82887 33.9561L24.0429 25.2728V6.86445C24.0399 6.07865 24.1919 5.29985 24.4899 4.57275C24.7869 3.84555 25.2259 3.18435 25.7799 2.62705C26.9039 1.51765 28.4199 0.895752 29.9999 0.895752C31.5789 0.895752 33.0949 1.51765 34.2199 2.62705Z" stroke="black" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
 `,
     title: "Travel",
@@ -3503,7 +3488,7 @@ export const servicePlatformData: ServicePlatformData[] = [
   {
     id: 6,
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="63" viewBox="0 0 64 63" fill="none">
-  <path d="M32 11V52M21.75 42.3718L24.753 44.6234C28.754 47.6267 35.242 47.6267 39.247 44.6234C43.251 41.6202 43.251 36.7548 39.247 33.7516C37.248 32.2483 34.624 31.5 32 31.5C29.523 31.5 27.046 30.7483 25.156 29.2484C21.378 26.2452 21.378 21.3798 25.156 18.3766C28.935 15.3733 35.065 15.3733 38.844 18.3766L40.262 19.5041M62.75 31.5C62.75 35.5381 61.955 39.5368 60.409 43.2675C58.864 46.9983 56.599 50.3881 53.744 53.2435C50.888 56.0989 47.498 58.364 43.768 59.9093C40.037 61.4546 36.038 62.25 32 62.25C27.962 62.25 23.963 61.4546 20.232 59.9093C16.502 58.364 13.112 56.0989 10.256 53.2435C7.40098 50.3881 5.136 46.9983 3.591 43.2675C2.045 39.5368 1.25 35.5381 1.25 31.5C1.25 23.3446 4.48998 15.5232 10.256 9.7565C16.023 3.9897 23.845 0.75 32 0.75C40.155 0.75 47.977 3.9897 53.744 9.7565C59.51 15.5232 62.75 23.3446 62.75 31.5Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M32 11V52M21.75 42.3718L24.753 44.6234C28.754 47.6267 35.242 47.6267 39.247 44.6234C43.251 41.6202 43.251 36.7548 39.247 33.7516C37.248 32.2483 34.624 31.5 32 31.5C29.523 31.5 27.046 30.7483 25.156 29.2484C21.378 26.2452 21.378 21.3798 25.156 18.3766C28.935 15.3733 35.065 15.3733 38.844 18.3766L40.262 19.5041M62.75 31.5C62.75 35.5381 61.955 39.5368 60.409 43.2675C58.864 46.9983 56.599 50.3881 53.744 53.2435C50.888 56.0989 47.498 58.364 43.768 59.9093C40.037 61.4546 36.038 62.25 32 62.25C27.962 62.25 23.963 61.4546 20.232 59.9093C16.502 58.364 13.112 56.0989 10.256 53.2435C7.40098 50.3881 5.136 46.9983 3.591 43.2675C2.045 39.5368 1.25 35.5381 1.25 31.5C1.25 23.3446 4.48998 15.5232 10.256 9.7565C16.023 3.9897 23.845 0.75 32 0.75C40.155 0.75 47.977 3.9897 53.744 9.7565C59.51 15.5232 62.75 23.3446 62.75 31.5Z" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
 `,
     title: "Trading",
@@ -3511,7 +3496,7 @@ export const servicePlatformData: ServicePlatformData[] = [
   {
     id: 7,
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="63" viewBox="0 0 64 63" fill="none">
-  <path d="M32 11V52M21.75 42.3718L24.75 44.6234C28.75 47.6267 35.24 47.6267 39.25 44.6234C43.25 41.6202 43.25 36.7548 39.25 33.7516C37.25 32.2483 34.62 31.5 32 31.5C29.52 31.5 27.05 30.7483 25.16 29.2484C21.38 26.2452 21.38 21.3798 25.16 18.3766C28.94 15.3733 35.06 15.3733 38.84 18.3766L40.26 19.5041M62.75 31.5C62.75 35.5381 61.95 39.5368 60.41 43.2675C58.86 46.9983 56.6 50.3881 53.74 53.2435C50.89 56.0989 47.5 58.364 43.77 59.9093C40.04 61.4546 36.04 62.25 32 62.25C27.96 62.25 23.96 61.4546 20.23 59.9093C16.5 58.364 13.11 56.0989 10.26 53.2435C7.40001 50.3881 5.13997 46.9983 3.58997 43.2675C2.04997 39.5368 1.25 35.5381 1.25 31.5C1.25 23.3446 4.49001 15.5232 10.26 9.7565C16.02 3.9897 23.84 0.75 32 0.75C40.16 0.75 47.98 3.9897 53.74 9.7565C59.51 15.5232 62.75 23.3446 62.75 31.5Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M32 11V52M21.75 42.3718L24.75 44.6234C28.75 47.6267 35.24 47.6267 39.25 44.6234C43.25 41.6202 43.25 36.7548 39.25 33.7516C37.25 32.2483 34.62 31.5 32 31.5C29.52 31.5 27.05 30.7483 25.16 29.2484C21.38 26.2452 21.38 21.3798 25.16 18.3766C28.94 15.3733 35.06 15.3733 38.84 18.3766L40.26 19.5041M62.75 31.5C62.75 35.5381 61.95 39.5368 60.41 43.2675C58.86 46.9983 56.6 50.3881 53.74 53.2435C50.89 56.0989 47.5 58.364 43.77 59.9093C40.04 61.4546 36.04 62.25 32 62.25C27.96 62.25 23.96 61.4546 20.23 59.9093C16.5 58.364 13.11 56.0989 10.26 53.2435C7.40001 50.3881 5.13997 46.9983 3.58997 43.2675C2.04997 39.5368 1.25 35.5381 1.25 31.5C1.25 23.3446 4.49001 15.5232 10.26 9.7565C16.02 3.9897 23.84 0.75 32 0.75C40.16 0.75 47.98 3.9897 53.74 9.7565C59.51 15.5232 62.75 23.3446 62.75 31.5Z" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
 `,
     title: "Hospital",
@@ -3519,9 +3504,9 @@ export const servicePlatformData: ServicePlatformData[] = [
   {
     id: 8,
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="63" viewBox="0 0 64 63" fill="none">
-  <path d="M32 11V52M21.75 42.3718L24.75 44.6234C28.75 47.6267 35.24 47.6267 39.25 44.6234C43.25 41.6202 43.25 36.7548 39.25 33.7516C37.25 32.2483 34.62 31.5 32 31.5C29.52 31.5 27.05 30.7483 25.16 29.2484C21.38 26.2452 21.38 21.3798 25.16 18.3766C28.94 15.3733 35.06 15.3733 38.84 18.3766L40.26 19.5041M62.75 31.5C62.75 35.5381 61.95 39.5368 60.41 43.2675C58.86 46.9983 56.6 50.3881 53.74 53.2435C50.89 56.0989 47.5 58.364 43.77 59.9093C40.04 61.4546 36.04 62.25 32 62.25C27.96 62.25 23.96 61.4546 20.23 59.9093C16.5 58.364 13.11 56.0989 10.26 53.2435C7.40001 50.3881 5.13997 46.9983 3.58997 43.2675C2.04997 39.5368 1.25 35.5381 1.25 31.5C1.25 23.3446 4.49001 15.5232 10.26 9.7565C16.02 3.9897 23.84 0.75 32 0.75C40.16 0.75 47.98 3.9897 53.74 9.7565C59.51 15.5232 62.75 23.3446 62.75 31.5Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M32 11V52M21.75 42.3718L24.75 44.6234C28.75 47.6267 35.24 47.6267 39.25 44.6234C43.25 41.6202 43.25 36.7548 39.25 33.7516C37.25 32.2483 34.62 31.5 32 31.5C29.52 31.5 27.05 30.7483 25.16 29.2484C21.38 26.2452 21.38 21.3798 25.16 18.3766C28.94 15.3733 35.06 15.3733 38.84 18.3766L40.26 19.5041M62.75 31.5C62.75 35.5381 61.95 39.5368 60.41 43.2675C58.86 46.9983 56.6 50.3881 53.74 53.2435C50.89 56.0989 47.5 58.364 43.77 59.9093C40.04 61.4546 36.04 62.25 32 62.25C27.96 62.25 23.96 61.4546 20.23 59.9093C16.5 58.364 13.11 56.0989 10.26 53.2435C7.40001 50.3881 5.13997 46.9983 3.58997 43.2675C2.04997 39.5368 1.25 35.5381 1.25 31.5C1.25 23.3446 4.49001 15.5232 10.26 9.7565C16.02 3.9897 23.84 0.75 32 0.75C40.16 0.75 47.98 3.9897 53.74 9.7565C59.51 15.5232 62.75 23.3446 62.75 31.5Z" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
 `,
     title: "Entertainment",
   },
-]
+];

@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST='{"components\\\\AnimationComponent\\\\AnimationComponent.tsx -> ../../assets/Lottie/buttonLoading.json":{"id":5087,"files":["static/chunks/5087.73bc4067e643801a.js"]}}';
+self.__REACT_LOADABLE_MANIFEST="{}"

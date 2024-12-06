@@ -11,4 +11,4 @@ const HeaderSection = () => {
     )
 }
 
-export default HeaderSection
+export default HeaderSection;

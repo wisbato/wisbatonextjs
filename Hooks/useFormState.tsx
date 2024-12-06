@@ -1,3 +1,5 @@
+"use client"
+
 import { useState } from 'react';
 
 export const useFormState = () => {
@@ -80,7 +82,7 @@ export const useResumeUpload = () => {
     const [message, setMessage] = useState('');
     const [designation, setDesignation] = useState('');
     const [experience, setExperience] = useState('');
-    const [cv, setCv] = useState(null);
+    const [cv, setCv] = useState<File | undefined | null>(null);
     const [loading, setLoading] = useState(false);
     const [statusMessage, setStatusMessage] = useState<{ message: string, color: string }>({ message: '', color: '' });
 

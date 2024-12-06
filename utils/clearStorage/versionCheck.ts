@@ -1,4 +1,4 @@
-import { APP_VERSION } from "../../version";
+import { APP_VERSION } from "../version";
 import { clearStorage } from "./clearStorage";
 
 export const checkAndHandleVersion = async () => {

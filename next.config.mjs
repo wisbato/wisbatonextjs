@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    domains: ["backend.wisbato.com"],
+  },
+};
 
 export default nextConfig;

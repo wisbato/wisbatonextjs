@@ -79,7 +79,7 @@ const WorkProcessMobile = () => {
                 </div>
                 <div>
                     <svg style={{ width: '100dvw' }} width="200" height="3001" viewBox="0 0 2 3001" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 0V3001" stroke="#878787" stroke-dasharray="8 8" />
+                        <path d="M1 0V3001" stroke="#878787" strokeDasharray="8 8" />
                         {workProcessData.map((item, index) => (
                             <React.Fragment key={index}>
                                 <g className="check-point-icon" fill={item.color}>

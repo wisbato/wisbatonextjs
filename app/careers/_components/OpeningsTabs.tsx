@@ -7,11 +7,11 @@ import Skeleton from 'react-loading-skeleton';
 // import { openings } from '../../../utils/openingsData';
 // import { openings } from '@/utils/openingsData'
 
-const OpeningsTabs = ({ openings, isLoading, error }: { openings: any, isLoading: boolean, error: any }) => {
+const OpeningsTabs = ({ openings, isLoading, error }: { openings: Opening[], isLoading: boolean, error: string }) => {
 
     const categoriesMap: { [key: string]: number } = {};
 
-    openings.forEach((opening: any) => {
+    openings.forEach((opening: Opening) => {
         categoriesMap[opening.category] = (categoriesMap[opening.category] || 0) + 1;
     });
 
@@ -26,12 +26,12 @@ const OpeningsTabs = ({ openings, isLoading, error }: { openings: any, isLoading
     const [bottomLineWidth, setBottomLineWidth] = useState(0);
     const [bottomLineLeft, setBottomLineLeft] = useState(0);
 
-    const handleTabClick = (category: any) => {
+    const handleTabClick = (category: string) => {
         setSelectedTab(category);
     };
 
     useEffect(() => {
-        const activeTab: any = document.querySelector('.tab-btn.active');
+        const activeTab = document.querySelector('.tab-btn.active') as HTMLButtonElement | null;
         if (activeTab) {
             setBottomLineWidth(activeTab.offsetWidth);
             setBottomLineLeft(activeTab.offsetLeft);
@@ -59,7 +59,7 @@ const OpeningsTabs = ({ openings, isLoading, error }: { openings: any, isLoading
             <div className="content-box">
                 <div className="openings-cards-list">
                     {
-                        openings.map((item: Opening, i: any) => <OpeningsCard key={i} data={item} selectedTab={selectedTab} isLoading={isLoading} error={error} />)
+                        openings.map((item: Opening, i: number) => <OpeningsCard key={i} data={item} selectedTab={selectedTab} isLoading={isLoading} error={error} />)
                     }
                 </div>
             </div>

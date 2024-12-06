@@ -11,7 +11,7 @@ export const useFetchMetaTags = (slug: string) => {
     useEffect(() => {
         const fetchData = async () => {
             setIsLoading(true);
-            setError(null); //
+            setError(null);
 
             try {
                 const response = await axios.get(

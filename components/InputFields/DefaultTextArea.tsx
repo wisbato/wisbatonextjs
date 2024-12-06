@@ -1,6 +1,7 @@
+// "use client"
 
 // const DefaultTextArea = ({ labelName, placeHolder, value, onChange }: { labelName: string; placeHolder: string; value: string, onChange: (e: any) => void }) => {
-const DefaultTextArea = ({ labelName, placeHolder, value, onChange }: { labelName: string; placeHolder: string; value: string, onChange?: any }) => {
+const DefaultTextArea = ({ labelName, placeHolder, value, onChange }: { labelName: string; placeHolder: string; value: string, onChange?: (e: string) => void; }) => {
     const textareaStyle = {
         fontFamily: 'Arial, sans-serif'
     };
@@ -17,7 +18,7 @@ const DefaultTextArea = ({ labelName, placeHolder, value, onChange }: { labelNam
                 placeholder={placeHolder}
                 style={textareaStyle}
                 value={value}
-                onChange={(e) => onChange(e.target.value)} />
+                onChange={(e) => onChange?.(e.target.value)} />
         </div>
     )
 }

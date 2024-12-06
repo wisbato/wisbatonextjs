@@ -1,7 +1,7 @@
 import FooterSection from "@/components/Footer/FooterSection";
 import HeaderSection from "@/components/Header/HeaderSection";
 // import { useEffect, useState } from "react";
-import Head from "next/head";
+// import Head from "next/head";
 import "./globals.css"
 
 export const metadata: { title: string; description: string } = {
@@ -12,10 +12,10 @@ export const metadata: { title: string; description: string } = {
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
     return (
         <html lang="en">
-            <Head>
+            {/* <Head>
                 <title>{metadata?.title}</title>
                 <meta name="description" content={metadata?.description} />
-            </Head>
+            </Head> */}
             <body>
                 <HeaderSection />
                 {children}

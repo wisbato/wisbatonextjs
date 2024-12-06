@@ -1,4 +1,4 @@
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+// import { LazyLoadImage } from 'react-lazy-load-image-component';
 // import { useNavigate } from 'react-router-dom';
 import { BlogData } from '../../../Hooks/useFetchData';
 
@@ -21,11 +21,16 @@ const BlogCard = ({ data }: { data: BlogData }) => {
     const description = data.description.slice(0, 100)
     return (
         <div className="blog-card" style={{ borderBottom: `10px solid ${data.border_color}` }} >
-            <LazyLoadImage
+            <img
                 src={data.image}
                 alt="Your image alt text"
                 className='blog-card-img'
             />
+            {/* <LazyLoadImage
+                src={data.image}
+                alt="Your image alt text"
+                className='blog-card-img'
+            /> */}
             <div className="blog-card-content-div">
                 <p className='recent-blog-container-title' style={{ fontSize: "14px", marginBottom: "4px" }} >{data.category}</p>
                 <p className='blog-card-title' >{title}...</p>

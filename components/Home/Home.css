@@ -54,7 +54,7 @@
 
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: flex-end;
   margin: 0 48px 38px;
   z-index: 1;
 
@@ -118,7 +118,7 @@
 .text-wrapper {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
   background-size: 4vh 4vh;
 }
 

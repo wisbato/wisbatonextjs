@@ -1,13 +1,12 @@
 "use client"
 
 import './teamcatecard.css'
-// import { teamData } from '../../../utils/people'
-import { useFetchTeam } from '../../../Hooks/useFetchData'
+import { TeamCategory, TeamMember, useFetchTeam } from '../../../Hooks/useFetchData'
 import { useEffect, useState } from 'react'
-const TeamCateCard = ({ service }: { service?: any }) => {
 
+const TeamCateCard = ({ service }: { service?: string }) => {
     const { team, isLoading, error } = useFetchTeam();
-    const [filteredTeam, setFilteredTeam] = useState<any>([]);
+    const [filteredTeam, setFilteredTeam] = useState<TeamCategory[]>([]);
 
     useEffect(() => {
         if (service) {
@@ -25,8 +24,8 @@ const TeamCateCard = ({ service }: { service?: any }) => {
 
     return (
         <div className="teamcatecard-container-wrapper">
-            {filteredTeam.map((data: any, index: number) => (
-                <div className="teamcatecard-container">
+            {filteredTeam.map((data: TeamCategory, index: number) => (
+                <div key={index} className="teamcatecard-container">
                     <div className="teamcatecard" key={index}>
                         <h1>{data.department}</h1>
                         <p>{data.description}</p>
@@ -34,7 +33,7 @@ const TeamCateCard = ({ service }: { service?: any }) => {
 
                     <div className="card-container">
                         {
-                            data?.members?.map((member: any) => (
+                            data?.members?.map((member: TeamMember) => (
                                 <div key={member.id} className="team-member">
                                     <img src={member.imageUrl} alt={member.name} className="team-member-image" />
                                     <div>

@@ -20,7 +20,6 @@ const BlogsPage = () => {
         window.scrollTo(0, 0)
     };
 
-
     const [currentPage, setCurrentPage] = useState(0);
     const { blogs, isLoading } = useFetchBlogs();
 
@@ -29,14 +28,14 @@ const BlogsPage = () => {
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
     const currentItems = blogs?.slice(indexOfFirstItem, indexOfLastItem);
 
-    const handlePageChange = (selectedPage: any) => {
+    const handlePageChange = (selectedPage: { selected: number }) => {
         setCurrentPage(selectedPage.selected);
     };
+
     return (
         <div className='blog-section page-transition'>
             <InnerBanner nextSection={'.blog-list-container'} text={"visit our <br> <span>blog</span>"} icons={["blogIcon1", "blogIcon2", "blogIcon2"]} />
             <div className="blog-list-container">
-
                 {
                     blogs.length === 0 || isLoading ?
                         <div className="recent-blog-container">
@@ -55,8 +54,6 @@ const BlogsPage = () => {
                         </div> : <div className="recent-blog-container">
                             <p className='recent-blog-container-title' >recent</p>
                             <div className="recent-blog">
-
-
                                 <img
                                     src={blogs[0]?.image}
                                     alt="Your image alt text"
@@ -91,7 +88,7 @@ const BlogsPage = () => {
                     {blogs.length === 0 || isLoading ?
                         <div className="list-all-blogs">
                             {
-                                Array.from({ length: 2 }).map(() => <div className="blog-card">
+                                Array.from({ length: 2 }).map((_, i) => <div key={i} className="blog-card">
                                     <Skeleton className='list-blog-skeleton-img' height={300} />
                                     <div className="blog-card-content-div">
                                         <p className='recent-blog-container-title' style={{ fontSize: "14px", marginBottom: "4px" }} ><Skeleton width={100} /></p>
@@ -113,11 +110,11 @@ const BlogsPage = () => {
                         {blogs.length > 2 && (
                             <ReactPaginate
                                 previousLabel={<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M15.5831 4L8.9964 10.5866C8.62508 10.9633 8.41693 11.471 8.41693 12C8.41693 12.529 8.62508 13.0367 8.9964 13.4134L15.5831 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M15.5831 4L8.9964 10.5866C8.62508 10.9633 8.41693 11.471 8.41693 12C8.41693 12.529 8.62508 13.0367 8.9964 13.4134L15.5831 20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                                 }
                                 nextLabel={<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8.41692 20L15.0036 13.4134C15.3749 13.0367 15.5831 12.529 15.5831 12C15.5831 11.471 15.3749 10.9633 15.0036 10.5866L8.41692 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M8.41692 20L15.0036 13.4134C15.3749 13.0367 15.5831 12.529 15.5831 12C15.5831 11.471 15.3749 10.9633 15.0036 10.5866L8.41692 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                                 }
                                 breakLabel={"..."}
