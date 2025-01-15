@@ -1,9 +1,10 @@
 import "./InnerBanner.css"
 import "../Home/Home.css"
 import ScrollButton from '../ScrollButton'
+// import { useLenis } from "@/Hooks/useLenis";
 
 const InnerBanner = ({ text, icons, nextSection }: { text: string; icons: string[]; nextSection: string }) => {
-
+    // useLenis();
     return (
         <div className='inner-banner-section'>
             <h1 className='banner-title' dangerouslySetInnerHTML={{ __html: text }}></h1>

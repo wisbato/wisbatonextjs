@@ -1,4 +1,4 @@
-"use client"                                                                                                                                                                                                                                                                                                                          
+"use client"
 
 // import AnimationComponent from "@/components/AnimationComponent/AnimationComponent";
 import DefaultInput from "@/components/InputFields/DefaultInput";
@@ -8,9 +8,12 @@ import ServicesDropDown from "@/components/InputFields/ServicesDropDown";
 import SectionTitle from "@/components/SectionTitle";
 import { StatusContext } from "@/Hooks/StatusContext";
 import { useFormState } from "@/Hooks/useFormState";
+import { useLenis } from "@/Hooks/useLenis";
 import { useContext, useEffect } from "react";
 
 const ContactPage = () => {
+    useLenis();
+
     const { statusMessage, handleServiceSelection, firstName, setFirstName, lastName, setLastName, email, setEmail, phone, setPhone, message, setMessage, handleSubmit, loading } = useFormState();
     const { setNotify } = useContext(StatusContext);
 

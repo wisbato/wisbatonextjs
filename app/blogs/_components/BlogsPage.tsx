@@ -10,8 +10,11 @@ import ReadFullBtn from "./ReadFullBtn";
 import DropDown from "@/components/DropDown";
 import BlogCard from "./BlogCard";
 import ReactPaginate from "react-paginate";
+import { useLenis } from "@/Hooks/useLenis";
 
 const BlogsPage = () => {
+    useLenis();
+
     const router = useRouter()
 
     const handleNavigation = (title: string) => {

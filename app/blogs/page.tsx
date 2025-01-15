@@ -1,3 +1,5 @@
+// "use server"
+
 import BlogsPage from './_components/BlogsPage'
 import "../globals.css"
 import "./blogs.css"
@@ -8,6 +10,7 @@ export const metadata: { title: string; description: string } = {
 };
 
 const Blogs = () => {
+    
     return <BlogsPage />
 }
 

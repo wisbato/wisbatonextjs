@@ -2,8 +2,12 @@
 
 import InnerBanner from "@/components/InnerBanner/InnerBanner"
 import TeamCateCard from "./TeamCateCard"
+import { useLenis } from "@/Hooks/useLenis";
+import Image from "next/image";
 
 const TeamPage = () => {
+    useLenis();
+
     return (
         <div className="team-section page-transition" >
             <InnerBanner nextSection={'.team-section'} text={'<span>team</span> <br> wisbato'} icons={["careersIcon1", "careersIcon2", "careersIcon3"]} />

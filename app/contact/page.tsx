@@ -1,3 +1,5 @@
+// "use server"
+
 import ContactPage from "./_components/ContactPage"
 import "./contact.css"
 

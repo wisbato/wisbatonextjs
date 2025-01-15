@@ -5,8 +5,11 @@ import SectionTitle from "@/components/SectionTitle";
 import { useFetchCareers } from "@/Hooks/useFetchData";
 import OpeningsTabs from "./OpeningsTabs";
 import OpeningsEyeExpand from "./OpeningsEyeExpand";
+import { useLenis } from "@/Hooks/useLenis";
 
 const CareersPage = () => {
+    useLenis();
+
     const { careers, isLoading, error } = useFetchCareers();
     return (
         <div className='careers-section page-transition' >

@@ -5,8 +5,11 @@ import { services } from "@/utils/servicesData";
 import InnerBanner from "@/components/InnerBanner/InnerBanner";
 import DefaultButton from "@/components/DefaultButton";
 import Testimonials from "@/components/Testimonials/Testimonials";
+import { useLenis } from "@/Hooks/useLenis";
 
 const ServicesPage = () => {
+    useLenis();
+
     const router = useRouter()
 
     const handleNavigation = (title: string) => {

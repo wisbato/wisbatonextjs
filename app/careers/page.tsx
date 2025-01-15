@@ -1,3 +1,5 @@
+"use server"
+
 import CareersPage from './_components/CareersPage'
 
 const Careers = () => {

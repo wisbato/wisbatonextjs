@@ -1,17 +1,20 @@
 "use client"
 
 import InnerBanner from "@/components/InnerBanner/InnerBanner";
-import { useFetchWorks } from "@/Hooks/useFetchData";
+import { Work } from "@/Hooks/useFetchData";
 import Skeleton from "react-loading-skeleton"
 import 'react-loading-skeleton/dist/skeleton.css'
 import { useState } from "react";
 import DropDown from "@/components/DropDown";
 import WorksCard from "@/components/Home/WorksCard";
 import ReactPaginate from "react-paginate";
+import { useLenis } from "@/Hooks/useLenis";
 
-const WorksPage = () => {
+const WorksPage = ({ works }: { works: Work[] }) => {
+    useLenis();
+
     const [currentPage, setCurrentPage] = useState(0);
-    const { works, isLoading } = useFetchWorks();
+    // const { works, isLoading } = useFetchWorks();
 
     // PAGINATION
     const itemsPerPage = 6;
@@ -28,7 +31,7 @@ const WorksPage = () => {
             <InnerBanner nextSection={'.works-portfolio'} text='our <br> <span>works</span>' icons={["worksIcon3", "worksIcon1", "worksIcon2"]} />
 
             <div className="works-portfolio">
-                {isLoading ? <div className="all-portfolio-title-section">
+                {false ? <div className="all-portfolio-title-section">
                     <p className='portfolio-container-title' ><Skeleton width={250} height={50} /></p>
                     <Skeleton width={200} height={50} />
                 </div> :
@@ -37,7 +40,7 @@ const WorksPage = () => {
                         <DropDown />
                     </div>}
 
-                {isLoading ? <div className="works-card-list">
+                {false ? <div className="works-card-list">
                     {Array.from({ length: 2 }).map((_, i) =>
                         <div className="works-card" key={i}>
                             <div className='works-card-img'>
