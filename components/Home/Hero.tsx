@@ -3,6 +3,7 @@
 import './Home.css';
 import ScrollButton from '../ScrollButton';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 const Hero = () => {
     const [videoLoaded, setVideoLoaded] = useState(false);
@@ -28,7 +29,7 @@ const Hero = () => {
     return (
         <div className='hero-section'>
             <div className='hero-image-container'>
-                {!videoLoaded && <img className="heroImg" src="/images/loadingimg.jpg" alt="Video Thumbnail" />}
+                {!videoLoaded && <Image width={1000} height={500} className="heroImg" src="/images/loadingimg.jpg" alt="Video Thumbnail" />}
                 {videoLoaded && <video autoPlay loop muted className="heroVideo">
                     <source src="/videos/videoHero1.webm" type="video/webm" />
                 </video>}

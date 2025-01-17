@@ -1,5 +1,7 @@
+import Image from "next/image";
+
 const SupportPerson = ({ name, title, avatar, number }: { name: string; title: string; avatar: string; number: number; }) => {
-    
+
     const redirectToWhatsApp = (number: number) => {
         const url = `https://wa.me/${number}`;
         window.open(url, '_blank');
@@ -8,7 +10,7 @@ const SupportPerson = ({ name, title, avatar, number }: { name: string; title: s
     return (
         <div className='chat-person'>
             <div style={{ display: 'flex', alignItems: "center", gap: "16px" }} >
-                <img src={`/images/${avatar}`} alt="" />
+                <Image width={45} height={45} src={`/images/${avatar}`} alt="" />
                 <div className="person-name"><p>{name}</p><p>{title}</p></div>
             </div>
             <div>

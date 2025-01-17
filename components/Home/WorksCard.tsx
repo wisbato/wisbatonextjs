@@ -4,6 +4,7 @@ import './Home.css';
 import useScrollAnimation from '../../Hooks/useScrollAnimation';
 import { WorkData } from '../../Hooks/useFetchData';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 
 const WorksCard = ({ data, key }: { data: WorkData; key: number }) => {
@@ -25,11 +26,11 @@ const WorksCard = ({ data, key }: { data: WorkData; key: number }) => {
             onClick={() => handleNavigation(data.slug)}
         >
             <div className='works-card-img'>
-                <img
+                <Image
                     src={data?.image} className='work-img' alt="wisbato works card"
-                    style={{ borderRadius: "4px", transition: "transform 0.3s ease" }}
-                    width={"100%"}
-                    height={"auto"}
+                    style={{ borderRadius: "4px", transition: "transform 0.3s ease", width: "100%", height: "auto" }}
+                    width={700}
+                    height={400}
                 />
             </div>
             <div className='works-title' >

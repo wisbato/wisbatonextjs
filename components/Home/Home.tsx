@@ -7,10 +7,10 @@ import Testimonials from '../Testimonials/Testimonials';
 import { useFetchWorks } from '../../Hooks/useFetchData';
 import { useRouter } from 'next/navigation';
 // import { services } from '../../utils/servicesData';
-import useScrollAnimation from '../../Hooks/useScrollAnimation';
+// import useScrollAnimation from '../../Hooks/useScrollAnimation';
 import SectionTitle from '../SectionTitle';
 import Hero from './Hero';
-import './Home.css';
+// import './Home.css';
 
 import Skeleton from "react-loading-skeleton"
 import 'react-loading-skeleton/dist/skeleton.css'
@@ -23,7 +23,7 @@ import HomeWorks from './_components/HomeWorks';
 const Home = () => {
     useLenis();
     const router = useRouter();
-    const animateRef = useScrollAnimation();
+    // const animateRef = useScrollAnimation();
 
     const handleNavigation = (title: string) => {
         const data = title.replace(/[^\w]+/gi, "-").toLowerCase();

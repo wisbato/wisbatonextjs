@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import "../app/globals.css"
+import "../pages/globals.css"
 
 const DropDown = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +15,6 @@ const DropDown = () => {
         setSelected(category)
         toggleDropdown()
     }
-
 
     return (
         <div className="drop-down-section">

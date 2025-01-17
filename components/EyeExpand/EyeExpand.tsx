@@ -1,6 +1,6 @@
 "use client"
 
-import "./EyeExpand.css"
+// import "./EyeExpand.css"
 
 const EyeExpand = ({ data, isOpen, toggleExpand }: { data: { title: string; content: string; id: number }, isOpen: number | null; toggleExpand: (id: number) => void }) => {
 

@@ -1,6 +1,7 @@
-import "./InnerBanner.css"
-import "../Home/Home.css"
+// import "./InnerBanner.css"
+// import "../Home/Home.css"
 import ScrollButton from '../ScrollButton'
+import Image from "next/image";
 // import { useLenis } from "@/Hooks/useLenis";
 
 const InnerBanner = ({ text, icons, nextSection }: { text: string; icons: string[]; nextSection: string }) => {
@@ -11,7 +12,8 @@ const InnerBanner = ({ text, icons, nextSection }: { text: string; icons: string
             <span className="inner-banner-icons">
                 {
                     icons?.map((item, i) =>
-                        <img key={i} className='gravity-icon shadow' src={`/svgIcons/${item}.svg`} alt="" />
+                        <Image width={80} height={80} key={i} className='gravity-icon shadow' src={`/svgIcons/${item}.svg`} alt="" />
+                        // <img key={i} className='gravity-icon shadow' src={`/svgIcons/${item}.svg`} alt="" />
                     )
                 }
             </span>

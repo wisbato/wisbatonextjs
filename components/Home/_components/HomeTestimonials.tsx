@@ -1,39 +1,43 @@
-import "./homeSections.css";
-// import { testimonialQuots } from '../../../utils/TestimonialQuotes';
+// import "./homeSections.css";
+import { testimonialQuots } from '../../../utils/TestimonialQuotes';
+import Image from "next/image";
 
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+// import Carousel from "react-multi-carousel";
+// import "react-multi-carousel/lib/styles.css";
 
-const responsive = {
-    desktop: {
-        breakpoint: { max: 3000, min: 1080 },
-        items: 2,
-        slidesToSlide: 1,
-    },
-    tablet: {
-        breakpoint: { max: 1080, min: 464 },
-        items: 2,
-        slidesToSlide: 1,
-    },
-    custom: {
-        breakpoint: { max: 768, min: 464 },
-        items: 2,
-        slidesToSlide: 1,
-    },
-    mobile: {
-        breakpoint: { max: 464, min: 0 },
-        items: 1,
-        slidesToSlide: 1,
-    },
-};
+// const responsive = {
+//     desktop: {
+//         breakpoint: { max: 3000, min: 1080 },
+//         items: 2,
+//         slidesToSlide: 1,
+//     },
+//     tablet: {
+//         breakpoint: { max: 1080, min: 464 },
+//         items: 2,
+//         slidesToSlide: 1,
+//     },
+//     custom: {
+//         breakpoint: { max: 768, min: 464 },
+//         items: 2,
+//         slidesToSlide: 1,
+//     },
+//     mobile: {
+//         breakpoint: { max: 464, min: 0 },
+//         items: 1,
+//         slidesToSlide: 1,
+//     },
+// };
 
 
 const HomeTestimonials = () => {
     return (
         <div className="home-testimonials" >
-            <HomeTestimonial />
-            <HomeTestimonial />
-            <Carousel
+            {
+                testimonialQuots?.slice(0, 2).map((item) => <HomeTestimonial key={item?.id} />)
+            }
+            {/* <HomeTestimonial />
+            <HomeTestimonial /> */}
+            {/* <Carousel
                 infinite={true}
                 autoPlay={true}
                 autoPlaySpeed={3000}
@@ -42,7 +46,7 @@ const HomeTestimonials = () => {
                 {Array.from({ length: 10 })?.map((_) => (
                     <HomeTestimonial />
                 ))}
-            </Carousel>
+            </Carousel> */}
         </div>
     )
 }
@@ -66,7 +70,8 @@ const HomeTestimonial = () => {
             </div>
             <p className="testimonial-desc" ><strong>Wisbato</strong> offered me the perfect website solution for my publishing agency. I did not want my website to be too flashy but it needed to have a perfect blend of old school and modernity. The web development team at Wisbato knew what I needed and offered me the website of my dreams. Thank you Wisbato!</p>
             <div className="testimonial-profile" >
-                <img width={40} src="/images/avatar.webp" alt="..." />
+                {/* <img width={40} src="/images/avatar.webp" alt="..." /> */}
+                <Image height={40} width={40} src="/images/avatar.webp" alt="..." />
                 <div>
                     <p>JAMES JO</p>
                     <p> CEO of Abc Company</p>

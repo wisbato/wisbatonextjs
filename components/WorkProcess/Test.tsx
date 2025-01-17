@@ -1,8 +1,9 @@
 "use client"
 
 import { workProcessCard } from "../../utils/WorkProcessCard";
-import { useEffect, useRef, useState } from "react";
-import "./WorkProcess.css"
+import { useCallback, useEffect, useRef, useState } from "react";
+// import "./WorkProcess.css"
+import Image from "next/image";
 
 interface WorkProcessCardItem {
     id: number;
@@ -34,26 +35,6 @@ const Test = () => {
     const [popupPositions, setPopupPositions] = useState<PopupPositions[] | null>(null);
 
     useEffect(() => {
-        const handleScroll = () => {
-            if (containerRef.current) {
-                const containerWidth = containerRef.current.clientHeight;
-                const scrollLeft = containerRef.current.scrollTop;
-                const scrollWidth = containerRef.current.scrollHeight;
-
-                const scrollProgress = (scrollLeft / (scrollWidth - containerWidth)) * 100;
-                setProgress(scrollProgress);
-                updatePointPosition(scrollProgress);
-            }
-        };
-
-        containerRef?.current?.addEventListener('scroll', handleScroll);
-
-        return () => {
-            containerRef?.current?.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
-    useEffect(() => {
         const timer = setInterval(() => {
             if (progress < 100) {
                 setProgress(prevProgress => prevProgress + 1);
@@ -63,7 +44,7 @@ const Test = () => {
         return () => clearInterval(timer);
     }, [progress]);
 
-    const updatePointPosition = (newProgress: number) => {
+    const updatePointPosition = useCallback((newProgress: number) => {
         if (pathRef.current) {
             const pathLength = pathRef.current.getTotalLength();
             const newPathLength = pathLength * (newProgress / 100);
@@ -74,7 +55,29 @@ const Test = () => {
 
             checkCollisionWithBlackCircles(x, y);
         }
-    };
+    }, [])
+
+    useEffect(() => {
+        const containerElement = containerRef.current;
+
+        const handleScroll = () => {
+            if (containerElement) {
+                const containerWidth = containerElement.clientHeight;
+                const scrollLeft = containerElement.scrollTop;
+                const scrollWidth = containerElement.scrollHeight;
+
+                const scrollProgress = (scrollLeft / (scrollWidth - containerWidth)) * 100;
+                setProgress(scrollProgress);
+                updatePointPosition(scrollProgress);
+            }
+        };
+
+        containerElement?.addEventListener('scroll', handleScroll);
+
+        return () => {
+            containerElement?.removeEventListener('scroll', handleScroll);
+        };
+    }, [updatePointPosition]);
 
     const MAX_POPUP_POSITIONS = 5;
 
@@ -178,7 +181,8 @@ const Test = () => {
                                     }}>
                                         <div className="work-process-card" style={{ backgroundColor: item.content.color }}>
                                             <div className="title-div">
-                                                <img src={`/svgIcons/checkPointsIcon/desktop/${item.content.id}.svg`} alt="" />
+                                                <Image src={`/svgIcons/checkPointsIcon/desktop/${item.content.id}.svg`} alt="" width={60} height={60} />
+                                                {/* <img src={`/svgIcons/checkPointsIcon/desktop/${item.content.id}.svg`} alt="" /> */}
                                                 <h1>{item.content.title}</h1>
                                             </div>
                                             <div className="work-process-points" >

@@ -12,7 +12,7 @@ export type Summary = {
 
 export type Service = {
   id: number;
-  icon: string;
+  icon?: string;
   slug: string;
   title: string;
   peopleTitle: string;

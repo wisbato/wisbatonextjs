@@ -1,6 +1,7 @@
 import SectionTitle from '../SectionTitle';
 import React from 'react';
-import './WorkProcess.css';
+// import './WorkProcess.css';
+import Image from 'next/image';
 
 const WorkProcessMobile = () => {
     const workProcessData = [
@@ -89,7 +90,8 @@ const WorkProcessMobile = () => {
                                 <foreignObject x="-150" y={item.position + 100} style={{ backgroundColor: item.color, width: '300px', height: '400px', borderRadius: '4px' }}>
                                     <div className="work-process-card-mobile">
                                         <div className="title-div-mobile">
-                                            <img src={`/svgIcons/checkPointsIcon/mobile/${item.icon}.svg`} alt="" />
+                                            <Image src={`/svgIcons/checkPointsIcon/mobile/${item.icon}.svg`} alt="" width={50} height={50} />
+                                            {/* <img src={`/svgIcons/checkPointsIcon/mobile/${item.icon}.svg`} alt="" /> */}
                                             <p>{item.title}</p>
                                         </div>
                                         <div className="work-process-points-mobile">

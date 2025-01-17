@@ -95,7 +95,7 @@ const Logo = () => {
             <Link href={"/"} style={{ zIndex: "1" }} >
 
                 <div className={`logo-text ${showText ? 'logo-slide-in' : 'logo-slide-out'}`} dangerouslySetInnerHTML={{
-                    __html: params === "/" || params.includes("/works/") ? svg1 : svg2
+                    __html: params === "/" || params?.includes("/works/") ? svg1 : svg2
                 }} />
             </Link>
         </div>

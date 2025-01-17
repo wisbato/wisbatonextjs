@@ -1,5 +1,5 @@
 // import MapComponent from '../MapLocation/MapLocation';
-import './Footer.css'
+// import './Footer.css'
 
 const FooterSection = () => {
 

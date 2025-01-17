@@ -1,5 +1,5 @@
 import Link from "next/link";
-import "./breadCrumb.css";
+// import "./breadCrumb.css";
 
 const RoutesMap = ({ title }: { title: string | string[] | undefined }) => {
     const currentURL = new URL(window.location.href);

@@ -1,6 +1,6 @@
 import Logo from './Logo'
 import NavLinks from './NavLinks'
-import "./Header.css"
+// import "./Header.css";
 
 const HeaderSection = () => {
     return (

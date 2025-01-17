@@ -5,11 +5,10 @@ import "./homeSections.css";
 import { redirect } from 'next/navigation';
 
 
-
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-type ServicesCardProps = { key: number; data: { title: string; description: string; image: string; id: number; slug: string; icon: string; }; }
+type ServicesCardProps = { key?: number; data: { title: string; description: string; image: string; id: number; slug: string; icon?: string; }; }
 
 const responsive = {
     desktop: {
@@ -100,7 +99,7 @@ const HomeServices = () => {
                     autoPlaySpeed={3000}
                     // customRightArrow={<CustomRightArrow onClick={() => { }} />} customLeftArrow={<CustomLeftArrow onClick={() => { }} />}
                     className="cards-carouse" draggable responsive={responsive} removeArrowOnDeviceType={["tablet", "mobile", "custom"]}>
-                    {services?.map((item: any, i) => (
+                    {services?.map((item, i: number) => (
                         <HomeServicesCards data={item} key={i} />
                     ))}
                 </Carousel>
@@ -111,10 +110,7 @@ const HomeServices = () => {
 
 export default HomeServices;
 
-
 const HomeServicesCards = ({ data }: ServicesCardProps) => {
-    // const navigate = useNavigate();
-
     const handleNavigation = (title: string) => {
         const data = title.replace(/[^\w]/gi, "-").toLowerCase();
         // navigate(`/services/${data}`);

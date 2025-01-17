@@ -3,6 +3,7 @@ import DefaultButton from '../DefaultButton'
 import useScrollAnimation from '../../Hooks/useScrollAnimation';
 import "./Home.css"
 import { redirect } from 'next/navigation';
+import Image from 'next/image';
 // import { LazyLoadImage } from 'react-lazy-load-image-component';
 // import 'react-lazy-load-image-component/src/effects/blur.css';
 
@@ -35,11 +36,8 @@ const ServicesCard = ({ data }: ServicesCardProps) => {
                 </div>
             </div>
             <div className="home-services-img">
-                {/* <LazyLoadImage
-                    src={`${data?.image}.webp`} alt="Your image alt text" className='services-img'
-                    effect={'blur'}
-                /> */}
-                <img src={`${data?.image}.webp`} alt="Your image alt text" className='services-img' />
+                <Image width={100} height={100} src={`${data?.image}.webp`} alt="Your image alt text" className='services-img' />
+                {/* <img src={`${data?.image}.webp`} alt="Your image alt text" className='services-img' /> */}
             </div>
         </div >
     )

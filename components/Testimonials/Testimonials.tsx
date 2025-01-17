@@ -1,15 +1,16 @@
 "use client"
 
-import { useState } from 'react'
+// import { useState } from 'react'
 import DefaultButton from '../DefaultButton';
 // import TestimonialsCard from './TestimonialsCard';
-import "./Testimonials.css"
-import { testimonialQuots } from '../../utils/TestimonialQuotes';
+// import "./Testimonials.css"
+// import { testimonialQuots } from '../../utils/TestimonialQuotes';
 // import { useNavigate } from 'react-router-dom';
 // import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import { redirect } from 'next/navigation';
 import HomeTestimonials from '../Home/_components/HomeTestimonials';
+import Image from 'next/image';
 
 const Testimonials = () => {
 
@@ -21,18 +22,18 @@ const Testimonials = () => {
         redirect(`/${page}`);
     };
 
-    const [activeIndex, setActiveIndex] = useState(0);
+    // const [activeIndex, setActiveIndex] = useState(0);
 
 
-    const updateIndex = (newIndex: number) => {
-        if (newIndex < 0) {
-            newIndex = 0;
-        } else if (newIndex >= testimonialQuots.length) {
-            newIndex = testimonialQuots.length - 1;
-        }
+    // const updateIndex = (newIndex: number) => {
+    //     if (newIndex < 0) {
+    //         newIndex = 0;
+    //     } else if (newIndex >= testimonialQuots.length) {
+    //         newIndex = testimonialQuots.length - 1;
+    //     }
 
-        setActiveIndex(newIndex);
-    };
+    //     setActiveIndex(newIndex);
+    // };
 
     return (
         <div className="testimonial-section">
@@ -69,14 +70,20 @@ const Testimonials = () => {
 
             <div className="testimonials-img-div">
                 <div>
-                    <img
+                    <Image
+                        width={800}
+                        height={100}
+                        className='testimonials-text-img'
+                        src="/images/team.webp"
+                        alt="Join our team"
+                    />
+                    {/* <img
                         width={"100%"}
                         height={"auto"}
                         className='testimonials-text-img'
                         src="/images/team.webp"
                         alt="Join our team"
-                    />
-                    {/* <img className='testimonials-text-img' src="/images/team.png" alt="Join our team" width={874} height={415} /> */}
+                    /> */}
                 </div>
                 <div className="testimonials-explore-div">
                     <h1>join our team</h1>

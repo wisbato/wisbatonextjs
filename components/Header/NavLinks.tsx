@@ -1,7 +1,8 @@
 "use client"
 
 import { useEffect, useState } from 'react';
-import "./Header.css";
+// import './Header.css';
+
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 // import { Link, useLocation } from 'react-router-dom';
@@ -48,7 +49,7 @@ const NavLinks = () => {
 
   const renderLinks = (isDropdown = false) =>
     navLinks.map(({ href, text }, index) => {
-      const isActive = params.startsWith(href);
+      const isActive = params?.startsWith(href);
       return (
         <Link onClick={() => window.scrollTo(0, 0)} key={index} href={href} className={`nav-link${isDropdown ? "-res" : ""}`} style={{ color: isActive ? "#f7931e" : "" }}>{text}</Link>
       );
