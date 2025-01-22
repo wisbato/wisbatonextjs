@@ -1,7 +1,7 @@
 // "use server"
 
 import ContactPage from "./_components/ContactPage"
-import "./contact.css"
+// import "./contact.css"
 
 export const metadata: { title: string; description: string } = {
     title: "Create Next App Contact",

@@ -1,5 +1,5 @@
 import TeamPage from "./_components/TeamPage";
-import './team.css'
+// import './team.css'
 
 export const metadata: { title: string; description: string } = {
     title: "Create Works Team",

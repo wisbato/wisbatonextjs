@@ -72,7 +72,7 @@
 
 import "../globals.css"
 import WorksPage from "./_components/WorksPage";
-import "./works.css"
+// import "./works.css"
 
 export const metadata: { title: string; description: string } = {
     title: "Create Works Page",

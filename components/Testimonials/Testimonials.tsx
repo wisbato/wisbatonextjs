@@ -77,13 +77,6 @@ const Testimonials = () => {
                         src="/images/team.webp"
                         alt="Join our team"
                     />
-                    {/* <img
-                        width={"100%"}
-                        height={"auto"}
-                        className='testimonials-text-img'
-                        src="/images/team.webp"
-                        alt="Join our team"
-                    /> */}
                 </div>
                 <div className="testimonials-explore-div">
                     <h1>join our team</h1>

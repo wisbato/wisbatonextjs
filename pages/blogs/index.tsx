@@ -2,7 +2,7 @@
 
 import BlogsPage from './_components/BlogsPage'
 import "../globals.css"
-import "./blogs.css"
+// import "./blogs.css"
 
 export const metadata: { title: string; description: string } = {
     title: "Create Next App Blogs",

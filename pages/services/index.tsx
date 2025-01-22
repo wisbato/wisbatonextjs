@@ -1,5 +1,5 @@
 import ServicesPage from "./_components/ServicesPage";
-import "./services.css"
+// import "./services.css"
 
 export const metadata: { title: string; description: string } = {
     title: "Create Services Page",

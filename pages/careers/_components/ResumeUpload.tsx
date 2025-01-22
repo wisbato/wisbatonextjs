@@ -8,7 +8,7 @@ import DefaultInput from '../../../components/InputFields/DefaultInput'
 import DefaultPhoneInput from '../../../components/InputFields/DefaultPhoneInput'
 import DefaultTextArea from '../../../components/InputFields/DefaultTextArea'
 
-import './ResumeUpload.css'
+// import './ResumeUpload.css'
 
 const ResumeUpload = ({ onClose }: { onClose: () => void }) => {
 

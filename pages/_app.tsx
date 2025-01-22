@@ -14,13 +14,14 @@ import '@/components/Testimonials/Testimonials.css'
 import '@/components/WorkProcess/WorkProcess.css'
 
 import "@/pages/about/about.css"
-import "@/pages/about/blog.css"
-import "@/pages/about/careers.css"
-import "@/pages/about/contact.css"
-import "@/pages/about/services.css"
-import "@/pages/about/team.css"
-import "@/pages/about/team.css"
-import "@/pages/about/works.css"
+import "@/pages/blogs/blogs.css"
+import "@/pages/careers/careers.css"
+import "@/pages/contact/contact.css"
+import "@/pages/services/services.css"
+import "@/pages/team/team.css"
+import "@/pages/works/works.css"
+
+import "@/pages/careers/_components/ResumeUpload.css"
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

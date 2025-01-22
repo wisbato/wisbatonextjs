@@ -1,6 +1,6 @@
 "use client"
 
-import "../blogs.css"
+// import "../blogs.css"
 import "../../globals.css"
 import BlogDetailedSection from '../_components/BlogDetailedSection'
 import RoutesMap from "../../../components/RoutesMap/BreadCrumb"

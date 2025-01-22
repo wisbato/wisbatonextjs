@@ -11,8 +11,11 @@ import Head from 'next/head';
 
 const CareersRequirement = () => {
     const { careers, isLoading, error } = useFetchCareers();
-    const { careersId: title } = useParams();
-    const careersIdValue = title || "";
+    // const { careersId: title } = useParams();
+    // const careersIdValue = title || "";
+
+    const params = useParams();
+    const careersIdValue = params?.careersId || "Default Title";
 
     const [showPopup, setShowPopup] = useState(false);
     const [data, setData] = useState<Opening | null>(null);
@@ -45,7 +48,7 @@ const CareersRequirement = () => {
                 await navigator.share({
                     title: opening?.name,
                     text: opening?.name,
-                    url: window.location.href
+                    url: window?.location.href
                 });
                 console.log('Successfully shared');
             } catch (error) {

@@ -1,4 +1,118 @@
 .footer-section {
+  background-color: #191919;
+  color: #f2f2f2;
+
+  padding: 80px 60px;
+}
+
+.footer-section .footer-title {
+  color: #ffffff;
+  font-size: 54px;
+  font-weight: 500;
+  line-height: 70.36px;
+  text-align: center;
+
+  margin-bottom: 50px;
+}
+
+.address-cards {
+  display: flex;
+  gap: 30px;
+}
+
+.address-card {
+  border: 1px solid #afafaf;
+
+  text-align: center;
+  border-radius: 24px;
+}
+
+.address-title {
+  padding: 24px 24px 14px 24px;
+  border-bottom: 1px solid #afafaf;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26.06px;
+}
+
+.address-details {
+  padding: 20px 24px 24px 24px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20.85px;
+
+  display: grid;
+  place-items: center;
+  gap: 24px;
+}
+
+.address-details button {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20.85px;
+  border-radius: 30px;
+
+  /* width: 180px;
+  height: 36px; */
+  padding: 7.5px 28px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  background-color: transparent;
+  border: 1px solid #afafaf;
+  color: #e8e8e8;
+}
+
+.footer-desc {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.45px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-desc button {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20.85px;
+  border-radius: 30px;
+
+  /* width: 180px;
+  height: 36px; */
+  padding: 7.5px 28px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  background-color: transparent;
+  border: 1px solid #afafaf;
+  color: #e8e8e8;
+}
+
+.socail-medias-footer {
+  display: flex;
+  gap: 16px;
+}
+
+/* old style code footer  */
+
+/* .footer-section {
   background: linear-gradient(#342007, #1a1003);
   color: #fff;
 }
@@ -53,14 +167,12 @@
   font-weight: 500;
   line-height: 63px;
   letter-spacing: 0em;
-  /* text-transform: lowercase; */
 
   width: 100%;
-  /* text-align: end; */
 
   display: flex;
   justify-content: space-between;
-  /* align-items: end; */
+
   align-items: center;
 
   @media screen and (max-width: 768px) {
@@ -77,10 +189,9 @@
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 400;
-  /* line-height: 21px; */
+
   letter-spacing: 0em;
   list-style-type: none;
-  /* margin-top: 60px; */
 
   display: flex;
   gap: 24px;
@@ -130,10 +241,6 @@
   }
 }
 
-/* *********************************
-          adress-section
-********************************* */
-
 .adress-section {
   display: flex;
   gap: 32px;
@@ -156,4 +263,4 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 20.85px;
-}
+} */

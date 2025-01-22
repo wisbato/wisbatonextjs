@@ -2,7 +2,7 @@
 
 import AboutPage from "./AboutPage"
 import "../globals.css"
-import "./about.css"
+// import "./about.css"
 
 export const metadata: { title: string; description: string } = {
     title: "Create Next App About",
