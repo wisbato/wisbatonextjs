@@ -21,7 +21,13 @@ const BlogsPage = () => {
     const handleNavigation = (title: string) => {
         const data = title.replace(/[^\w]+/gi, "-").toLowerCase();
         router.push(`/blogs/${data}?`)
-        window.scrollTo(0, 0)
+
+        // if (typeof window !== 'undefined') {
+        //     window?.scrollTo(0, 0)
+        // }
+
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
     };
 
     const [currentPage, setCurrentPage] = useState(0);

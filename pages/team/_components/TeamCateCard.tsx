@@ -1,6 +1,6 @@
 "use client"
 
-import './teamcatecard.css'
+// import './teamcatecard.css'
 import { TeamCategory, TeamMember, useFetchTeam } from '../../../Hooks/useFetchData'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'

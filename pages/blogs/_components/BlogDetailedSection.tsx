@@ -46,39 +46,30 @@ const BlogDetailedSection: React.FC<BlogDetailedSectionProps> = ({ detailedBlog 
         setHeadings(headingArray);
         setHtmlContent(tempDiv.innerHTML);
     }, [detailedBlog?.content, testHtml]);
-    // const testHtml: string | undefined = detailedBlog?.content[0]?.description
-
-    // useEffect(() => {
-    //     if (!detailedBlog?.content) return;
-
-    //     const tempDiv: any = document.createElement('div');
-    //     tempDiv.innerHTML = testHtml;
-
-    //     const headingNodes = tempDiv.querySelectorAll('h2, h3');
-    //     const headingArray: Heading[] = Array.from(headingNodes).map((node: any, index) => {
-    //         const id = `heading-${index}`;
-    //         node.id = id;
-    //         return {
-    //             id,
-    //             title: node.textContent || '',
-    //             tagName: node.tagName.toLowerCase(),
-    //         };
-    //     });
-
-    //     setHeadings(headingArray);
-    //     setHtmlContent(tempDiv.innerHTML);
-    // }, [detailedBlog?.content]);
 
     const handleTitleClick = (id: string) => {
-        const element = document.getElementById(id);
-        if (element) {
-            const offsetPosition = element.getBoundingClientRect().top + window.scrollY - 70;
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth',
-            });
+        if (typeof window !== 'undefined') {
+            const element = document.getElementById(id);
+            if (element) {
+                const offsetPosition = element.getBoundingClientRect().top + window?.scrollY - 70;
+                window?.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth',
+                });
+            }
         }
     };
+
+    // const handleTitleClick = (id: string) => {
+    //     const element = document.getElementById(id);
+    //     if (element) {
+    //         const offsetPosition = element.getBoundingClientRect().top + window?.scrollY - 70;
+    //         window?.scrollTo({
+    //             top: offsetPosition,
+    //             behavior: 'smooth',
+    //         });
+    //     }
+    // };
 
     return (
         <div className="blog-content-section">

@@ -7,13 +7,13 @@ const CaseStudies = ({ item }: { item: { type: string; title: string; descriptio
     return (
         <div className="case-studies-section visible-section" ref={animateRef}>
             <div className="case-studies-section-desc">
-                <h2>{item.type}</h2>
-                <h1>{item.title}</h1>
-                <div className="work-description-paragraphs" dangerouslySetInnerHTML={{ __html: item.description }} />
+                <h2>{item?.type}</h2>
+                <h1>{item?.title}</h1>
+                <div className="work-description-paragraphs" dangerouslySetInnerHTML={{ __html: item?.description }} />
             </div>
 
             <div className="case-studies-images">
-                <Image width={1000} height={500} src={item.image} alt="..." />
+                <Image width={1000} height={500} src={item?.image} alt="..." />
             </div>
         </div>
     )

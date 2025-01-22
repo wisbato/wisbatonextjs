@@ -11,7 +11,7 @@ const OpeningsTabs = ({ openings, isLoading, error }: { openings: Opening[], isL
 
     const categoriesMap: { [key: string]: number } = {};
 
-    openings.forEach((opening: Opening) => {
+    openings?.forEach((opening: Opening) => {
         categoriesMap[opening.category] = (categoriesMap[opening.category] || 0) + 1;
     });
 
@@ -41,7 +41,7 @@ const OpeningsTabs = ({ openings, isLoading, error }: { openings: Opening[], isL
     return (
         <div className='openings-tabs-section' >
             <div className="tab-box">
-                {categories.map((category, i) => (
+                {categories?.map((category, i) => (
                     <button
                         onClick={() => handleTabClick(category)}
                         key={i}
@@ -59,7 +59,7 @@ const OpeningsTabs = ({ openings, isLoading, error }: { openings: Opening[], isL
             <div className="content-box">
                 <div className="openings-cards-list">
                     {
-                        openings.map((item: Opening, i: number) => <OpeningsCard key={i} data={item} selectedTab={selectedTab} isLoading={isLoading} error={error} />)
+                        openings?.map((item: Opening, i: number) => <OpeningsCard key={i} data={item} selectedTab={selectedTab} isLoading={isLoading} error={error} />)
                     }
                 </div>
             </div>

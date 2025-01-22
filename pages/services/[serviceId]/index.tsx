@@ -1,6 +1,6 @@
 "use client"
 
-import "../../globals.css"
+// import "../../globals.css"
 import DefaultPhoneInput from '../../../components/InputFields/DefaultPhoneInput';
 import ScrollButton from '../../../components/ScrollButton';
 import DefaultTextArea from '../../../components/InputFields/DefaultTextArea';

@@ -1,7 +1,7 @@
 // "use server"
 
 import AboutPage from "./AboutPage"
-import "../globals.css"
+// import "../globals.css"
 // import "./about.css"
 
 export const metadata: { title: string; description: string } = {

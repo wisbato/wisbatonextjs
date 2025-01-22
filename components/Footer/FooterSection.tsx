@@ -15,9 +15,9 @@ const FooterSection = () => {
 
     return (
         <div className='footer-section'>
-            <h2 className="footer-title" >Let’s Make Something Great Together</h2>
+            <h2 className="footer-title" >Let&apos;s Make Something Great Together</h2>
 
-            <div style={{ display: "flex", alignItems: "center", gap: "100px" }} >
+            <div className="footer-main-contents" >
                 <div className="address-cards">
                     <div className="address-card">
                         <div className="address-title">
@@ -64,9 +64,9 @@ const FooterSection = () => {
                 </div>
 
                 <div className="footer-desc" >
-                    <p>We're here to help. Whether you have questions about our services, need a consultation, or are ready to start your next project, don't hesitate to contact us.</p>
+                    <p>We&apos;re here to help. Whether you have questions about our services, need a consultation, or are ready to start your next project, don&apos;t hesitate to contact us.</p>
 
-                    <div style={{ display: "flex", gap: "20px" }} >
+                    <div className="footer-contact-btns">
                         <button onClick={() => handleMailto("hello@wisbato.com")} >
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16.667 3.3335H3.33366C2.41318 3.3335 1.66699 4.07969 1.66699 5.00016V15.0002C1.66699 15.9206 2.41318 16.6668 3.33366 16.6668H16.667C17.5875 16.6668 18.3337 15.9206 18.3337 15.0002V5.00016C18.3337 4.07969 17.5875 3.3335 16.667 3.3335Z" stroke="#F2F2F2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />

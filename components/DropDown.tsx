@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import "../pages/globals.css"
+// import "../pages/globals.css"
 
 const DropDown = () => {
     const [isOpen, setIsOpen] = useState(false);

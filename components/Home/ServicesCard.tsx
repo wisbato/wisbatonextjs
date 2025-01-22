@@ -1,7 +1,7 @@
 import DefaultButton from '../DefaultButton'
 // import { useNavigate } from 'react-router-dom';
 import useScrollAnimation from '../../Hooks/useScrollAnimation';
-import "./Home.css"
+// import "./Home.css"
 import { redirect } from 'next/navigation';
 import Image from 'next/image';
 // import { LazyLoadImage } from 'react-lazy-load-image-component';

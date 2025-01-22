@@ -1,6 +1,6 @@
 'use client';
 
-import './Home.css';
+// import './Home.css';
 import useScrollAnimation from '../../Hooks/useScrollAnimation';
 import { WorkData } from '../../Hooks/useFetchData';
 import { useRouter } from 'next/navigation';

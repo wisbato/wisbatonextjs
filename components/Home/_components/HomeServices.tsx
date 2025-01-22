@@ -1,6 +1,6 @@
 import useScrollAnimation from "../../../Hooks/useScrollAnimation";
 import { services } from "../../../utils/servicesData";
-import "./homeSections.css";
+// import "./homeSections.css";
 // import { useNavigate } from 'react-router-dom';
 import { redirect } from 'next/navigation';
 

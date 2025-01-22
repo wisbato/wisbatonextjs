@@ -1,4 +1,4 @@
-import '../components/Home/Home.css';
+// import '../components/Home/Home.css';
 
 const ScrollButton = ({ color, hide, nextSection }: { color: string; hide?: boolean; nextSection: string }) => {
 

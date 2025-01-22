@@ -1,7 +1,7 @@
 "use client"
 
-import "../works.css"
-import '../../../components/Home/Home.css';
+// import "../works.css"
+// import '../../../components/Home/Home.css';
 import WorksCard from "../../../components/Home/WorksCard"
 import CaseStudies from "../_components/CaseStudies";
 import { useEffect, useState } from "react";

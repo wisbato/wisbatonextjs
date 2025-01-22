@@ -1,4 +1,11 @@
-export const testimonialQuots = [
+export type TestimonialQuots = {
+  id: number;
+  name: string;
+  jobTitle: string;
+  text: string;
+};
+
+export const testimonialQuots: TestimonialQuots[] = [
   {
     id: 1,
     name: "Andrew",

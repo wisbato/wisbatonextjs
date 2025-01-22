@@ -1,4 +1,4 @@
-import "./homeSections.css";
+// import "./homeSections.css";
 
 const HomeWorks = () => {
     return (

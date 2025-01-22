@@ -1,7 +1,7 @@
 // "use client"
 
 import { useState } from "react";
-import "../../pages/globals.css"
+// import "../../pages/globals.css"
 
 const ServicesDropDown = ({ onServiceSelected }: { onServiceSelected: (category: string) => void }) => {
     const [isOpen, setIsOpen] = useState(false);

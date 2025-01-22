@@ -70,7 +70,7 @@
 
 // 1 //////////////////////////////
 
-import "../globals.css"
+// import "../globals.css"
 import WorksPage from "./_components/WorksPage";
 // import "./works.css"
 

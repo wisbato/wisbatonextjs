@@ -10,7 +10,7 @@ const OpeningsEyeExpand = ({ openings, isLoading, error }: { openings: Opening[]
 
     const categoriesMap: { [key: string]: number } = {};
 
-    openings.forEach((opening: Opening) => {
+    openings?.forEach((opening: Opening) => {
         categoriesMap[opening.category] = (categoriesMap[opening.category] || 0) + 1;
     });
 
@@ -18,14 +18,14 @@ const OpeningsEyeExpand = ({ openings, isLoading, error }: { openings: Opening[]
 
 
     const [selectedTab, setSelectedTab] = useState(categories[0])
-    const filteredCategory = openings.filter((value: { category: string }) => value.category === selectedTab)
+    const filteredCategory = openings?.filter((value: { category: string }) => value.category === selectedTab)
 
     const handleTabClick = (category: string) => {
         setSelectedTab(category);
     };
     return (
         <div className='openings-eye-expand-component'>
-            {categories.map((category, i) => (
+            {categories?.map((category, i) => (
                 <div key={i} className="openings-eye-expand">
                     <div key={i} onClick={() => handleTabClick(category)} className="openings-eye-expand-title">
                         <p>{category} ({categoriesMap[category]})</p>
@@ -38,7 +38,7 @@ const OpeningsEyeExpand = ({ openings, isLoading, error }: { openings: Opening[]
                     </div>
                     {selectedTab === category && <div className="openings-cards-list">
                         {
-                            filteredCategory.map((item: Opening) => <OpeningsCard key={item?.id} data={item} selectedTab={selectedTab} isLoading={isLoading} error={error} />)
+                            filteredCategory?.map((item: Opening) => <OpeningsCard key={item?.id} data={item} selectedTab={selectedTab} isLoading={isLoading} error={error} />)
                         }
                     </div>
                     }

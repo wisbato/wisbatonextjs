@@ -1,6 +1,6 @@
 "use client"
 
-import './Home.css';
+// import './Home.css';
 import ScrollButton from '../ScrollButton';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';

@@ -4,7 +4,7 @@ import { Opening, useFetchCareers } from '../../../Hooks/useFetchData';
 import { useEffect, useState } from 'react';
 import ResumeUpload from '../_components/ResumeUpload';
 import RoutesMap from '../../../components/RoutesMap/BreadCrumb';
-import "../careers.css";
+// import "../careers.css";
 import Skeleton from 'react-loading-skeleton';
 import { useParams } from 'next/navigation';
 import Head from 'next/head';
@@ -15,6 +15,7 @@ const CareersRequirement = () => {
     // const careersIdValue = title || "";
 
     const params = useParams();
+    console.log("params: ", params)
     const careersIdValue = params?.careersId || "Default Title";
 
     const [showPopup, setShowPopup] = useState(false);
@@ -43,7 +44,7 @@ const CareersRequirement = () => {
     };
 
     const handleShare = async () => {
-        if (navigator.share) {
+        if (typeof window !== 'undefined' && navigator.share) {
             try {
                 await navigator.share({
                     title: opening?.name,
@@ -58,6 +59,23 @@ const CareersRequirement = () => {
             console.log('Web Share API not supported');
         }
     };
+
+    // const handleShare = async () => {
+    //     if (navigator.share) {
+    //         try {
+    //             await navigator.share({
+    //                 title: opening?.name,
+    //                 text: opening?.name,
+    //                 url: window?.location.href
+    //             });
+    //             console.log('Successfully shared');
+    //         } catch (error) {
+    //             console.error('Error sharing:', error);
+    //         }
+    //     } else {
+    //         console.log('Web Share API not supported');
+    //     }
+    // };
 
     return (
         <div className='career-requirements-section'>
