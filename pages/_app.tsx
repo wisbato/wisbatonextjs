@@ -28,11 +28,19 @@ import "@/pages/careers/_components/ResumeUpload.css"
 import '@/pages/team/_components/teamcatecard.css'
 import '@/components/Home/_components/homeSections.css'
 
+interface Window {
+  dataLayer?: Array<Record<string, unknown>>;
+}
+
+interface EventData {
+  [key: string]: string | number | boolean | undefined;
+}
+
 // GTM Function to initialize and track page views
 export const initializeGTM = (gtmId: string) => {
   // Initialize GTM script
-  (window as any).dataLayer = (window as any).dataLayer || [];
-  (window as any).dataLayer.push({
+  (window as Window).dataLayer = (window as Window).dataLayer || [];
+  (window as Window).dataLayer?.push({
     'gtm.start': new Date().getTime(),
     event: 'gtm.js'
   });
@@ -57,7 +65,7 @@ export const GTMPageView = () => {
   useEffect(() => {
     // Track page views
     const handleRouteChange = (url: string) => {
-      (window as any).dataLayer.push({
+      (window as Window).dataLayer?.push({
         event: 'pageview',
         page: url
       });
@@ -89,9 +97,9 @@ export default function App({ Component, pageProps }: AppProps) {
 }
 
 // Optional: GTM Event Tracking Function
-export const trackEvent = (eventName: string, eventData: any = {}) => {
-  if ((window as any).dataLayer) {
-    (window as any).dataLayer.push({
+export const trackEvent = (eventName: string, eventData: EventData = {}) => {
+  if ((window as Window).dataLayer) {
+    (window as Window).dataLayer?.push({
       event: eventName,
       ...eventData
     });
