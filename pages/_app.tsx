@@ -82,9 +82,9 @@ export const GTMPageView = () => {
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
-    initializeGTM('GTM-TXBL8KWB');
+    initializeGTM('GTM-5XCQZZ57'); // prasoon
+    // initializeGTM('GTM-TXBL8KWB'); mine
   }, []);
-
 
   return (
     <>

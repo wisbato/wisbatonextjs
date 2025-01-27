@@ -279,6 +279,7 @@
 
 .home-works-card {
   width: calc(20% - 30px);
+  /* height: 100%; */
   position: relative;
 
   display: flex;
@@ -462,9 +463,10 @@
 }
 
 .home-testimonial .testimonial-desc {
-  font-size: 24px;
+  /* font-size: 24px; */
+  font-size: 17px;
   font-weight: 400;
-  line-height: 31.27px;
+  line-height: 28px;
 
   @media screen and (max-width: 768px) {
     font-size: 20px;

@@ -2,7 +2,7 @@ import DefaultButton from '../DefaultButton'
 // import { useNavigate } from 'react-router-dom';
 import useScrollAnimation from '../../Hooks/useScrollAnimation';
 // import "./Home.css"
-import { redirect } from 'next/navigation';
+import { redirect, useRouter } from 'next/navigation';
 import Image from 'next/image';
 // import { LazyLoadImage } from 'react-lazy-load-image-component';
 // import 'react-lazy-load-image-component/src/effects/blur.css';
@@ -19,11 +19,20 @@ const ServicesCard = ({ data }: ServicesCardProps) => {
     const isReverse = data.id % 2 !== 0;
     const flexDirectionClass = isReverse ? 'reverse' : 'normal';
 
+    // const handleNavigation = (title: string) => {
+    //     const data = title.replace(/[^\w]/gi, "-").toLowerCase();
+    //     // navigate(`/services/${data}`);
+    //     window.scrollTo(0, 0);
+    //     redirect(`/services/${data}`);
+    // };
+
+    const router = useRouter()
+
     const handleNavigation = (title: string) => {
-        const data = title.replace(/[^\w]/gi, "-").toLowerCase();
-        // navigate(`/services/${data}`);
-        window.scrollTo(0, 0);
-        redirect(`/services/${data}`);
+        const formattedSlug = title.replace(/[^\w]+/gi, "-").toLowerCase();
+
+        router.push(`/services/${formattedSlug}`, { scroll: false });
+        window.scrollTo(0, 0)
     };
 
     return (

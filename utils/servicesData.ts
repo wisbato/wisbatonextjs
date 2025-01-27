@@ -3048,10 +3048,10 @@ export const services = [
   {
     id: 8,
     icon: `<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M30.9375 7.5H25.3125C25.0639 7.5 24.8254 7.40123 24.6496 7.22541C24.4738 7.0496 24.375 6.81114 24.375 6.5625C24.375 6.31386 24.4738 6.0754 24.6496 5.89959C24.8254 5.72377 25.0639 5.625 25.3125 5.625H30.9375C31.1861 5.625 31.4246 5.72377 31.6004 5.89959C31.7762 6.0754 31.875 6.31386 31.875 6.5625C31.875 6.81114 31.7762 7.0496 31.6004 7.22541C31.4246 7.40123 31.1861 7.5 30.9375 7.5ZM38.4375 58.125H17.8125C16.5698 58.1235 15.3783 57.6292 14.4996 56.7504C13.6208 55.8717 13.1265 54.6802 13.125 53.4375V40.3125C13.125 40.0639 13.2238 39.8254 13.3996 39.6496C13.5754 39.4738 13.8139 39.375 14.0625 39.375C14.3111 39.375 14.5496 39.4738 14.7254 39.6496C14.9012 39.8254 15 40.0639 15 40.3125V53.4375C15 54.9881 16.2619 56.25 17.8125 56.25H38.4375C39.9881 56.25 41.25 54.9881 41.25 53.4375V21.5625C41.25 21.3139 41.3488 21.0754 41.5246 20.8996C41.7004 20.7238 41.9389 20.625 42.1875 20.625C42.4361 20.625 42.6746 20.7238 42.8504 20.8996C43.0262 21.0754 43.125 21.3139 43.125 21.5625V53.4375C43.125 56.0213 41.0231 58.125 38.4375 58.125Z" fill="#F2F2F2"/>
-<path d="M42.1867 9.375C41.9381 9.375 41.6996 9.27623 41.5238 9.10041C41.348 8.9246 41.2492 8.68614 41.2492 8.4375V6.5625C41.2492 5.01187 39.9873 3.75 38.4367 3.75H17.8117C16.2611 3.75 14.9992 5.01187 14.9992 6.5625V8.4375C14.9992 8.68614 14.9004 8.9246 14.7246 9.10041C14.5488 9.27623 14.3104 9.375 14.0617 9.375C13.8131 9.375 13.5746 9.27623 13.3988 9.10041C13.223 8.9246 13.1242 8.68614 13.1242 8.4375V6.5625C13.1242 3.97875 15.2261 1.875 17.8117 1.875H38.4367C41.0223 1.875 43.1242 3.97875 43.1242 6.5625V8.4375C43.1242 8.68614 43.0254 8.9246 42.8496 9.10041C42.6738 9.27623 42.4354 9.375 42.1867 9.375ZM27.1867 46.875H19.6867C19.4381 46.875 19.1996 46.7762 19.0238 46.6004C18.848 46.4246 18.7492 46.1861 18.7492 45.9375C18.7492 45.6889 18.848 45.4504 19.0238 45.2746C19.1996 45.0988 19.4381 45 19.6867 45H27.1867C27.4354 45 27.6738 45.0988 27.8496 45.2746C28.0254 45.4504 28.1242 45.6889 28.1242 45.9375C28.1242 46.1861 28.0254 46.4246 27.8496 46.6004C27.6738 46.7762 27.4354 46.875 27.1867 46.875ZM32.8117 50.625H19.6867C19.4381 50.625 19.1996 50.5262 19.0238 50.3504C18.848 50.1746 18.7492 49.9361 18.7492 49.6875C18.7492 49.4389 18.848 49.2004 19.0238 49.0246C19.1996 48.8488 19.4381 48.75 19.6867 48.75H32.8117C33.0604 48.75 33.2988 48.8488 33.4746 49.0246C33.6504 49.2004 33.7492 49.4389 33.7492 49.6875C33.7492 49.9361 33.6504 50.1746 33.4746 50.3504C33.2988 50.5262 33.0604 50.625 32.8117 50.625ZM36.5617 43.125H19.6867C19.4381 43.125 19.1996 43.0262 19.0238 42.8504C18.848 42.6746 18.7492 42.4361 18.7492 42.1875C18.7492 41.9389 18.848 41.7004 19.0238 41.5246C19.1996 41.3488 19.4381 41.25 19.6867 41.25H36.5617C36.8104 41.25 37.0488 41.3488 37.2246 41.5246C37.4004 41.7004 37.4992 41.9389 37.4992 42.1875C37.4992 42.4361 37.4004 42.6746 37.2246 42.8504C37.0488 43.0262 36.8104 43.125 36.5617 43.125ZM16.8742 26.25C14.2886 26.25 12.1867 24.1462 12.1867 21.5625C12.1867 18.9788 14.2886 16.875 16.8742 16.875C19.4598 16.875 21.5617 18.9788 21.5617 21.5625C21.5617 24.1462 19.4598 26.25 16.8742 26.25ZM16.8742 18.75C15.3236 18.75 14.0617 20.0119 14.0617 21.5625C14.0617 23.1131 15.3236 24.375 16.8742 24.375C18.4248 24.375 19.6867 23.1131 19.6867 21.5625C19.6867 20.0119 18.4248 18.75 16.8742 18.75ZM16.8742 37.5C13.5784 37.4966 10.4052 36.2498 7.98859 34.0088C7.86547 33.8949 7.77514 33.7502 7.72699 33.5896C7.67884 33.429 7.67464 33.2584 7.71483 33.0956C8.06216 31.6754 8.8768 30.4132 10.0279 29.5117C11.179 28.6102 12.5996 28.1218 14.0617 28.125H19.6867C21.1486 28.1223 22.569 28.6106 23.7203 29.5116C24.8715 30.4126 25.6868 31.6741 26.0355 33.0938C26.0757 33.2565 26.0715 33.4271 26.0233 33.5877C25.9752 33.7483 25.8848 33.8931 25.7617 34.0069C23.3449 36.2491 20.1709 37.4966 16.8742 37.5ZM9.69858 33.0131C13.7523 36.39 19.9961 36.39 24.0498 33.0131C23.7162 32.1261 23.1196 31.3622 22.3398 30.8237C21.5601 30.2852 20.6344 29.9978 19.6867 30H14.0617C13.1141 29.9978 12.1884 30.2852 11.4086 30.8237C10.6288 31.3622 10.0322 32.1261 9.69858 33.0131Z" fill="#F2F2F2"/>
-<path d="M16.875 37.5C9.63938 37.5 3.75 31.6125 3.75 24.375C3.75 17.1375 9.63938 11.25 16.875 11.25C24.1106 11.25 30 17.1375 30 24.375C30 31.6125 24.1106 37.5 16.875 37.5ZM16.875 13.125C10.6706 13.125 5.625 18.1706 5.625 24.375C5.625 30.5794 10.6706 35.625 16.875 35.625C23.0794 35.625 28.125 30.5794 28.125 24.375C28.125 18.1706 23.0794 13.125 16.875 13.125ZM8.4375 43.0313C7.92 43.0313 7.5 42.705 7.5 42.1875V42C7.5 41.7514 7.59877 41.5129 7.77459 41.3371C7.9504 41.1613 8.18886 41.0625 8.4375 41.0625C8.68614 41.0625 8.9246 41.1613 9.10041 41.3371C9.27623 41.5129 9.375 41.7514 9.375 42C9.375 42.5175 8.955 43.0313 8.4375 43.0313ZM8.4375 46.7812C7.92 46.7812 7.5 46.455 7.5 45.9375V45.75C7.5 45.5014 7.59877 45.2629 7.77459 45.0871C7.9504 44.9113 8.18886 44.8125 8.4375 44.8125C8.68614 44.8125 8.9246 44.9113 9.10041 45.0871C9.27623 45.2629 9.375 45.5014 9.375 45.75C9.375 46.2675 8.955 46.7812 8.4375 46.7812ZM8.4375 50.5312C7.92 50.5312 7.5 50.205 7.5 49.6875V49.5C7.5 49.2514 7.59877 49.0129 7.77459 48.8371C7.9504 48.6613 8.18886 48.5625 8.4375 48.5625C8.68614 48.5625 8.9246 48.6613 9.10041 48.8371C9.27623 49.0129 9.375 49.2514 9.375 49.5C9.375 50.0175 8.955 50.5312 8.4375 50.5312ZM45.6375 50.625H44.0625C43.8139 50.625 43.5754 50.5262 43.3996 50.3504C43.2238 50.1746 43.125 49.9361 43.125 49.6875C43.125 49.4389 43.2238 49.2004 43.3996 49.0246C43.5754 48.8488 43.8139 48.75 44.0625 48.75H44.8819L45.3412 46.6219C45.3782 46.4496 45.4631 46.2912 45.5862 46.1652C45.7093 46.0391 45.8655 45.9504 46.0369 45.9094C46.9416 45.6876 47.8063 45.3264 48.6 44.8387C48.7497 44.7474 48.9219 44.6999 49.0973 44.7015C49.2726 44.7032 49.444 44.754 49.5919 44.8481L51.4481 46.035L52.5975 44.8763L51.4106 43.035C51.3154 42.8869 51.2636 42.7151 51.2613 42.5391C51.259 42.363 51.3062 42.1899 51.3975 42.0394C51.8853 41.246 52.2459 40.3812 52.4663 39.4763C52.5075 39.3054 52.5957 39.1495 52.721 39.0263C52.8463 38.903 53.0035 38.8173 53.175 38.7787L55.3106 38.3044V36.6975L53.175 36.2231C53.0035 36.1846 52.8463 36.0989 52.721 35.9756C52.5957 35.8523 52.5075 35.6965 52.4663 35.5256C52.2451 34.621 51.8845 33.7563 51.3975 32.9625C51.3054 32.8127 51.2576 32.6398 51.2596 32.464C51.2616 32.2881 51.3133 32.1165 51.4087 31.9687L52.5975 30.1106L51.45 28.9631L49.5919 30.1519C49.4441 30.2465 49.2727 30.2975 49.0973 30.2992C48.9219 30.3008 48.7495 30.253 48.6 30.1613C47.806 29.6743 46.9414 29.3131 46.0369 29.0906C45.8655 29.0496 45.7093 28.9609 45.5862 28.8348C45.4631 28.7088 45.3782 28.5504 45.3412 28.3781L44.8819 26.25H44.0625C43.8139 26.25 43.5754 26.1512 43.3996 25.9754C43.2238 25.7996 43.125 25.5611 43.125 25.3125C43.125 25.0639 43.2238 24.8254 43.3996 24.6496C43.5754 24.4738 43.8139 24.375 44.0625 24.375H45.6375C45.8517 24.3754 46.0593 24.4491 46.2257 24.5838C46.3922 24.7185 46.5075 24.9062 46.5525 25.1156L47.0531 27.4275C47.7394 27.6356 48.4125 27.9169 49.0612 28.2675L51.075 26.9794C51.2551 26.8643 51.4691 26.8142 51.6815 26.8374C51.894 26.8606 52.0921 26.9557 52.2431 27.1069L54.4575 29.3194C54.6084 29.4706 54.7031 29.6689 54.726 29.8813C54.7488 30.0938 54.6984 30.3076 54.5831 30.4875L53.295 32.5012C53.6456 33.1519 53.9269 33.825 54.135 34.5131L56.4506 35.0269C56.659 35.073 56.8454 35.1888 56.979 35.3551C57.1127 35.5215 57.1855 35.7285 57.1856 35.9419V39.0544C57.1855 39.2678 57.1127 39.4748 56.979 39.6411C56.8454 39.8075 56.659 39.9233 56.4506 39.9694L54.135 40.4831C53.9234 41.1797 53.6419 41.8531 53.295 42.4931L54.5813 44.4881C54.6977 44.6674 54.7491 44.8811 54.727 45.0938C54.7048 45.3064 54.6103 45.5049 54.4594 45.6562L52.245 47.8875C52.0941 48.0395 51.8957 48.1352 51.6828 48.1587C51.47 48.1822 51.2555 48.1322 51.075 48.0169L49.0612 46.7288C48.4216 47.075 47.7488 47.3564 47.0531 47.5688L46.5525 49.8806C46.5083 50.0907 46.3933 50.2793 46.2267 50.4147C46.0602 50.5502 45.8522 50.6245 45.6375 50.625Z" fill="#F2F2F2"/>
-<path d="M46.0369 42.69C45.8236 42.6897 45.6169 42.6168 45.4507 42.4832C45.2845 42.3496 45.1688 42.1633 45.1227 41.9552C45.0766 41.747 45.1029 41.5293 45.1972 41.338C45.2914 41.1468 45.4481 40.9934 45.6412 40.9031C46.2886 40.6002 46.8365 40.1193 47.2209 39.5168C47.6054 38.9142 47.8105 38.2148 47.8125 37.5C47.8116 36.8816 47.658 36.2731 47.3652 35.7284C47.0725 35.1837 46.6497 34.7198 46.1345 34.3778C45.6192 34.0359 45.0275 33.8265 44.4119 33.7684C43.7962 33.7102 43.1758 33.805 42.6056 34.0444C42.4915 34.0981 42.3676 34.1282 42.2415 34.1329C42.1155 34.1376 41.9897 34.1168 41.8719 34.0718C41.754 34.0267 41.6465 33.9583 41.5557 33.8707C41.4649 33.7831 41.3927 33.6781 41.3434 33.5619C41.2942 33.4458 41.2689 33.3209 41.2691 33.1947C41.2693 33.0685 41.2949 32.9437 41.3445 32.8277C41.3941 32.7116 41.4665 32.6068 41.5576 32.5195C41.6486 32.4321 41.7564 32.3641 41.8744 32.3194C42.7296 31.9603 43.6602 31.8179 44.5836 31.905C45.507 31.992 46.3946 32.3058 47.1677 32.8183C47.9407 33.3309 48.5751 34.0264 49.0147 34.8431C49.4543 35.6599 49.6854 36.5725 49.6875 37.5C49.6851 38.5716 49.3777 39.6205 48.8014 40.5239C48.225 41.4274 47.4033 42.1481 46.4325 42.6019C46.3087 42.6599 46.1736 42.6899 46.0369 42.69ZM48.75 18.75H37.5C35.4319 18.75 33.75 17.0681 33.75 15C33.75 12.9319 35.4319 11.25 37.5 11.25H48.75C50.8181 11.25 52.5 12.9319 52.5 15C52.5 17.0681 50.8181 18.75 48.75 18.75ZM37.5 13.125C37.0172 13.1466 36.5614 13.3536 36.2274 13.7028C35.8934 14.0521 35.707 14.5167 35.707 15C35.707 15.4833 35.8934 15.9479 36.2274 16.2972C36.5614 16.6464 37.0172 16.8534 37.5 16.875H48.75C49.2328 16.8534 49.6886 16.6464 50.0226 16.2972C50.3566 15.9479 50.543 15.4833 50.543 15C50.543 14.5167 50.3566 14.0521 50.0226 13.7028C49.6886 13.3536 49.2328 13.1466 48.75 13.125H37.5Z" fill="#F2F2F2"/>
+<path d="M57.3281 42.0938C56.8305 41.2339 56.0126 40.6061 55.0533 40.3478C54.094 40.0895 53.0714 40.2218 52.2094 40.7156L43.0687 45.9938C42.5696 45.2458 41.8172 44.7032 40.95 44.4656L26.9625 40.725C25.8861 40.4345 24.7531 40.4248 23.6719 40.6969L18.75 41.925V40.3125C18.75 40.0639 18.6512 39.8254 18.4754 39.6496C18.2996 39.4738 18.0611 39.375 17.8125 39.375H10.3125C10.0639 39.375 9.8254 39.4738 9.64959 39.6496C9.47377 39.8254 9.375 40.0639 9.375 40.3125V41.25H2.8125C2.56386 41.25 2.3254 41.3488 2.14959 41.5246C1.97377 41.7004 1.875 41.9389 1.875 42.1875V55.3125C1.875 55.5611 1.97377 55.7996 2.14959 55.9754C2.3254 56.1512 2.56386 56.25 2.8125 56.25H9.375V57.1875C9.375 57.4361 9.47377 57.6746 9.64959 57.8504C9.8254 58.0262 10.0639 58.125 10.3125 58.125H17.8125C18.0611 58.125 18.2996 58.0262 18.4754 57.8504C18.6512 57.6746 18.75 57.4361 18.75 57.1875V55.8937L19.9594 56.4937C20.8711 56.9476 21.8753 57.185 22.8937 57.1875H36.9281C38.0807 57.19 39.2132 56.8859 40.2094 56.3063L55.9594 47.2125C56.8173 46.713 57.4427 45.8944 57.6992 44.9354C57.9556 43.9763 57.8222 42.9548 57.3281 42.0938ZM9.375 54.375H3.75V43.125H9.375V54.375ZM16.875 56.25H11.25V41.25H16.875V56.25ZM55.0219 45.5906L39.2719 54.6844C38.5596 55.0966 37.7511 55.3133 36.9281 55.3125H22.8937C22.1645 55.314 21.4451 55.1438 20.7938 54.8156L18.75 53.7938V43.8562L24.1219 42.5156C24.8949 42.3202 25.7052 42.3266 26.475 42.5344L40.4625 46.2844C40.8224 46.3778 41.1461 46.5766 41.3923 46.8552C41.6384 47.1339 41.7958 47.4797 41.8441 47.8483C41.8925 48.217 41.8296 48.5916 41.6636 48.9243C41.4977 49.257 41.2361 49.5326 40.9125 49.7156C40.7012 49.8403 40.467 49.9211 40.2238 49.9533C39.9805 49.9855 39.7333 49.9685 39.4969 49.9031L28.3125 46.9031C28.0713 46.8385 27.8143 46.8723 27.5981 46.9971C27.3818 47.1219 27.224 47.3276 27.1594 47.5688C27.0947 47.8099 27.1285 48.0669 27.2534 48.2832C27.3782 48.4994 27.5838 48.6572 27.825 48.7219L39.0094 51.7125C39.3274 51.7981 39.6551 51.8422 39.9844 51.8437C40.6403 51.8447 41.2845 51.6699 41.85 51.3375C42.2785 51.0928 42.6541 50.7654 42.9551 50.3743C43.256 49.9832 43.4763 49.5363 43.6031 49.0594C43.7071 48.6461 43.742 48.2184 43.7062 47.7937L53.1469 42.3469C53.5776 42.1078 54.0845 42.0455 54.5603 42.1732C55.0362 42.3009 55.4437 42.6086 55.6969 43.0313C55.9459 43.4604 56.0146 43.9707 55.8881 44.4504C55.7616 44.9301 55.4501 45.3401 55.0219 45.5906Z" fill="#F2F2F2"/>
+<path d="M14.0625 55.3125C14.3111 55.3125 14.5496 55.2137 14.7254 55.0379C14.9012 54.8621 15 54.6236 15 54.375V53.4375C15 53.1889 14.9012 52.9504 14.7254 52.7746C14.5496 52.5988 14.3111 52.5 14.0625 52.5C13.8139 52.5 13.5754 52.5988 13.3996 52.7746C13.2238 52.9504 13.125 53.1889 13.125 53.4375V54.375C13.125 54.6236 13.2238 54.8621 13.3996 55.0379C13.5754 55.2137 13.8139 55.3125 14.0625 55.3125ZM43.125 15.9375H39.6094L39.4406 15.5437L41.9344 13.0594C42.11 12.8824 42.2086 12.6431 42.2086 12.3938C42.2086 12.1444 42.11 11.9051 41.9344 11.7281L37.9594 7.75313C37.7824 7.57748 37.5431 7.47892 37.2937 7.47892C37.0444 7.47892 36.8051 7.57748 36.6281 7.75313L34.1437 10.2469L33.75 10.0781V6.5625C33.75 6.31386 33.6512 6.0754 33.4754 5.89959C33.2996 5.72377 33.0611 5.625 32.8125 5.625H27.1875C26.9389 5.625 26.7004 5.72377 26.5246 5.89959C26.3488 6.0754 26.25 6.31386 26.25 6.5625V10.0781L25.8562 10.2469L23.3719 7.75313C23.1949 7.57748 22.9556 7.47892 22.7062 7.47892C22.4569 7.47892 22.2176 7.57748 22.0406 7.75313L18.0656 11.7281C17.89 11.9051 17.7914 12.1444 17.7914 12.3938C17.7914 12.6431 17.89 12.8824 18.0656 13.0594L20.5594 15.5437L20.3906 15.9375H16.875C16.6264 15.9375 16.3879 16.0363 16.2121 16.2121C16.0363 16.3879 15.9375 16.6264 15.9375 16.875V22.5C15.9375 22.7486 16.0363 22.9871 16.2121 23.1629C16.3879 23.3387 16.6264 23.4375 16.875 23.4375H20.3906L20.5594 23.8312L18.0656 26.3156C17.8929 26.4944 17.7956 26.7327 17.7937 26.9813C17.7974 27.2294 17.8945 27.4671 18.0656 27.6469L22.0406 31.6219C22.2194 31.7946 22.4577 31.8919 22.7062 31.8938C22.9544 31.8901 23.1921 31.793 23.3719 31.6219L25.8562 29.1281L26.25 29.2969V32.8125C26.25 33.0611 26.3488 33.2996 26.5246 33.4754C26.7004 33.6512 26.9389 33.75 27.1875 33.75H32.8125C33.0611 33.75 33.2996 33.6512 33.4754 33.4754C33.6512 33.2996 33.75 33.0611 33.75 32.8125V29.2969L34.1437 29.1281L36.6281 31.6219C36.8094 31.7892 37.0471 31.882 37.2937 31.882C37.5404 31.882 37.7781 31.7892 37.9594 31.6219L41.9344 27.6469C42.1055 27.4671 42.2026 27.2294 42.2063 26.9813C42.2044 26.7327 42.1071 26.4944 41.9344 26.3156L39.4406 23.8312L39.6094 23.4375H43.125C43.3736 23.4375 43.6121 23.3387 43.7879 23.1629C43.9637 22.9871 44.0625 22.7486 44.0625 22.5V16.875C44.0625 16.6264 43.9637 16.3879 43.7879 16.2121C43.6121 16.0363 43.3736 15.9375 43.125 15.9375ZM42.1875 21.5625H38.9438C38.7461 21.5626 38.5535 21.6253 38.3935 21.7415C38.2335 21.8576 38.1144 22.0214 38.0531 22.2094C37.9082 22.6804 37.7166 23.1358 37.4812 23.5687C37.3857 23.7475 37.3496 23.952 37.3782 24.1527C37.4069 24.3533 37.4988 24.5396 37.6406 24.6844L39.9469 26.9813L37.2937 29.6344L34.9969 27.3281C34.8521 27.1863 34.6658 27.0944 34.4652 27.0657C34.2645 27.0371 34.06 27.0732 33.8812 27.1687C33.4483 27.4041 32.9929 27.5957 32.5219 27.7406C32.3339 27.8019 32.1701 27.921 32.054 28.081C31.9378 28.241 31.8751 28.4336 31.875 28.6313V31.875H28.125V28.6313C28.1249 28.4336 28.0622 28.241 27.946 28.081C27.8299 27.921 27.6661 27.8019 27.4781 27.7406C27.0071 27.5957 26.5517 27.4041 26.1188 27.1687C25.94 27.0732 25.7355 27.0371 25.5348 27.0657C25.3342 27.0944 25.1479 27.1863 25.0031 27.3281L22.7062 29.6344L20.0531 26.9813L22.3594 24.6844C22.5012 24.5396 22.5931 24.3533 22.6218 24.1527C22.6504 23.952 22.6143 23.7475 22.5188 23.5687C22.2834 23.1358 22.0918 22.6804 21.9469 22.2094C21.8856 22.0214 21.7665 21.8576 21.6065 21.7415C21.4465 21.6253 21.2539 21.5626 21.0562 21.5625H17.8125V17.8125H21.0562C21.2539 17.8124 21.4465 17.7497 21.6065 17.6335C21.7665 17.5174 21.8856 17.3536 21.9469 17.1656C22.0918 16.6946 22.2834 16.2392 22.5188 15.8063C22.6143 15.6275 22.6504 15.423 22.6218 15.2223C22.5931 15.0217 22.5012 14.8354 22.3594 14.6906L20.0531 12.3938L22.7062 9.74063L25.0031 12.0469C25.1479 12.1887 25.3342 12.2806 25.5348 12.3093C25.7355 12.3379 25.94 12.3018 26.1188 12.2063C26.5517 11.9709 27.0071 11.7793 27.4781 11.6344C27.6661 11.5731 27.8299 11.454 27.946 11.294C28.0622 11.134 28.1249 10.9414 28.125 10.7438V7.5H31.875V10.7438C31.8751 10.9414 31.9378 11.134 32.054 11.294C32.1701 11.454 32.3339 11.5731 32.5219 11.6344C32.9929 11.7793 33.4483 11.9709 33.8812 12.2063C34.06 12.3018 34.2645 12.3379 34.4652 12.3093C34.6658 12.2806 34.8521 12.1887 34.9969 12.0469L37.2937 9.74063L39.9469 12.3938L37.6406 14.6906C37.4988 14.8354 37.4069 15.0217 37.3782 15.2223C37.3496 15.423 37.3857 15.6275 37.4812 15.8063C37.7166 16.2392 37.9082 16.6946 38.0531 17.1656C38.1144 17.3536 38.2335 17.5174 38.3935 17.6335C38.5535 17.7497 38.7461 17.8124 38.9438 17.8125H42.1875V21.5625Z" fill="#F2F2F2"/>
+<path d="M35.625 19.6875C35.625 18.575 35.2951 17.4874 34.677 16.5624C34.0589 15.6374 33.1804 14.9164 32.1526 14.4907C31.1248 14.0649 29.9938 13.9535 28.9026 14.1706C27.8115 14.3876 26.8092 14.9234 26.0225 15.71C25.2359 16.4967 24.7001 17.499 24.4831 18.5901C24.266 19.6813 24.3774 20.8123 24.8032 21.8401C25.2289 22.8679 25.9499 23.7464 26.8749 24.3645C27.7999 24.9826 28.8875 25.3125 30 25.3125C31.4914 25.311 32.9213 24.7179 33.9758 23.6633C35.0304 22.6088 35.6235 21.1789 35.625 19.6875ZM26.25 19.6875C26.25 18.9458 26.4699 18.2208 26.882 17.6041C27.294 16.9874 27.8797 16.5068 28.5649 16.223C29.2502 15.9391 30.0042 15.8649 30.7316 16.0096C31.459 16.1543 32.1272 16.5114 32.6517 17.0359C33.1761 17.5603 33.5333 18.2285 33.6779 18.9559C33.8226 19.6833 33.7484 20.4373 33.4646 21.1226C33.1807 21.8078 32.7001 22.3935 32.0834 22.8055C31.4667 23.2176 30.7417 23.4375 30 23.4375C29.0054 23.4375 28.0516 23.0424 27.3484 22.3392C26.6451 21.6359 26.25 20.6821 26.25 19.6875Z" fill="#F2F2F2"/>
+<path d="M51.5625 21.5625H49.6875C49.6875 16.3411 47.6133 11.3335 43.9212 7.64134C40.229 3.94921 35.2215 1.875 30 1.875C24.7786 1.875 19.771 3.94921 16.0788 7.64134C12.3867 11.3335 10.3125 16.3411 10.3125 21.5625H8.4375C6.94566 21.5625 5.51492 22.1551 4.46002 23.21C3.40513 24.2649 2.8125 25.6957 2.8125 27.1875C2.8125 28.6793 3.40513 30.1101 4.46002 31.165C5.51492 32.2199 6.94566 32.8125 8.4375 32.8125H13.125C13.3736 32.8125 13.6121 32.7137 13.7879 32.5379C13.9637 32.3621 14.0625 32.1236 14.0625 31.875V22.5C14.0625 22.2514 13.9637 22.0129 13.7879 21.8371C13.6121 21.6613 13.3736 21.5625 13.125 21.5625H12.1875C12.1875 16.8383 14.0642 12.3077 17.4047 8.96716C20.7452 5.62667 25.2758 3.75 30 3.75C34.7242 3.75 39.2548 5.62667 42.5953 8.96716C45.9358 12.3077 47.8125 16.8383 47.8125 21.5625H46.875C46.6264 21.5625 46.3879 21.6613 46.2121 21.8371C46.0363 22.0129 45.9375 22.2514 45.9375 22.5V31.875C45.9375 32.1236 46.0363 32.3621 46.2121 32.5379C46.3879 32.7137 46.6264 32.8125 46.875 32.8125H47.8125V35.625C47.8125 35.8736 47.7137 36.1121 47.5379 36.2879C47.3621 36.4637 47.1236 36.5625 46.875 36.5625H40.1437C39.9492 36.0162 39.591 35.5431 39.1179 35.2076C38.6449 34.8721 38.0799 34.6905 37.5 34.6875H35.625C34.8791 34.6875 34.1637 34.9838 33.6363 35.5113C33.1088 36.0387 32.8125 36.7541 32.8125 37.5C32.8125 38.2459 33.1088 38.9613 33.6363 39.4887C34.1637 40.0162 34.8791 40.3125 35.625 40.3125H37.5C38.0799 40.3095 38.6449 40.1279 39.1179 39.7924C39.591 39.4569 39.9492 38.9838 40.1437 38.4375H46.875C47.6202 38.4353 48.3343 38.1382 48.8613 37.6113C49.3882 37.0843 49.6853 36.3702 49.6875 35.625V32.8125H51.5625C53.0543 32.8125 54.4851 32.2199 55.54 31.165C56.5949 30.1101 57.1875 28.6793 57.1875 27.1875C57.1875 25.6957 56.5949 24.2649 55.54 23.21C54.4851 22.1551 53.0543 21.5625 51.5625 21.5625ZM8.4375 30.9375C7.44294 30.9375 6.48911 30.5424 5.78585 29.8391C5.08259 29.1359 4.6875 28.1821 4.6875 27.1875C4.6875 26.1929 5.08259 25.2391 5.78585 24.5359C6.48911 23.8326 7.44294 23.4375 8.4375 23.4375V30.9375ZM12.1875 30.9375H10.3125V23.4375H12.1875V30.9375ZM37.5 38.4375H35.625C35.3764 38.4375 35.1379 38.3387 34.9621 38.1629C34.7863 37.9871 34.6875 37.7486 34.6875 37.5C34.6875 37.2514 34.7863 37.0129 34.9621 36.8371C35.1379 36.6613 35.3764 36.5625 35.625 36.5625H37.5C37.7486 36.5625 37.9871 36.6613 38.1629 36.8371C38.3387 37.0129 38.4375 37.2514 38.4375 37.5C38.4375 37.7486 38.3387 37.9871 38.1629 38.1629C37.9871 38.3387 37.7486 38.4375 37.5 38.4375ZM49.6875 30.9375H47.8125V23.4375H49.6875V30.9375ZM51.5625 30.9375V23.4375C52.5571 23.4375 53.5109 23.8326 54.2141 24.5359C54.9174 25.2391 55.3125 26.1929 55.3125 27.1875C55.3125 28.1821 54.9174 29.1359 54.2141 29.8391C53.5109 30.5424 52.5571 30.9375 51.5625 30.9375Z" fill="#F2F2F2"/>
 </svg>
 `,
     slug: "it-support-in-calicut",
@@ -3235,266 +3235,266 @@ export const services = [
       },
     ],
   },
-  {
-    id: 9,
-    slug: "software-development-in-calicut",
-    title: "Software Development",
-    peopleTitle: "Software Development Team",
-    metaTitle: " Best software development company in Calicut.",
-    metaDescription:
-      "Develop a custom software for your business with affordable price with leading software development company in Calicut- Contact now",
-    description:
-      "We offer rapid and efficient technical support for your business and enjoy increased productivity at affordable prices. Empower your business with the right IT support.",
-    image: "/images/about3.jpg",
-    style: {
-      backgroundColor: "#F7D2DB",
-    },
-    width: "55",
-    context: {
-      mainTitle:
-        "Simplify Your Business with <span>Customized Software</span> Solutions",
-      subTitle: "WHY BUSINESS NEED A CUSTOMIZED SOFTWARE.",
-      content: `<a href="https://en.wikipedia.org/wiki/Software_development" target="_blank">Software development</a> is key to business success because it helps companies streamline operations, reduce time, enhance customer experiences, and Be competitive in the online marketplace .Custom software solutions allow businesses to automate processes, improve efficiency, and offer custom services to their clients. For businesses in Kerala, partnering with a reliable software development company in Calicut ensures access to new technology and expert guidance, helping them grow and innovate effectively.
-`,
-    },
-    workingProcess: [
-      {
-        id: 1,
-        title:
-          "Customized Software Solutions to Simplify Your Business and Drive To Success.",
-        image:
-          "/images/workingProcess/software/Requirement Gathering and Analysis.jpg",
-        alt: "software company in Calicut",
-        list: [
-          {
-            id: 1,
-            title: "Understanding Business Needs",
-            content:
-              "Before starting any project, the development team works closely with stakeholders to understand the business goals and specific software needs.",
-          },
-          {
-            id: 2,
-            title: "Identifying Target Users",
-            content:
-              "Defining who the end-users will be helps shape the features and usability of the software.",
-          },
-          {
-            id: 3,
-            title: "Technical Feasibility Study",
-            content:
-              "A technical assessment is conducted to determine whether the proposed solution is achievable within the constraints of technology and resources.",
-          },
-          {
-            id: 4,
-            title: "Documenting Requirements",
-            content:
-              "All the gathered requirements are documented in a detailed specification document that guides the rest of the development process.",
-          },
-        ],
-      },
-      {
-        id: 2,
-        title: "Project Planning and Management",
-        image:
-          "/images/workingProcess/software/Project Planning and Management.jpg",
-        alt: " software project planning and manage",
-        list: [
-          {
-            id: 5,
-            title: "Defining Project Scope",
-            content:
-              "The project scope outlines the software’s features, goals, and deliverables, ensuring everyone understands what is expected.",
-          },
-          {
-            id: 6,
-            title: "Timeline and Milestone Setup",
-            content:
-              "Setting clear deadlines and milestones helps keep the project on track and ensures that key goals are met at each stage of development.",
-          },
-          {
-            id: 7,
-            title: "Resource Allocation",
-            content:
-              "Assigning the right team members and tools to different aspects of the project ensures efficient use of resources and skills.",
-          },
-          {
-            id: 8,
-            title: "Risk Management",
-            content:
-              "Identifying potential risks early on allows the team to mitigate issues that may impact the project’s timeline or quality.",
-          },
-        ],
-      },
-      {
-        id: 3,
-        title: "System Design",
-        image: "/images/workingProcess/software/system design.jpg",
-        alt: "design your software project ",
-        list: [
-          {
-            id: 9,
-            title: "High-Level System Architecture",
-            content:
-              "The team designs a blueprint for the software, outlining the structure and interaction between components.",
-          },
-          {
-            id: 10,
-            title: " Database Design",
-            content:
-              "Database architects define how the software will store, retrieve, and manage data.",
-          },
-          {
-            id: 11,
-            title: " User Interface (UI) Design",
-            content:
-              "Designers create user-friendly interfaces that ensure smooth user interaction with the system.",
-          },
-          {
-            id: 12,
-            title: " Technology Stack Selection",
-            content:
-              "Choosing the right programming languages, frameworks, and tools for building the software is critical at this stage.",
-          },
-        ],
-      },
-      {
-        id: 4,
-        title: " Implementation (Coding)",
-        image: "/images/workingProcess/software/Implementation.jpg",
-        alt: "best software development company in Calicut",
-        list: [
-          {
-            id: 13,
-            title: " Modular Coding",
-            content:
-              "The project is divided into smaller, manageable modules that are developed independently.",
-          },
-          {
-            id: 14,
-            title: "Following Best Practices",
-            content:
-              "Developers adhere to coding standards and industry best practices to ensure clean, maintainable code.",
-          },
-          {
-            id: 15,
-            title: "Regular Code Reviews",
-            content:
-              "Senior developers or team leads review the code to identify any issues or improvements.",
-          },
-          {
-            id: 16,
-            title: " Version Control",
-            content:
-              "Version control systems like Git are used to track changes, manage collaboration, and avoid code conflicts.",
-          },
-        ],
-      },
-      {
-        id: 5,
-        title: "Testing and Quality Assurance (QA)",
-        image:
-          "/images/workingProcess/software/Testing and Quality Assurance.jpg",
-        alt: "software developers in Calicut test your quality and mistakes",
+//   {
+//     id: 9,
+//     slug: "software-development-in-calicut",
+//     title: "Software Development",
+//     peopleTitle: "Software Development Team",
+//     metaTitle: " Best software development company in Calicut.",
+//     metaDescription:
+//       "Develop a custom software for your business with affordable price with leading software development company in Calicut- Contact now",
+//     description:
+//       "We offer rapid and efficient technical support for your business and enjoy increased productivity at affordable prices. Empower your business with the right IT support.",
+//     image: "/images/about3.jpg",
+//     style: {
+//       backgroundColor: "#F7D2DB",
+//     },
+//     width: "55",
+//     context: {
+//       mainTitle:
+//         "Simplify Your Business with <span>Customized Software</span> Solutions",
+//       subTitle: "WHY BUSINESS NEED A CUSTOMIZED SOFTWARE.",
+//       content: `<a href="https://en.wikipedia.org/wiki/Software_development" target="_blank">Software development</a> is key to business success because it helps companies streamline operations, reduce time, enhance customer experiences, and Be competitive in the online marketplace .Custom software solutions allow businesses to automate processes, improve efficiency, and offer custom services to their clients. For businesses in Kerala, partnering with a reliable software development company in Calicut ensures access to new technology and expert guidance, helping them grow and innovate effectively.
+// `,
+//     },
+//     workingProcess: [
+//       {
+//         id: 1,
+//         title:
+//           "Customized Software Solutions to Simplify Your Business and Drive To Success.",
+//         image:
+//           "/images/workingProcess/software/Requirement Gathering and Analysis.jpg",
+//         alt: "software company in Calicut",
+//         list: [
+//           {
+//             id: 1,
+//             title: "Understanding Business Needs",
+//             content:
+//               "Before starting any project, the development team works closely with stakeholders to understand the business goals and specific software needs.",
+//           },
+//           {
+//             id: 2,
+//             title: "Identifying Target Users",
+//             content:
+//               "Defining who the end-users will be helps shape the features and usability of the software.",
+//           },
+//           {
+//             id: 3,
+//             title: "Technical Feasibility Study",
+//             content:
+//               "A technical assessment is conducted to determine whether the proposed solution is achievable within the constraints of technology and resources.",
+//           },
+//           {
+//             id: 4,
+//             title: "Documenting Requirements",
+//             content:
+//               "All the gathered requirements are documented in a detailed specification document that guides the rest of the development process.",
+//           },
+//         ],
+//       },
+//       {
+//         id: 2,
+//         title: "Project Planning and Management",
+//         image:
+//           "/images/workingProcess/software/Project Planning and Management.jpg",
+//         alt: " software project planning and manage",
+//         list: [
+//           {
+//             id: 5,
+//             title: "Defining Project Scope",
+//             content:
+//               "The project scope outlines the software’s features, goals, and deliverables, ensuring everyone understands what is expected.",
+//           },
+//           {
+//             id: 6,
+//             title: "Timeline and Milestone Setup",
+//             content:
+//               "Setting clear deadlines and milestones helps keep the project on track and ensures that key goals are met at each stage of development.",
+//           },
+//           {
+//             id: 7,
+//             title: "Resource Allocation",
+//             content:
+//               "Assigning the right team members and tools to different aspects of the project ensures efficient use of resources and skills.",
+//           },
+//           {
+//             id: 8,
+//             title: "Risk Management",
+//             content:
+//               "Identifying potential risks early on allows the team to mitigate issues that may impact the project’s timeline or quality.",
+//           },
+//         ],
+//       },
+//       {
+//         id: 3,
+//         title: "System Design",
+//         image: "/images/workingProcess/software/system design.jpg",
+//         alt: "design your software project ",
+//         list: [
+//           {
+//             id: 9,
+//             title: "High-Level System Architecture",
+//             content:
+//               "The team designs a blueprint for the software, outlining the structure and interaction between components.",
+//           },
+//           {
+//             id: 10,
+//             title: " Database Design",
+//             content:
+//               "Database architects define how the software will store, retrieve, and manage data.",
+//           },
+//           {
+//             id: 11,
+//             title: " User Interface (UI) Design",
+//             content:
+//               "Designers create user-friendly interfaces that ensure smooth user interaction with the system.",
+//           },
+//           {
+//             id: 12,
+//             title: " Technology Stack Selection",
+//             content:
+//               "Choosing the right programming languages, frameworks, and tools for building the software is critical at this stage.",
+//           },
+//         ],
+//       },
+//       {
+//         id: 4,
+//         title: " Implementation (Coding)",
+//         image: "/images/workingProcess/software/Implementation.jpg",
+//         alt: "best software development company in Calicut",
+//         list: [
+//           {
+//             id: 13,
+//             title: " Modular Coding",
+//             content:
+//               "The project is divided into smaller, manageable modules that are developed independently.",
+//           },
+//           {
+//             id: 14,
+//             title: "Following Best Practices",
+//             content:
+//               "Developers adhere to coding standards and industry best practices to ensure clean, maintainable code.",
+//           },
+//           {
+//             id: 15,
+//             title: "Regular Code Reviews",
+//             content:
+//               "Senior developers or team leads review the code to identify any issues or improvements.",
+//           },
+//           {
+//             id: 16,
+//             title: " Version Control",
+//             content:
+//               "Version control systems like Git are used to track changes, manage collaboration, and avoid code conflicts.",
+//           },
+//         ],
+//       },
+//       {
+//         id: 5,
+//         title: "Testing and Quality Assurance (QA)",
+//         image:
+//           "/images/workingProcess/software/Testing and Quality Assurance.jpg",
+//         alt: "software developers in Calicut test your quality and mistakes",
 
-        list: [
-          {
-            id: 13,
-            title: "  Unit Testing",
-            content:
-              "Each module is tested individually to ensure that it functions as expected.",
-          },
-          {
-            id: 14,
-            title: " Integration Testing",
-            content:
-              "The team checks how different modules work together to detect any issues with integration.",
-          },
-          {
-            id: 15,
-            title: "Performance Testing",
-            content:
-              "Testing the software for speed, scalability, and responsiveness under different loads.",
-          },
-          {
-            id: 16,
-            title: "  Bug Fixing and Optimization",
-            content:
-              "Any bugs discovered during testing are fixed, and the software is optimized for better performance.",
-          },
-        ],
-      },
-      {
-        id: 6,
-        title: " Deployment and Maintenance",
-        image:
-          "/images/workingProcess/software/Deployment and Maintenance (2).jpg",
-        alt: "software Deployment and Maintenance",
-        list: [
-          {
-            id: 13,
-            title: "  Deployment to Live Environment",
-            content:
-              "Once the software is thoroughly tested, it is deployed to the production environment for real-world use.",
-          },
-          {
-            id: 14,
-            title: "User Training and Documentation",
-            content:
-              "End-users are trained on how to use the software, and comprehensive documentation is provided.",
-          },
-          {
-            id: 15,
-            title: "Monitoring and Feedback",
-            content:
-              "The software is monitored for any performance issues or bugs, and user feedback is collected for further improvement.",
-          },
-          {
-            id: 16,
-            title: "Ongoing Maintenance and Updates",
-            content:
-              "Regular updates and patches are released to fix issues and add new features, ensuring the software stays up-to-date and secure.",
-          },
-        ],
-      },
-    ],
-    outcomes: outcomes[6],
-    FAQData: [
-      {
-        id: 1,
-        title:
-          "What types of software solutions do you offer for businesses in Calicut?     ",
-        content: ` We offer all types of software solutions custom to meet the unique needs of businesses in Calicut. Our services include custom software development, <a href="https://www.wisbato.com/services/mobile-app-development" target="_blank">mobile applications</a>,<a href="https://www.wisbato.com/services/web-development-company-in-calicut" target="_blank">web applications</a>, cloud computing, system integration, and more. Whether you're a small startup or a large enterprise, we can create solutions that enhance your operations and drive growth.
-`,
-      },
-      {
-        id: 2,
-        title:
-          " How long does the software development process typically take?",
-        content:
-          "The duration of the software development process varies based on the complexity and scope of the project. Generally, smaller projects may take a few weeks, while larger, more complex systems can take several months. We prioritize thorough planning and communication, so we'll provide you with a detailed timeline during the initial consultation to ensure you know what to expect.",
-      },
-      {
-        id: 3,
-        title:
-          "How do you ensure the software meets our specific business needs?",
-        content:
-          " We follow a comprehensive approach to understand your business requirements fully. This includes initial consultations, requirement analysis, and ongoing feedback throughout the development process. Our goal is to create a solution that aligns perfectly with your objectives, and we encourage collaboration to ensure we meet your expectations at every stage.",
-      },
-      {
-        id: 4,
-        title: " What support do you provide after the software is deployed?",
-        content:
-          " Our commitment to your success doesn’t end with deployment. We offer ongoing support and maintenance services to ensure your software runs smoothly. This includes troubleshooting, updates, and enhancements as needed, so you can focus on your core business activities while we take care of the technical aspects.",
-      },
-      {
-        id: 5,
-        title:
-          " How do I know if custom software is the right choice for my business?",
-        content:
-          " Custom software is an excellent choice if your business has specific needs that off-the-shelf solutions cannot meet. It allows for tailored functionality, better integration with existing systems, and scalability as your business grows. If you’re unsure, we offer consultations to discuss your unique challenges and how custom software can address them effectively. This way, you can make an informed decision that aligns with your business goals.",
-      },
-    ],
-  },
+//         list: [
+//           {
+//             id: 13,
+//             title: "  Unit Testing",
+//             content:
+//               "Each module is tested individually to ensure that it functions as expected.",
+//           },
+//           {
+//             id: 14,
+//             title: " Integration Testing",
+//             content:
+//               "The team checks how different modules work together to detect any issues with integration.",
+//           },
+//           {
+//             id: 15,
+//             title: "Performance Testing",
+//             content:
+//               "Testing the software for speed, scalability, and responsiveness under different loads.",
+//           },
+//           {
+//             id: 16,
+//             title: "  Bug Fixing and Optimization",
+//             content:
+//               "Any bugs discovered during testing are fixed, and the software is optimized for better performance.",
+//           },
+//         ],
+//       },
+//       {
+//         id: 6,
+//         title: " Deployment and Maintenance",
+//         image:
+//           "/images/workingProcess/software/Deployment and Maintenance (2).jpg",
+//         alt: "software Deployment and Maintenance",
+//         list: [
+//           {
+//             id: 13,
+//             title: "  Deployment to Live Environment",
+//             content:
+//               "Once the software is thoroughly tested, it is deployed to the production environment for real-world use.",
+//           },
+//           {
+//             id: 14,
+//             title: "User Training and Documentation",
+//             content:
+//               "End-users are trained on how to use the software, and comprehensive documentation is provided.",
+//           },
+//           {
+//             id: 15,
+//             title: "Monitoring and Feedback",
+//             content:
+//               "The software is monitored for any performance issues or bugs, and user feedback is collected for further improvement.",
+//           },
+//           {
+//             id: 16,
+//             title: "Ongoing Maintenance and Updates",
+//             content:
+//               "Regular updates and patches are released to fix issues and add new features, ensuring the software stays up-to-date and secure.",
+//           },
+//         ],
+//       },
+//     ],
+//     outcomes: outcomes[6],
+//     FAQData: [
+//       {
+//         id: 1,
+//         title:
+//           "What types of software solutions do you offer for businesses in Calicut?     ",
+//         content: ` We offer all types of software solutions custom to meet the unique needs of businesses in Calicut. Our services include custom software development, <a href="https://www.wisbato.com/services/mobile-app-development" target="_blank">mobile applications</a>,<a href="https://www.wisbato.com/services/web-development-company-in-calicut" target="_blank">web applications</a>, cloud computing, system integration, and more. Whether you're a small startup or a large enterprise, we can create solutions that enhance your operations and drive growth.
+// `,
+//       },
+//       {
+//         id: 2,
+//         title:
+//           " How long does the software development process typically take?",
+//         content:
+//           "The duration of the software development process varies based on the complexity and scope of the project. Generally, smaller projects may take a few weeks, while larger, more complex systems can take several months. We prioritize thorough planning and communication, so we'll provide you with a detailed timeline during the initial consultation to ensure you know what to expect.",
+//       },
+//       {
+//         id: 3,
+//         title:
+//           "How do you ensure the software meets our specific business needs?",
+//         content:
+//           " We follow a comprehensive approach to understand your business requirements fully. This includes initial consultations, requirement analysis, and ongoing feedback throughout the development process. Our goal is to create a solution that aligns perfectly with your objectives, and we encourage collaboration to ensure we meet your expectations at every stage.",
+//       },
+//       {
+//         id: 4,
+//         title: " What support do you provide after the software is deployed?",
+//         content:
+//           " Our commitment to your success doesn’t end with deployment. We offer ongoing support and maintenance services to ensure your software runs smoothly. This includes troubleshooting, updates, and enhancements as needed, so you can focus on your core business activities while we take care of the technical aspects.",
+//       },
+//       {
+//         id: 5,
+//         title:
+//           " How do I know if custom software is the right choice for my business?",
+//         content:
+//           " Custom software is an excellent choice if your business has specific needs that off-the-shelf solutions cannot meet. It allows for tailored functionality, better integration with existing systems, and scalability as your business grows. If you’re unsure, we offer consultations to discuss your unique challenges and how custom software can address them effectively. This way, you can make an informed decision that aligns with your business goals.",
+//       },
+//     ],
+//   },
 ];
 
 export type ServicePlatformData = {

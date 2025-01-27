@@ -35,6 +35,7 @@ const HomeTestimonials = () => {
             {
                 testimonialQuots?.slice(0, 2).map((item) => <HomeTestimonial data={item} key={item?.id} />)
             }
+            
             {/* <HomeTestimonial />
             <HomeTestimonial /> */}
             {/* <Carousel

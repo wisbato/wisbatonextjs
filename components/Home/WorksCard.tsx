@@ -13,7 +13,6 @@ const WorksCard = ({ data, key }: { data: WorkData; key: number }) => {
 
     const handleNavigation = (title: string) => {
         const formattedSlug = title.replace(/[^\w]+/gi, "-").toLowerCase();
-
         router.push(`/works/${formattedSlug}`, { scroll: false });
         window.scrollTo(0, 0)
     };
