@@ -35,7 +35,7 @@ const HomeTestimonials = () => {
             {
                 testimonialQuots?.slice(0, 2).map((item) => <HomeTestimonial data={item} key={item?.id} />)
             }
-            
+
             {/* <HomeTestimonial />
             <HomeTestimonial /> */}
             {/* <Carousel
@@ -72,8 +72,7 @@ const HomeTestimonial = ({ data }: { data: TestimonialQuots }) => {
             {/* <p className="testimonial-desc" ><strong>Wisbato</strong> offered me the perfect website solution for my publishing agency. I did not want my website to be too flashy but it needed to have a perfect blend of old school and modernity. The web development team at Wisbato knew what I needed and offered me the website of my dreams. Thank you Wisbato!</p> */}
             <p className="testimonial-desc" >{data.text}</p>
             <div className="testimonial-profile" >
-                {/* <img width={40} src="/images/avatar.webp" alt="..." /> */}
-                <Image height={40} width={40} src="/images/avatar.webp" alt="..." />
+                <Image width={50} height={50} style={{ objectFit: "contain" }} src={data?.image} alt="..." />
                 <div>
                     <p>{data.name}</p>
                     <p>{data.jobTitle}</p>

@@ -84,11 +84,12 @@ const ServiceDetailed = () => {
 
     const { works, isLoading } = useFetchWorks();
 
-    const { team, isLoading: teamLoading, error } = useFetchTeam()
-    console.log(team)
-    if (teamLoading || error) {
-        return <h1>loading</h1>;
-    }
+    // const { team, isLoading: teamLoading, error } = useFetchTeam()
+    // console.log(team)
+    // if (teamLoading || error) {
+    //     return <h1>loading</h1>;
+    // }
+    
     return (
         <>
             {/* {!isLoadingData && data ? */}

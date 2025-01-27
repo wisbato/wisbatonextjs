@@ -168,7 +168,8 @@
 ****************************** */
 
 .work-section {
-  margin: 120px 60px 60px 60px;
+  /* margin: 120px 60px 60px 60px; */
+  margin: 0px 60px 60px 60px;
 }
 
 .works-card-list {
@@ -248,7 +249,8 @@
 
 @media screen and (max-width: 768px) {
   .work-section {
-    margin: 120px 24px 24px 24px;
+    /* margin: 120px 24px 24px 24px; */
+    margin: 0px 24px 24px 24px;
   }
 
   .works-card {

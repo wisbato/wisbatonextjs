@@ -13,6 +13,10 @@ const FooterSection = () => {
         window.open(`mailto:${email}`);
     };
 
+    const handleSocialMedia = (url: string) => {
+        window.open(url, '_blank')
+    }
+
     return (
         <div className='footer-section'>
             <h2 className="footer-title" >Let&apos;s Make Something Great Together</h2>
@@ -83,7 +87,7 @@ const FooterSection = () => {
                     </div>
 
                     <div className="socail-medias-footer">
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg onClick={() => handleSocialMedia("https://www.instagram.com/wisbatosoftwares/")} width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="#F2F2F2" />
                             <g clip-path="url(#clip0_2177_707)">
                                 <path d="M24.167 11.6665H15.8337C13.5325 11.6665 11.667 13.532 11.667 15.8332V24.1665C11.667 26.4677 13.5325 28.3332 15.8337 28.3332H24.167C26.4682 28.3332 28.3337 26.4677 28.3337 24.1665V15.8332C28.3337 13.532 26.4682 11.6665 24.167 11.6665Z" stroke="#F2F2F2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -97,22 +101,27 @@ const FooterSection = () => {
                             </defs>
                         </svg>
 
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg onClick={() => handleSocialMedia("https://www.facebook.com/wisbato")} width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="#F2F2F2" />
                             <path d="M24.9997 11.6665H22.4997C21.3946 11.6665 20.3348 12.1055 19.5534 12.8869C18.772 13.6683 18.333 14.7281 18.333 15.8332V18.3332H15.833V21.6665H18.333V28.3332H21.6663V21.6665H24.1663L24.9997 18.3332H21.6663V15.8332C21.6663 15.6122 21.7541 15.4002 21.9104 15.2439C22.0667 15.0876 22.2787 14.9998 22.4997 14.9998H24.9997V11.6665Z" stroke="#F2F2F2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
 
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="#F2F2F2" />
-                            <path d="M12.0831 24.1667C11.5009 21.4194 11.5009 18.5806 12.0831 15.8333C12.1596 15.5543 12.3074 15.3001 12.5119 15.0955C12.7165 14.8909 12.9708 14.7432 13.2498 14.6667C17.7193 13.9262 22.2802 13.9262 26.7498 14.6667C27.0288 14.7432 27.283 14.8909 27.4876 15.0955C27.6921 15.3001 27.8399 15.5543 27.9164 15.8333C28.4986 18.5806 28.4986 21.4194 27.9164 24.1667C27.8399 24.4457 27.6921 24.6999 27.4876 24.9045C27.283 25.1091 27.0288 25.2568 26.7498 25.3333C22.2802 26.0739 17.7193 26.0739 13.2498 25.3333C12.9708 25.2568 12.7165 25.1091 12.5119 24.9045C12.3074 24.6999 12.1596 24.4457 12.0831 24.1667Z" stroke="#F2F2F2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                            <path d="M18.333 22.5L22.4997 20L18.333 17.5V22.5Z" stroke="#F2F2F2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                        <svg onClick={() => handleSocialMedia("https://www.linkedin.com/company/wisbato/")} width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M39.5 20C39.5 9.23045 30.7696 0.5 20 0.5C9.23045 0.5 0.5 9.23045 0.5 20C0.5 30.7696 9.23045 39.5 20 39.5C30.7696 39.5 39.5 30.7696 39.5 20Z" stroke="#F2F2F2" />
+                            <path d="M20.0012 17.7541C20.8418 16.8954 21.9363 16.3333 23.2095 16.3333C25.9938 16.3333 28.2512 18.5905 28.2512 21.3749V28.2499H26.4178V21.3749C26.4178 19.603 24.9814 18.1666 23.2095 18.1666C21.4376 18.1666 20.0012 19.603 20.0012 21.3749V28.2499H18.1678V16.7916H20.0012V17.7541ZM13.5845 14.9583C12.8251 14.9583 12.2095 14.3426 12.2095 13.5833C12.2095 12.8239 12.8251 12.2083 13.5845 12.2083C14.3439 12.2083 14.9595 12.8239 14.9595 13.5833C14.9595 14.3426 14.3439 14.9583 13.5845 14.9583ZM12.6678 16.7916H14.5011V28.2499H12.6678V16.7916Z" fill="white" />
                         </svg>
 
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="#F2F2F2" />
-                            <path d="M28.3337 13.3332C28.3337 13.3332 27.7503 15.0832 26.667 16.1665C28.0003 24.4999 18.8337 30.5832 11.667 25.8332C13.5003 25.9165 15.3337 25.3332 16.667 24.1665C12.5003 22.9165 10.417 17.9999 12.5003 14.1665C14.3337 16.3332 17.167 17.5832 20.0003 17.4999C19.2503 13.9999 23.3337 11.9999 25.8337 14.3332C26.7503 14.3332 28.3337 13.3332 28.3337 13.3332Z" stroke="#F2F2F2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                        <svg onClick={() => handleSocialMedia("https://twitter.com/wisbato")} width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_108_18)">
+                                <path d="M39.5 20C39.5 9.23045 30.7696 0.5 20 0.5C9.23045 0.5 0.5 9.23045 0.5 20C0.5 30.7696 9.23045 39.5 20 39.5C30.7696 39.5 39.5 30.7696 39.5 20Z" stroke="#F2F2F2" />
+                                <path d="M24.6536 12.6875H27.1346L21.7144 18.8825L28.0909 27.3125H23.0981L19.1876 22.1998L14.7131 27.3125H12.2306L18.0281 20.6862L11.9111 12.6875H17.0306L20.5654 17.3607L24.6536 12.6875ZM23.7829 25.8275H25.1576L16.2836 14.0945H14.8084L23.7829 25.8275Z" fill="white" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_108_18">
+                                    <rect width="40" height="40" fill="white" />
+                                </clipPath>
+                            </defs>
                         </svg>
-
                     </div>
                 </div>
             </div>

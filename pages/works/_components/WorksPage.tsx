@@ -17,7 +17,7 @@ const WorksPage = () => {
     const [currentPage, setCurrentPage] = useState(0);
     const { works, isLoading } = useFetchWorks();
 
-    if (isLoading) return <div>Loading...</div>
+    // if (isLoading) return <div>Loading...</div>
 
     // PAGINATION
     const itemsPerPage = 6;
@@ -43,7 +43,7 @@ const WorksPage = () => {
                         <DropDown />
                     </div>}
 
-                {false ? <div className="works-card-list">
+                {isLoading ? <div className="works-card-list">
                     {Array.from({ length: 2 }).map((_, i) =>
                         <div className="works-card" key={i}>
                             <div className='works-card-img'>
