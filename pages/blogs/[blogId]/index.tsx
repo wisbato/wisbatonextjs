@@ -107,7 +107,8 @@ const BlogDetailed = () => {
                                     </span>
                                 </div>
                                 <div className='blog-date' >
-                                    <p>February 21, 2024</p>
+                                    <p>{detailedBlog?.created_at}</p>
+                                    {/* <p>February 21, 2024</p> */}
                                     {/* <p>7 min read</p> */}
                                 </div>
                             </div>

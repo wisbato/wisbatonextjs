@@ -186,10 +186,12 @@ const SubBlogs: React.FC<{ recentBlogs: Blog[], popularBlogs: Blog[] }> = ({ rec
 const SubBlogSection: React.FC<{ title: string, blogs: Blog[] }> = ({ title, blogs }) => {
     // const navigate = useNavigate()
     const router = useRouter()
+
+    const isRecent = title === "recent posts"
     return (
         <div className='sub-blogs'>
             <p>{title}</p>
-            {blogs.map((blog, i) => (
+            {blogs.slice(isRecent ? 0 : 3, 8).map((blog, i) => (
                 <div style={{ cursor: "pointer" }} key={i} className='sub-blog' onClick={() => {
                     router.push(`/blogs/${blog.slug}`)
                     scrollTo(0, 0)

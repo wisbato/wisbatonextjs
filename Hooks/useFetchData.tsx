@@ -24,6 +24,7 @@ export interface Blog {
     meta_title: string;
     meta_description: string;
     content: BlogContent[];
+    created_at: string;
 }
 export type BlogData = Blog;
 

@@ -521,7 +521,8 @@
 .detailed-blog-seperate-section {
   display: flex;
   gap: 60px;
-  /* gap: 32px; */
+
+  /* background-color: red; */
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -800,7 +801,7 @@
 
 .sub-blog-img {
   width: 265px;
-  height: 98px;
+  max-height: 98px;
   object-fit: cover;
 
   border-radius: 4px;
