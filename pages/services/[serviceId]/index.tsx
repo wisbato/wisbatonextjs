@@ -45,7 +45,7 @@ const ServiceDetailed = () => {
 
     const params = useParams();
     const careersIdValue = params?.serviceId || "Default Title";
-    
+
 
     const [data, setData] = useState<Service | undefined>(undefined);
 
@@ -89,7 +89,7 @@ const ServiceDetailed = () => {
     // if (teamLoading || error) {
     //     return <h1>loading</h1>;
     // }
-    
+
     return (
         <>
             {/* {!isLoadingData && data ? */}
@@ -224,7 +224,7 @@ const ServiceDetailed = () => {
                         {/* <TeamCateCard service={data.title} /> */}
                         <TeamCateCard service={data.title} />
 
-                        <div className="services-faq-section">
+                        <div className="services-faq-section" >
                             <SectionTitle title='faq' />
                             {
                                 data.FAQData.map((item) => {

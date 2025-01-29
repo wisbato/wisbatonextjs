@@ -33,9 +33,10 @@ const RoutesMap = ({ title }: { title: string | string[] | undefined }) => {
             {segments.map((segment, index) => (
                 <span key={index} style={{ fontSize: "16px", color: "#878787" }}>
                     {segment} /
+                    {/* {segment} / */}
                 </span>
             ))}
-            <span style={{ fontSize: "16px", color: "#000" }}>{normalizedTitle}</span>
+            {/* <span style={{ fontSize: "16px", color: "#000" }}>{normalizedTitle}</span> */}
         </div>
     );
 };

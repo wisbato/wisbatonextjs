@@ -19,9 +19,9 @@ const OpeningsTabs = ({ openings, isLoading, error }: { openings: Opening[], isL
 
     const [selectedTab, setSelectedTab] = useState(categories[0])
 
-    useEffect(() => {
-        setSelectedTab(categories[0])
-    }, [openings, categories])
+    // useEffect(() => {
+    //     setSelectedTab(categories[0])
+    // }, [openings, categories])
 
     const [bottomLineWidth, setBottomLineWidth] = useState(0);
     const [bottomLineLeft, setBottomLineLeft] = useState(0);

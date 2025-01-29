@@ -8,18 +8,19 @@ import DefaultButton from '../DefaultButton';
 // import { useNavigate } from 'react-router-dom';
 // import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import { redirect } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import HomeTestimonials from '../Home/_components/HomeTestimonials';
 import Image from 'next/image';
 
 const Testimonials = () => {
 
     // const navigate = useNavigate();
+    const router = useRouter()
 
     const handleNavigation = (page: string) => {
-        // navigate(`/${page}`);
         scrollTo(0, 0)
-        redirect(`/${page}`);
+        // redirect(`/${page}`);
+        router.push(`/${page}`);
     };
 
     // const [activeIndex, setActiveIndex] = useState(0);

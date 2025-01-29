@@ -39,12 +39,12 @@ const NavLinks = () => {
   };
 
   const navLinks = [
+    { href: "/about", text: "about" },
     { href: "/works", text: "works" },
     { href: "/services", text: "services" },
-    { href: "/blogs", text: "blogs" },
-    { href: "/about", text: "about" },
     { href: "/team", text: "team" },
     { href: "/careers", text: "careers" },
+    { href: "/blogs", text: "blogs" },
   ];
 
   const renderLinks = (isDropdown = false) =>

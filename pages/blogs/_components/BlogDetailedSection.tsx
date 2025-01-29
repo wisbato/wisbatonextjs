@@ -23,7 +23,6 @@ const BlogDetailedSection: React.FC<BlogDetailedSectionProps> = ({ detailedBlog 
     const [htmlContent, setHtmlContent] = useState('');
     const { blogs, isLoading } = useFetchBlogs();
 
-
     const testHtml: string = detailedBlog?.content[0]?.description || '';
 
     useEffect(() => {

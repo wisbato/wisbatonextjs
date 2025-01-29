@@ -22,7 +22,8 @@ const TeamPage = () => {
                 </div>
 
                 <div className="sub-content">
-                    <p>Meet the talented team behind our success</p>
+                    {/* <p>Meet the talented team behind our success</p> */}
+                    <p>Meet our team</p>
                 </div>
             </div>
             <TeamCateCard />

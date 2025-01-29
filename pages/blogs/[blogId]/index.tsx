@@ -103,7 +103,7 @@ const BlogDetailed = () => {
                                     />
                                     <span>
                                         <p className='blog-author-name'>By Admin</p>
-                                        <p>Admin@Wisbato</p>
+                                        <p>Shafi k Ahmed</p>
                                     </span>
                                 </div>
                                 <div className='blog-date' >

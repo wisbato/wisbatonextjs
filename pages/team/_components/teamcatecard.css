@@ -19,6 +19,11 @@
 
 .teamcatecard {
   margin-bottom: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .teamcatecard h1 {
@@ -36,7 +41,7 @@
   font-size: 18px;
   font-weight: 400;
   margin-top: 16px;
-  width: 100%;
+  width: 80%;
   text-align: center;
 }
 
