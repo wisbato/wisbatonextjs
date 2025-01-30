@@ -27,7 +27,7 @@ const BlogDetailed = () => {
     const worksIdValue = params?.blogId || "Default Title";
 
     const [detailedBlog, setDetailedBlog] = useState<Blog>();
-    const { blogs, isLoading } = useFetchBlogs();
+    const { blogs, isLoading } = useFetchBlogs({});
 
     // const { statusMessage, handleServiceSelection, firstName, setFirstName, lastName, setLastName, email, setEmail, phone, setPhone, message, setMessage, handleSubmit, loading } = useFormState();
     const { handleServiceSelection, firstName, setFirstName, lastName, setLastName, email, setEmail, phone, setPhone, message, setMessage, handleSubmit, loading } = useFormState();

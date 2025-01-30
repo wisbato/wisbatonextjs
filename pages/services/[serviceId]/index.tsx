@@ -82,7 +82,7 @@ const ServiceDetailed = () => {
         }
     }, [statusMessage, setNotify]);
 
-    const { works, isLoading } = useFetchWorks();
+    const { works, isLoading } = useFetchWorks({});
 
     // const { team, isLoading: teamLoading, error } = useFetchTeam()
     // console.log(team)
