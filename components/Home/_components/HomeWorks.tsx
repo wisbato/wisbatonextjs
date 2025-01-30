@@ -59,7 +59,7 @@ const worksData: WorksData[] = [
     },
     {
         id: 4,
-        title: "Test",
+        title: "Test & Deployment",
         content: " Rigorous testing is conducted to identify and fix bugs, ensuring functionality, performance, and security. We gather user feedback for continuous improvement.",
         image: `<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_2177_562)">
@@ -109,7 +109,7 @@ export default HomeWorks;
 const HomeWorksCard = ({ data }: { data: WorksData }) => {
     return (
         <div className="home-works-card" >
-            <div className="home-works-icon" dangerouslySetInnerHTML={{ __html: data.image ||""}} />
+            <div className="home-works-icon" dangerouslySetInnerHTML={{ __html: data.image || "" }} />
             <div className="doted-line"></div>
             <h2>{data?.title}</h2>
             <div className="works-line-dot" >

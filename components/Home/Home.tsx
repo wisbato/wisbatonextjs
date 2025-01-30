@@ -30,7 +30,7 @@ const Home = () => {
         router.push(`/${data}`);
         window.scrollTo(0, 0);
     };
-    const { works, isLoading } = useFetchWorks();
+    const { works, isLoading } = useFetchWorks({});
     const { metaTags } = useFetchMetaTags("Home");
 
     return (

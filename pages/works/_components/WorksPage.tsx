@@ -4,7 +4,7 @@ import InnerBanner from "@/components/InnerBanner/InnerBanner";
 import { useFetchWorks } from "@/Hooks/useFetchData";
 import Skeleton from "react-loading-skeleton"
 import 'react-loading-skeleton/dist/skeleton.css'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DropDown from "@/components/DropDown";
 import WorksCard from "@/components/Home/WorksCard";
 import ReactPaginate from "react-paginate";
@@ -14,10 +14,14 @@ import { useLenis } from "@/Hooks/useLenis";
 const WorksPage = () => {
     useLenis();
 
-    const [currentPage, setCurrentPage] = useState(0);
-    const { works, isLoading } = useFetchWorks();
+    const [selectedService, setSelectedService] = useState("")
 
-    // if (isLoading) return <div>Loading...</div>
+    const onSelectService = (service: string) => {
+        setSelectedService(service)
+    }
+
+    const [currentPage, setCurrentPage] = useState(0);
+    const { works, isLoading } = useFetchWorks({ selectedService });
 
     // PAGINATION
     const itemsPerPage = 6;
@@ -29,6 +33,7 @@ const WorksPage = () => {
         setCurrentPage(selectedPage.selected);
         // window.scroll(0, 700);
     };
+
     return (
         <div className='careers-section page-transition' >
             <InnerBanner nextSection={'.works-portfolio'} text='our <br> <span>works</span>' icons={["worksIcon3", "worksIcon1", "worksIcon2"]} />
@@ -40,7 +45,7 @@ const WorksPage = () => {
                 </div> :
                     <div className="all-portfolio-title-section">
                         <p className='portfolio-container-title' >portfolio</p>
-                        <DropDown />
+                        <DropDown onSelectService={onSelectService} />
                     </div>}
 
                 {isLoading ? <div className="works-card-list">

@@ -24,7 +24,7 @@ const WorkDetailed = () => {
     const animateRef: React.RefObject<HTMLDivElement | null> = useScrollAnimation();
     const worksIdValue = title ? title : "Default value";
     const [workCaseStudy, setWorkCaseStudy] = useState<Work | undefined>();
-    const { works, isLoading } = useFetchWorks();
+    const { works, isLoading } = useFetchWorks({});
 
     useEffect(() => {
         if (!isLoading) {

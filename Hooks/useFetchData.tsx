@@ -28,7 +28,7 @@ export interface Blog {
 }
 export type BlogData = Blog;
 
-export const useFetchBlogs = () => {
+export const useFetchBlogs = ({ selectedService }: { selectedService?: string }) => {
     const [blogs, setBlogs] = useState<BlogData[]>([]);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState<any>(null);
@@ -39,11 +39,11 @@ export const useFetchBlogs = () => {
             setError(null);
 
             try {
-                const response = await axios.get('https://backend.wisbato.com/api/blogs');
-                // const response = await axios.get(`https://backend.wisbato.com/api/blogs?page=${currentPage}`);
+                const query = selectedService ? `?service_name=${selectedService}` : "";
+                const response = await axios.get(`https://backend.wisbato.com/api/blogs${query}`);
                 setBlogs(response.data.data);
             } catch (error) {
-                console.error('Error fetching blogs:', error);
+                console.error("Error fetching blogs:", error);
                 setError(error);
             } finally {
                 setIsLoading(false);
@@ -51,10 +51,44 @@ export const useFetchBlogs = () => {
         };
 
         fetchData();
-    }, []);
+    }, [selectedService]); // Add selectedService to the dependency array
 
     return { blogs, isLoading, error };
 };
+
+
+// export const useFetchBlogs = ({ selectedService }: { selectedService?: string }) => {
+//     const [blogs, setBlogs] = useState<BlogData[]>([]);
+//     const [isLoading, setIsLoading] = useState(false);
+//     const [error, setError] = useState<any>(null);
+
+//     const isService = selectedService ? `?service_name=${selectedService}` : `?service_name=${selectedService}`;
+
+//     console.log("isService:", isService)
+
+//     useEffect(() => {
+//         const fetchData = async () => {
+//             setIsLoading(true);
+//             setError(null);
+
+//             try {
+//                 const response = await axios.get(`https://backend.wisbato.com/api/blogs${isService}`);
+//                 // const response = await axios.get(`https://backend.wisbato.com/api/blogs?service_name=Social Media Marketing`);
+//                 // const response = await axios.get(`https://backend.wisbato.com/api/blogs?page=${currentPage}`);
+//                 setBlogs(response.data.data);
+//             } catch (error) {
+//                 console.error('Error fetching blogs:', error);
+//                 setError(error);
+//             } finally {
+//                 setIsLoading(false);
+//             }
+//         };
+
+//         fetchData();
+//     }, []);
+
+//     return { blogs, isLoading, error };
+// };
 
 // blog end
 
@@ -88,7 +122,7 @@ export interface Work {
 
 export type WorkData = Work;
 
-export const useFetchWorks = () => {
+export const useFetchWorks = ({ selectedService }: { selectedService?: string }) => {
     const [works, setWorks] = useState<WorkData[]>([]);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState<any>(null);
@@ -99,10 +133,11 @@ export const useFetchWorks = () => {
             setError(null);
 
             try {
-                const response = await axios.get('https://backend.wisbato.com/api/works');
+                const query = selectedService ? `?service_name=${selectedService}` : "";
+                const response = await axios.get(`https://backend.wisbato.com/api/works${query}`);
                 setWorks(response.data.data);
             } catch (error) {
-                console.error('Error fetching blogs:', error);
+                console.error("Error fetching works:", error);
                 setError(error);
             } finally {
                 setIsLoading(false);
@@ -110,10 +145,37 @@ export const useFetchWorks = () => {
         };
 
         fetchData();
-    }, []);
+    }, [selectedService]);
 
     return { works, isLoading, error };
 };
+
+// export const useFetchWorks = ({ selectedService }: { selectedService?: string }) => {
+//     const [works, setWorks] = useState<WorkData[]>([]);
+//     const [isLoading, setIsLoading] = useState(false);
+//     const [error, setError] = useState<any>(null);
+
+//     useEffect(() => {
+//         const fetchData = async () => {
+//             setIsLoading(true);
+//             setError(null);
+
+//             try {
+//                 const response = await axios.get('https://backend.wisbato.com/api/works');
+//                 setWorks(response.data.data);
+//             } catch (error) {
+//                 console.error('Error fetching blogs:', error);
+//                 setError(error);
+//             } finally {
+//                 setIsLoading(false);
+//             }
+//         };
+
+//         fetchData();
+//     }, []);
+
+//     return { works, isLoading, error };
+// };
 
 // works end
 
@@ -210,3 +272,38 @@ export const useFetchTeam = () => {
 };
 
 // team end
+
+// services titles start
+
+export type ServiceTitle = {
+    id: number;
+    name: string;
+}
+
+export const useFetchServicesTitle = () => {
+    const [services, setServices] = useState<ServiceTitle[]>([]);
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState<any>(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            setIsLoading(true);
+            setError(null);
+
+            try {
+                const response = await axios.get('https://backend.wisbato.com/api/service');
+                setServices(response.data.data);
+            } catch (error) {
+                console.error('Error fetching Services:', error);
+                setError(error);
+            } finally {
+                setIsLoading(false);
+            }
+        };
+
+        fetchData();
+    }, []);
+
+    return { services, isLoading, error };
+};
+// services titles end

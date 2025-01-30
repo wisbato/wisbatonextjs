@@ -30,8 +30,14 @@ const BlogsPage = () => {
         document.documentElement.scrollTop = 0;
     };
 
+    const [selectedService, setSelectedService] = useState("")
+
+    const onSelectService = (service: string) => {
+        setSelectedService(service)
+    }
+
     const [currentPage, setCurrentPage] = useState(0);
-    const { blogs, isLoading } = useFetchBlogs();
+    const { blogs, isLoading } = useFetchBlogs({ selectedService });
 
     const itemsPerPage = 6;
     const indexOfLastItem = (currentPage + 1) * itemsPerPage;
@@ -86,22 +92,23 @@ const BlogsPage = () => {
 
                 <div className="list-all-blogs-section">
                     {
-                        blogs.length === 0 || isLoading ?
-                            <div className="all-blogs-title-section">
+                        // blogs.length === 0 || isLoading ?
+                        false ?
+                            <div className="all-blogs-title-section" >
                                 <p className='recent-blog-container-title' ><Skeleton width={100} /></p>
                                 <Skeleton width={200} height={50} />
                             </div>
                             :
                             <div className="all-blogs-title-section">
                                 <p className='recent-blog-container-title' >all blogs</p>
-                                <DropDown />
+                                <DropDown onSelectService={onSelectService} />
                             </div>
                     }
 
-                    {blogs.length === 0 || isLoading ?
-                        <div className="list-all-blogs">
+                    {isLoading ?
+                        <div className="list-all-blogs" >
                             {
-                                Array.from({ length: 2 }).map((_, i) => <div key={i} className="blog-card">
+                                Array.from({ length: 3 }).map((_, i) => <div key={i} className="blog-card">
                                     <Skeleton className='list-blog-skeleton-img' height={300} />
                                     <div className="blog-card-content-div">
                                         <p className='recent-blog-container-title' style={{ fontSize: "14px", marginBottom: "4px" }} ><Skeleton width={100} /></p>
@@ -113,12 +120,20 @@ const BlogsPage = () => {
                             }
                         </div>
                         :
-                        <div className="list-all-blogs">
+                        <div className="list-all-blogs" >
                             {
                                 currentItems.map((item) => <BlogCard key={item?.id} data={item} />)
                             }
                         </div>
                     }
+
+                    {
+                        blogs.length === 0 &&
+                        <div className="list-all-blogs" >
+                            <div>No Blogs Found</div>
+                        </div>
+                    }
+
                     {!isLoading && <div className='pagination-section'>
                         {blogs.length > 2 && (
                             <ReactPaginate

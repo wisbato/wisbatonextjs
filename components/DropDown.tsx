@@ -1,17 +1,26 @@
+import { useFetchServicesTitle } from '@/Hooks/useFetchData';
 import { useState } from 'react'
 // import "../pages/globals.css"
 
-const DropDown = () => {
+const DropDown = ({ onSelectService }: { onSelectService: (service: string) => void }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [selected, setSelected] = useState("");
 
-    const categories = ['web development', 'application development', 'branding', 'ecommerce development', 'socialmedia marketing', 'search engine optimization', 'mobile app development', 'IT suppot'];
+    // const categories = ['web development', 'application development', 'branding', 'ecommerce development', 'socialmedia marketing', 'search engine optimization', 'mobile app development', 'IT suppot'];
+
+    const { services, error, isLoading } = useFetchServicesTitle()
+
+    if (error || isLoading) {
+        return <div>Something went wrong</div>
+    }
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
     }
 
+    console.log("selected: ", selected)
     const handleSelected = (category: string) => {
+        onSelectService(category)
         setSelected(category)
         toggleDropdown()
     }
@@ -27,8 +36,8 @@ const DropDown = () => {
 
 
             <ul className={`dropdown-menu ${isOpen ? "open" : ""}`}>
-                {categories.map((category, index) => (
-                    <li onClick={() => handleSelected(category)} key={index}>{category}</li>
+                {services?.map((category, index) => (
+                    <li onClick={() => handleSelected(category?.name)} key={index}>{category?.name}</li>
                 ))}
             </ul>
         </div>
