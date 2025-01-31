@@ -84,7 +84,10 @@ const BlogsPage = () => {
                                         <p>{blogs[0].title}</p>
                                         <p>{blogs[0].description.slice(0, 300)}...</p>
                                     </div>
-                                    <ReadFullBtn title='read full' onClick={() => handleNavigation(blogs[0].slug)} />
+                                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }} >
+                                        <ReadFullBtn title='read full' onClick={() => handleNavigation(blogs[0].slug)} />
+                                        <p>{blogs[0].created_at}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>

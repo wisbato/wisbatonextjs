@@ -16,7 +16,7 @@ const BlogCard = ({ data }: { data: BlogData }) => {
         // if (typeof window !== 'undefined') {
         //     window.scrollTo(0, 0);
         // }
-        
+
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
 
@@ -41,7 +41,10 @@ const BlogCard = ({ data }: { data: BlogData }) => {
                 className='blog-card-img'
             /> */}
             <div className="blog-card-content-div">
-                <p className='recent-blog-container-title' style={{ fontSize: "14px", marginBottom: "4px" }} >{data?.category}</p>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }} >
+                    <p className='recent-blog-container-title' style={{ fontSize: "14px", marginBottom: "4px" }} >{data?.category}</p>
+                    <p className='recent-blog-container-title' style={{ fontSize: "14px", marginBottom: "4px" }} >{data?.created_at}</p>
+                </div>
                 <p className='blog-card-title' >{title}...</p>
                 <p className='blog-card-description' >{description}...</p>
                 <ReadFullBtn title='read full' onClick={() => handleNavigation(data?.slug)} />

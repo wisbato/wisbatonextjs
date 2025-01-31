@@ -21,7 +21,7 @@ const BlogDetailedSection: React.FC<BlogDetailedSectionProps> = ({ detailedBlog 
     const blogDetailRef = useRef<HTMLDivElement>(null);
     const [headings, setHeadings] = useState<Heading[]>([]);
     const [htmlContent, setHtmlContent] = useState('');
-    const { blogs, isLoading } = useFetchBlogs();
+    const { blogs, isLoading } = useFetchBlogs({});
 
     const testHtml: string = detailedBlog?.content[0]?.description || '';
 
