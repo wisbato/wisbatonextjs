@@ -1,6 +1,9 @@
 .bread-crumps-section {
   @media screen and (max-width: 768px) {
     margin-top: 32px;
+
+    width: 30ch;
+    overflow: hidden;
   }
 }
 

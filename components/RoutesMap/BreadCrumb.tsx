@@ -24,20 +24,22 @@ const RoutesMap = ({ title }: { title: string | string[] | undefined }) => {
                 gap: "3px",
                 alignItems: "center",
                 textTransform: "capitalize",
-                whiteSpace: "nowrap"
+                whiteSpace: "nowrap",
             }}
         >
             <Link href="/" style={{ cursor: "pointer", textDecoration: "none", color: "#878787" }}>
                 <p style={{ fontSize: "16px" }}>Home /</p>
             </Link>
-            {segments.map((segment, index) => (
-                <span key={index} style={{ fontSize: "16px", color: "#878787" }}>
-                    {segment} /
-                    {/* {segment} / */}
-                </span>
-            ))}
+            {
+                segments.map((segment, index) => (
+                    <span key={index} style={{ fontSize: "16px", color: "#878787" }}>
+                        {segment} /
+                        {/* {segment} / */}
+                    </span>
+                ))
+            }
             {/* <span style={{ fontSize: "16px", color: "#000" }}>{normalizedTitle}</span> */}
-        </div>
+        </div >
     );
 };
 
