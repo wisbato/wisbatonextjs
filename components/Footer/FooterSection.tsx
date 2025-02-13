@@ -1,3 +1,5 @@
+import { useFetchContactDetail } from "@/Hooks/useFetchData";
+
 const FooterSection = () => {
 
     const handleLocation = (location: string) => {
@@ -17,77 +19,73 @@ const FooterSection = () => {
         window.open(url, '_blank')
     }
 
+    const { contactDetail, error, isLoading } = useFetchContactDetail()
+
+    // console.log("contactDetail: ", contactDetail)
+    console.log("contactDetail: ", contactDetail)
+
+    if (error || isLoading) {
+        return <h1>loading</h1>
+    }
+
     return (
         <div className='footer-section'>
-            <h2 className="footer-title" >Let&apos;s Make Something Great Together</h2>
+            <h2 className="footer-title" >{contactDetail.title}</h2>
 
             <div className="footer-main-contents" >
                 <div className="address-cards">
-                    <div className="address-card">
-                        <div className="address-title">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M20 10C20 14.993 14.461 20.193 12.601 21.799C12.4277 21.9293 12.2168 21.9998 12 21.9998C11.7832 21.9998 11.5723 21.9293 11.399 21.799C9.539 20.193 4 14.993 4 10C4 7.87827 4.84285 5.84344 6.34315 4.34315C7.84344 2.84285 9.87827 2 12 2C14.1217 2 16.1566 2.84285 17.6569 4.34315C19.1571 5.84344 20 7.87827 20 10Z" stroke="#F2F2F2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#F2F2F2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            <p>Mumbai</p>
-                        </div>
-                        <div className="address-details">
-                            <p>103, 1 St Floor, A wing, Greenscape Technocity Tower 3, Mahape, Navi Mumbai, Maharashtra PIN:400710</p>
-                            <button onClick={() => handleLocation("v8jFXasg5oSG2wZt8")} >
-                                <span>Get Direction</span>
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M17.5 10.8333V15.8333C17.5 16.2754 17.3244 16.6993 17.0118 17.0118C16.6993 17.3244 16.2754 17.5 15.8333 17.5H4.16667C3.72464 17.5 3.30072 17.3244 2.98816 17.0118C2.67559 16.6993 2.5 16.2754 2.5 15.8333V4.16667C2.5 3.72464 2.67559 3.30072 2.98816 2.98816C3.30072 2.67559 3.72464 2.5 4.16667 2.5H9.16667" stroke="#E8E8E8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                    <path d="M17.5 2.5L10 10" stroke="#E8E8E8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                    <path d="M12.5 2.5H17.5V7.5" stroke="#E8E8E8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
 
-                    <div className="address-card">
-                        <div className="address-title">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M20 10C20 14.993 14.461 20.193 12.601 21.799C12.4277 21.9293 12.2168 21.9998 12 21.9998C11.7832 21.9998 11.5723 21.9293 11.399 21.799C9.539 20.193 4 14.993 4 10C4 7.87827 4.84285 5.84344 6.34315 4.34315C7.84344 2.84285 9.87827 2 12 2C14.1217 2 16.1566 2.84285 17.6569 4.34315C19.1571 5.84344 20 7.87827 20 10Z" stroke="#F2F2F2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#F2F2F2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            <p>Kozhikode</p>
-                        </div>
-                        <div className="address-details">
-                            <p>4th Floor, City Corner Building, West Nadakkave, Vandipetta, West Hill, Kozhikode, Kerala 673011</p>
-                            <button onClick={() => handleLocation("Bjc9fNqUHhddqfKD8")} >
-                                <span>Get Direction</span>
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M17.5 10.8333V15.8333C17.5 16.2754 17.3244 16.6993 17.0118 17.0118C16.6993 17.3244 16.2754 17.5 15.8333 17.5H4.16667C3.72464 17.5 3.30072 17.3244 2.98816 17.0118C2.67559 16.6993 2.5 16.2754 2.5 15.8333V4.16667C2.5 3.72464 2.67559 3.30072 2.98816 2.98816C3.30072 2.67559 3.72464 2.5 4.16667 2.5H9.16667" stroke="#E8E8E8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                    <path d="M17.5 2.5L10 10" stroke="#E8E8E8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                    <path d="M12.5 2.5H17.5V7.5" stroke="#E8E8E8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-
+                    {
+                        contactDetail?.address?.map((address, index) => {
+                            return (
+                                <div className="address-card" key={index} >
+                                    <div className="address-title">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M20 10C20 14.993 14.461 20.193 12.601 21.799C12.4277 21.9293 12.2168 21.9998 12 21.9998C11.7832 21.9998 11.5723 21.9293 11.399 21.799C9.539 20.193 4 14.993 4 10C4 7.87827 4.84285 5.84344 6.34315 4.34315C7.84344 2.84285 9.87827 2 12 2C14.1217 2 16.1566 2.84285 17.6569 4.34315C19.1571 5.84344 20 7.87827 20 10Z" stroke="#F2F2F2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                            <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#F2F2F2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                        </svg>
+                                        <p>{address.place}</p>
+                                    </div>
+                                    <div className="address-details">
+                                        <p>{address.address}</p>
+                                        <button onClick={() => address?.location_url && handleLocation(address.location_url)} >
+                                            <span>Get Direction</span>
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M17.5 10.8333V15.8333C17.5 16.2754 17.3244 16.6993 17.0118 17.0118C16.6993 17.3244 16.2754 17.5 15.8333 17.5H4.16667C3.72464 17.5 3.30072 17.3244 2.98816 17.0118C2.67559 16.6993 2.5 16.2754 2.5 15.8333V4.16667C2.5 3.72464 2.67559 3.30072 2.98816 2.98816C3.30072 2.67559 3.72464 2.5 4.16667 2.5H9.16667" stroke="#E8E8E8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                                <path d="M17.5 2.5L10 10" stroke="#E8E8E8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                                <path d="M12.5 2.5H17.5V7.5" stroke="#E8E8E8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            )
+                        })
+                    }
                 </div>
 
                 <div className="footer-desc" >
                     <p>We&apos;re here to help. Whether you have questions about our services, need a consultation, or are ready to start your next project, don&apos;t hesitate to contact us.</p>
 
                     <div className="footer-contact-btns">
-                        <button onClick={() => handleMailto("hello@wisbato.com")} >
+
+                        <button onClick={() => contactDetail?.contact_detail?.[0]?.email?.[0] && handleMailto(contactDetail?.contact_detail[0]?.email[0])} >
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16.667 3.3335H3.33366C2.41318 3.3335 1.66699 4.07969 1.66699 5.00016V15.0002C1.66699 15.9206 2.41318 16.6668 3.33366 16.6668H16.667C17.5875 16.6668 18.3337 15.9206 18.3337 15.0002V5.00016C18.3337 4.07969 17.5875 3.3335 16.667 3.3335Z" stroke="#F2F2F2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                 <path d="M18.3337 5.8335L10.8587 10.5835C10.6014 10.7447 10.3039 10.8302 10.0003 10.8302C9.69673 10.8302 9.39927 10.7447 9.14199 10.5835L1.66699 5.8335" stroke="#F2F2F2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
-                            <span>hello@wisbato.com</span>
+                            <span>{contactDetail?.contact_detail?.[0]?.email?.[0] ?? 'N/A'}</span>
                         </button>
-                        <button onClick={() => handleCall("0495 490 0077")} >
+
+                        <button onClick={() => contactDetail?.contact_detail?.[0]?.phone?.[0] && handleCall(contactDetail?.contact_detail[0]?.phone[0])} >
                             <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M18.8332 14.0999V16.5999C18.8341 16.832 18.7866 17.0617 18.6936 17.2744C18.6006 17.487 18.4643 17.6779 18.2933 17.8348C18.1222 17.9917 17.9203 18.1112 17.7005 18.1855C17.4806 18.2599 17.2477 18.2875 17.0165 18.2666C14.4522 17.988 11.989 17.1117 9.82486 15.7083C7.81139 14.4288 6.10431 12.7217 4.82486 10.7083C3.41651 8.53426 2.54007 6.05908 2.26653 3.48325C2.2457 3.25281 2.27309 3.02055 2.34695 2.80127C2.4208 2.58199 2.53951 2.38049 2.6955 2.2096C2.8515 2.03871 3.04137 1.90218 3.25302 1.80869C3.46468 1.7152 3.69348 1.6668 3.92486 1.66658H6.42486C6.82928 1.6626 7.22136 1.80582 7.528 2.06953C7.83464 2.33324 8.03493 2.69946 8.09153 3.09992C8.19705 3.89997 8.39274 4.68552 8.67486 5.44158C8.78698 5.73985 8.81125 6.06401 8.74478 6.37565C8.67832 6.68729 8.52392 6.97334 8.29986 7.19992L7.24153 8.25825C8.42783 10.3445 10.1552 12.072 12.2415 13.2583L13.2999 12.1999C13.5264 11.9759 13.8125 11.8215 14.1241 11.755C14.4358 11.6885 14.7599 11.7128 15.0582 11.8249C15.8143 12.107 16.5998 12.3027 17.3999 12.4083C17.8047 12.4654 18.1744 12.6693 18.4386 12.9812C18.7029 13.2931 18.8433 13.6912 18.8332 14.0999Z" stroke="#F2F2F2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
-                            <span>0495 490 0077</span>
+                            <span>{contactDetail?.contact_detail?.[0]?.phone?.[0] ?? 'N/A'}</span>
                         </button>
                     </div>
 
                     <div className="socail-medias-footer">
-                        <svg onClick={() => handleSocialMedia("https://www.instagram.com/wisbatosoftwares/")} width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg onClick={() => contactDetail.social_media_links?.instagram && handleSocialMedia(contactDetail.social_media_links.instagram)} width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="#F2F2F2" />
                             <g clip-path="url(#clip0_2177_707)">
                                 <path d="M24.167 11.6665H15.8337C13.5325 11.6665 11.667 13.532 11.667 15.8332V24.1665C11.667 26.4677 13.5325 28.3332 15.8337 28.3332H24.167C26.4682 28.3332 28.3337 26.4677 28.3337 24.1665V15.8332C28.3337 13.532 26.4682 11.6665 24.167 11.6665Z" stroke="#F2F2F2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -101,17 +99,17 @@ const FooterSection = () => {
                             </defs>
                         </svg>
 
-                        <svg onClick={() => handleSocialMedia("https://www.facebook.com/wisbato")} width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg onClick={() => contactDetail.social_media_links?.facebook && handleSocialMedia(contactDetail.social_media_links.facebook)} width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="#F2F2F2" />
                             <path d="M24.9997 11.6665H22.4997C21.3946 11.6665 20.3348 12.1055 19.5534 12.8869C18.772 13.6683 18.333 14.7281 18.333 15.8332V18.3332H15.833V21.6665H18.333V28.3332H21.6663V21.6665H24.1663L24.9997 18.3332H21.6663V15.8332C21.6663 15.6122 21.7541 15.4002 21.9104 15.2439C22.0667 15.0876 22.2787 14.9998 22.4997 14.9998H24.9997V11.6665Z" stroke="#F2F2F2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
 
-                        <svg onClick={() => handleSocialMedia("https://www.linkedin.com/company/wisbato/")} width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg onClick={() => contactDetail.social_media_links?.linkedin && handleSocialMedia(contactDetail.social_media_links.linkedin)} width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M39.5 20C39.5 9.23045 30.7696 0.5 20 0.5C9.23045 0.5 0.5 9.23045 0.5 20C0.5 30.7696 9.23045 39.5 20 39.5C30.7696 39.5 39.5 30.7696 39.5 20Z" stroke="#F2F2F2" />
                             <path d="M20.0012 17.7541C20.8418 16.8954 21.9363 16.3333 23.2095 16.3333C25.9938 16.3333 28.2512 18.5905 28.2512 21.3749V28.2499H26.4178V21.3749C26.4178 19.603 24.9814 18.1666 23.2095 18.1666C21.4376 18.1666 20.0012 19.603 20.0012 21.3749V28.2499H18.1678V16.7916H20.0012V17.7541ZM13.5845 14.9583C12.8251 14.9583 12.2095 14.3426 12.2095 13.5833C12.2095 12.8239 12.8251 12.2083 13.5845 12.2083C14.3439 12.2083 14.9595 12.8239 14.9595 13.5833C14.9595 14.3426 14.3439 14.9583 13.5845 14.9583ZM12.6678 16.7916H14.5011V28.2499H12.6678V16.7916Z" fill="white" />
                         </svg>
 
-                        <svg onClick={() => handleSocialMedia("https://twitter.com/wisbato")} width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg onClick={() => contactDetail.social_media_links?.twitter && handleSocialMedia(contactDetail.social_media_links.twitter)} width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_108_18)">
                                 <path d="M39.5 20C39.5 9.23045 30.7696 0.5 20 0.5C9.23045 0.5 0.5 9.23045 0.5 20C0.5 30.7696 9.23045 39.5 20 39.5C30.7696 39.5 39.5 30.7696 39.5 20Z" stroke="#F2F2F2" />
                                 <path d="M24.6536 12.6875H27.1346L21.7144 18.8825L28.0909 27.3125H23.0981L19.1876 22.1998L14.7131 27.3125H12.2306L18.0281 20.6862L11.9111 12.6875H17.0306L20.5654 17.3607L24.6536 12.6875ZM23.7829 25.8275H25.1576L16.2836 14.0945H14.8084L23.7829 25.8275Z" fill="white" />

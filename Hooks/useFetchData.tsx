@@ -307,3 +307,90 @@ export const useFetchServicesTitle = () => {
     return { services, isLoading, error };
 };
 // services titles end
+
+// Gallery start
+
+export type Gallery = {
+    id: number;
+    image: string;
+    isTall: string;
+}
+
+export const useFetchGallery = () => {
+    const [gallery, setGallery] = useState<Gallery[]>([]);
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState<any>(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            setIsLoading(true);
+            setError(null);
+
+            try {
+                const response = await axios.get('https://backend.wisbato.com/api/gallery');
+                setGallery(response.data.data);
+            } catch (error) {
+                console.error('Error fetching Services:', error);
+                setError(error);
+            } finally {
+                setIsLoading(false);
+            }
+        };
+
+        fetchData();
+    }, []);
+
+    return { gallery, isLoading, error };
+};
+// Gallery end
+
+// Gallery start
+
+export type ContactDetail = {
+    address?:
+    {
+        place?: string,
+        address?: string;
+        location_url?: string | undefined;
+    }[];
+    contact_detail?:
+    {
+        email?: string[];
+        phone?: string[];
+    }[]
+    title?: string;
+    social_media_links?: {
+        instagram: string;
+        linkedin: string;
+        twitter: string;
+        facebook: string
+    }
+}
+
+export const useFetchContactDetail = () => {
+    const [contactDetail, setContactDetail] = useState<ContactDetail>({});
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState<any>(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            setIsLoading(true);
+            setError(null);
+
+            try {
+                const response = await axios.get('https://backend.wisbato.com/api/contact-detail');
+                setContactDetail(response.data.data);
+            } catch (error) {
+                console.error('Error fetching Services:', error);
+                setError(error);
+            } finally {
+                setIsLoading(false);
+            }
+        };
+
+        fetchData();
+    }, []);
+
+    return { contactDetail, isLoading, error };
+};
+// Gallery end

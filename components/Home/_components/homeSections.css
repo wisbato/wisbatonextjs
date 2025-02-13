@@ -246,7 +246,7 @@
 .home-works-section {
   padding: 60px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1080px) {
     padding: 60px 24px;
   }
 }
@@ -260,7 +260,7 @@
   text-transform: uppercase;
   margin-bottom: 60px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1080px) {
     line-height: 130%;
   }
 }
@@ -272,7 +272,7 @@
 
   /* //////////// */
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1080px) {
     flex-direction: column;
   }
 }
@@ -290,7 +290,8 @@
 
   /* //////////// */
 
-  @media screen and (max-width: 768px) {
+  /* @media screen and (max-width: 768px) { */
+  @media screen and (max-width: 1080px) {
     flex-direction: row;
     width: calc(100%);
     gap: 10px;
@@ -306,7 +307,7 @@
   border: 1px dotted #2a2a2a;
   width: 60%;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1080px) {
     left: 23px;
     top: 0;
     transform: translate(0%, -70%);
@@ -317,14 +318,14 @@
 
 .home-works-card:first-child .doted-line {
   display: block;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1080px) {
     display: none;
   }
 }
 
 .home-works-card:last-child .doted-line {
   display: none;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1080px) {
     display: block;
   }
 }
@@ -333,6 +334,13 @@
   font-size: clamp(20px, 4vw, 24px);
   font-weight: 700;
   line-height: 31.27px;
+
+  height: 62px;
+
+  /* background-color: red; */
+  text-align: center;
+  display: grid;
+  place-items: center;
 }
 
 .home-works-card p {
@@ -345,12 +353,11 @@
   width: 60px;
   height: 60px;
   border-radius: 16px;
-
   display: grid;
   place-items: center;
   margin-bottom: 36px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1080px) {
     margin-bottom: 0;
 
     min-width: 40px;
@@ -359,7 +366,7 @@
 }
 
 .home-works-card .home-works-icon svg {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1080px) {
     width: 24px;
     height: 24px;
   }
@@ -388,7 +395,7 @@
 
   /* ///////////////////// */
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1080px) {
     transform: rotate(270deg);
     margin: 0 20px 0 15px;
   }
@@ -397,10 +404,22 @@
 .home-works-card-desc {
   padding: 16px 20px;
   border-radius: 16px;
+  min-height: 190px;
+
+  display: flex;
+  align-items: center;
 
   font-size: 16px;
   font-weight: 400;
   line-height: 20.85px;
+
+  @media screen and (max-width: 1300px) {
+    min-height: 250px;
+  }
+
+  @media screen and (max-width: 1080px) {
+    min-height: 100%;
+  }
 }
 
 .home-works-card:nth-child(odd) .home-works-card-desc {

@@ -2,7 +2,7 @@
 
 type WorksData = {
     id: number;
-    title: string;
+    title?: string;
     content: string;
     image: string;
 }

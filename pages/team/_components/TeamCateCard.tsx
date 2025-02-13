@@ -2,30 +2,31 @@
 
 // import './teamcatecard.css'
 import { TeamCategory, TeamMember, useFetchTeam } from '../../../Hooks/useFetchData'
-import { useEffect, useState } from 'react'
+// import { useEffect, useState } from 'react'
 import Image from 'next/image'
 
 const TeamCateCard = ({ service }: { service?: string }) => {
     const { team, isLoading, error } = useFetchTeam();
-    const [filteredTeam, setFilteredTeam] = useState<TeamCategory[]>([]);
+    // const [filteredTeam, setFilteredTeam] = useState<TeamCategory[]>([]);
 
-    useEffect(() => {
-        if (service) {
-            const filtered = team.filter((member) =>
-                member.services.some((s) => s.includes(service))
-            );
-            setFilteredTeam(filtered);
-        } else {
-            setFilteredTeam(team);
-        }
-    }, [service, team]);
+    // useEffect(() => {
+    //     if (service) {
+    //         const filtered = team.filter((member) =>
+    //             member.services.some((s) => s.includes(service))
+    //         );
+    //         setFilteredTeam(filtered);
+    //     } else {
+    //         setFilteredTeam(team);
+    //     }
+    // }, [service, team]);
 
     if (isLoading) return <h1>Loading...</h1>;
     if (error) return <h1>Error: {error.message}</h1>;
 
     return (
         <div className="teamcatecard-container-wrapper">
-            {filteredTeam.map((data: TeamCategory, index: number) => (
+            {/* {filteredTeam.map((data: TeamCategory, index: number) => ( */}
+            {team.map((data: TeamCategory, index: number) => (
                 <div key={index} className="teamcatecard-container">
                     <div className="teamcatecard" key={index}>
                         <h1>{data.department}</h1>

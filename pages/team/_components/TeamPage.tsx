@@ -4,9 +4,12 @@ import InnerBanner from "@/components/InnerBanner/InnerBanner"
 import TeamCateCard from "./TeamCateCard"
 import { useLenis } from "@/Hooks/useLenis";
 import Image from "next/image";
+import { useFetchGallery } from "@/Hooks/useFetchData";
 
 const TeamPage = () => {
     useLenis();
+
+    const { gallery, error, isLoading } = useFetchGallery()
 
     return (
         <div className="team-section page-transition" >
@@ -35,50 +38,45 @@ const TeamPage = () => {
                     </div>
 
                     <div className="gallery">
-                        <div className="image-container">
-                            {/* <img src="/images/events/img1.webp" /> */}
+                        {
+                            isLoading ? <div></div> : gallery?.map((item, i) => <div key={i} className={`image-container ${item.isTall ? "tall" : ""}`}>
+                                <Image alt="" width={300} height={200} src={item.image} />
+                            </div>)
+                        }
+
+                        {/* <div className="image-container">
                             <Image alt="" width={300} height={200} src="/images/events/img1.webp" />
                         </div>
                         <div className="image-container">
-                            {/* <img src="/images/events/img2.webp" /> */}
                             <Image alt="" width={300} height={200} src="/images/events/img2.webp" />
                         </div>
                         <div className="image-container tall">
-                            {/* <img src="/images/events/img5.webp" /> */}
                             <Image alt="" width={300} height={200} src="/images/events/img5.webp" />
                         </div>
                         <div className="image-container">
-                            {/* <img src="/images/events/img9.webp" /> */}
                             <Image alt="" width={300} height={200} src="/images/events/img9.webp" />
                         </div>
                         <div className="image-container">
-                            {/* <img src="/images/events/img3.webp" /> */}
                             <Image alt="" width={300} height={200} src="/images/events/img3.webp" />
                         </div>
                         <div className="image-container tall">
-                            {/* <img src="/images/events/img8.webp" /> */}
                             <Image alt="" width={300} height={200} src="/images/events/img8.webp" />
                         </div>
                         <div className="image-container">
-                            {/* <img src="/images/events/img4.webp" /> */}
                             <Image alt="" width={300} height={200} src="/images/events/img4.webp" />
                         </div>
                         <div className="image-container tall ">
-                            {/* <img src="/images/events/img11.webp" /> */}
                             <Image alt="" width={300} height={200} src="/images/events/img11.webp" />
                         </div>
                         <div className="image-container tall">
-                            {/* <img src="/images/events/img12.webp" /> */}
                             <Image alt="" width={300} height={200} src="/images/events/img12.webp" />
                         </div>
                         <div className="image-container">
-                            {/* <img src="/images/events/img6.webp" /> */}
                             <Image alt="" width={300} height={200} src="/images/events/img6.webp" />
                         </div>
                         <div className="image-container">
-                            {/* <img src="/images/events/img10.webp" /> */}
                             <Image alt="" width={300} height={200} src="/images/events/img10.webp" />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
