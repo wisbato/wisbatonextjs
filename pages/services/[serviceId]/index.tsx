@@ -18,7 +18,7 @@ import { StatusContext } from "../../../Hooks/StatusContext";
 import { useFormState } from "../../../Hooks/useFormState";
 import ServicesDropDown from "../../../components/InputFields/ServicesDropDown";
 import AnimationComponent from "../../../components/AnimationComponent/AnimationComponent";
-import { useFetchTeam, useFetchWorks } from "../../../Hooks/useFetchData";
+import { useFetchWorks } from "../../../Hooks/useFetchData";
 import WorksCard from "../../../components/Home/WorksCard";
 import OutComes from "../_components/OutComes";
 import TeamCateCard from "../../team/_components/TeamCateCard";
@@ -37,6 +37,8 @@ const ServiceDetailed = () => {
             setExpandedId(id);
         }
     };
+
+    services[0].image
 
     const [activeIndex, setActiveIndex] = useState(0);
 

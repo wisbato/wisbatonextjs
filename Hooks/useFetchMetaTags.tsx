@@ -9,10 +9,10 @@ export const useFetchMetaTags = (slug: string) => {
     const [error, setError] = useState<any>(null);
 
     useEffect(() => {
+
         const fetchData = async () => {
             setIsLoading(true);
             setError(null);
-
             try {
                 const response = await axios.get(
                     `https://backend.wisbato.com/api/metatags?name=${slug}`
@@ -32,4 +32,34 @@ export const useFetchMetaTags = (slug: string) => {
     }, [slug]);
 
     return { metaTags, isLoading, error };
+};
+
+export const useFetchNavLinks = () => {
+    const [navLinks, setNavLinks] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState<any>(null);
+
+    useEffect(() => {
+
+        const fetchData = async () => {
+            setIsLoading(true);
+            setError(null);
+            try {
+                const response = await axios.get(
+                    `https://backend.wisbato.com/api/metatags`
+                );
+                setNavLinks(response.data.data);
+            } catch (error) {
+                console.error('Error fetching nav links:', error);
+                setError(error);
+            } finally {
+                setIsLoading(false);
+            }
+        };
+
+        fetchData();
+
+    }, []);
+
+    return { navLinks, isLoading, error };
 };

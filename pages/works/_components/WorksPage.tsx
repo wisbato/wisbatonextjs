@@ -4,7 +4,7 @@ import InnerBanner from "@/components/InnerBanner/InnerBanner";
 import { useFetchWorks } from "@/Hooks/useFetchData";
 import Skeleton from "react-loading-skeleton"
 import 'react-loading-skeleton/dist/skeleton.css'
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import DropDown from "@/components/DropDown";
 import WorksCard from "@/components/Home/WorksCard";
 import ReactPaginate from "react-paginate";
