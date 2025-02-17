@@ -9,7 +9,7 @@ import { useFetchGallery } from "@/Hooks/useFetchData";
 const TeamPage = () => {
     useLenis();
 
-    const { gallery, error, isLoading } = useFetchGallery()
+    const { gallery, isLoading } = useFetchGallery()
 
     return (
         <div className="team-section page-transition" >

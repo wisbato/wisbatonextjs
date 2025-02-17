@@ -242,6 +242,7 @@ export interface TeamCategory {
     description: string;
     members: TeamMember[];
     services: string[]
+    isActive: boolean;
 }
 
 export const useFetchTeam = () => {
@@ -344,7 +345,7 @@ export const useFetchGallery = () => {
 };
 // Gallery end
 
-// Gallery start
+// Footer Contact start
 
 export type ContactDetail = {
     address?:
@@ -393,4 +394,5 @@ export const useFetchContactDetail = () => {
 
     return { contactDetail, isLoading, error };
 };
-// Gallery end
+
+// Footer Contact end
