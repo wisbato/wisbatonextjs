@@ -27,6 +27,7 @@ import "@/pages/works/works.css";
 import "@/pages/careers/_components/ResumeUpload.css";
 import "@/pages/team/_components/teamcatecard.css";
 import "@/components/Home/_components/homeSections.css";
+import ChatIcon from "@/components/ChatIcon/ChatIcon";
 
 interface Window {
   dataLayer?: Array<Record<string, unknown>>;
@@ -36,10 +37,10 @@ interface EventData {
   [key: string]: string | number | boolean | undefined;
 }
 
-// ✅ Google Analytics Tracking ID
+// Google Analytics Tracking ID
 const GA_TRACKING_ID = "G-CMM0518P02";
 
-// ✅ Initialize GTM
+// Initialize GTM
 export const initializeGTM = (gtmId: string) => {
   (window as Window).dataLayer = (window as Window).dataLayer || [];
   (window as Window).dataLayer?.push({
@@ -59,7 +60,7 @@ export const initializeGTM = (gtmId: string) => {
   document.head.appendChild(script);
 };
 
-// ✅ Track GTM Page Views
+// Track GTM Page Views
 export const GTMPageView = () => {
   const router = useRouter();
 
@@ -80,14 +81,14 @@ export const GTMPageView = () => {
   return null;
 };
 
-// ✅ Track Google Analytics Page Views
+// Track Google Analytics Page Views
 export const trackPageView = (url: string) => {
   window.gtag("config", GA_TRACKING_ID, {
     page_path: url,
   });
 };
 
-// ✅ Track Custom Events in GA
+// Track Custom Events in GA
 export const trackEvent = (eventName: string, eventData: EventData = {}) => {
   if ((window as Window).dataLayer) {
     (window as Window).dataLayer?.push({
@@ -115,7 +116,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      {/* ✅ Google Tag Manager (GTM) */}
+      {/* Google Tag Manager (GTM) */}
       <noscript>
         <iframe
           src={`https://www.googletagmanager.com/ns.html?id=GTM-5XCQZZ57`}
@@ -125,7 +126,7 @@ export default function App({ Component, pageProps }: AppProps) {
         ></iframe>
       </noscript>
 
-      {/* ✅ Google Analytics (GA4) */}
+      {/* Google Analytics (GA4) */}
       <Script
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
@@ -146,117 +147,8 @@ export default function App({ Component, pageProps }: AppProps) {
       <GTMPageView />
       <HeaderSection />
       <Component {...pageProps} />
+      <ChatIcon />
       <FooterSection />
     </>
   );
-}
-
-
-
-// import FooterSection from "@/components/Footer/FooterSection";
-// import HeaderSection from "@/components/Header/HeaderSection";
-// import "@/styles/globals.css";
-// import type { AppProps } from "next/app";
-
-// import React, { useEffect } from 'react';
-// import { useRouter } from 'next/router';
-
-// import '@/components/Header/Header.css';
-// import '@/components/EyeExpand/EyeExpand.css';
-// import '@/components/Footer/Footer.css';
-// import '@/components/Home/Home.css';
-// import '@/components/InnerBanner/InnerBanner.css'
-// import '@/components/RoutesMap/breadCrumb.css'
-// import '@/components/Testimonials/Testimonials.css'
-// import '@/components/WorkProcess/WorkProcess.css'
-
-
-// import "@/pages/about/about.css"
-// import "@/pages/blogs/blogs.css"
-// import "@/pages/careers/careers.css"
-// import "@/pages/contact/contact.css"
-// import "@/pages/services/services.css"
-// import "@/pages/team/team.css"
-// import "@/pages/works/works.css"
-
-// import "@/pages/careers/_components/ResumeUpload.css"
-// import '@/pages/team/_components/teamcatecard.css'
-// import '@/components/Home/_components/homeSections.css'
-
-// interface Window {
-//   dataLayer?: Array<Record<string, unknown>>;
-// }
-
-// interface EventData {
-//   [key: string]: string | number | boolean | undefined;
-// }
-
-// // GTM Function to initialize and track page views
-// export const initializeGTM = (gtmId: string) => {
-//   // Initialize GTM script
-//   (window as Window).dataLayer = (window as Window).dataLayer || [];
-//   (window as Window).dataLayer?.push({
-//     'gtm.start': new Date().getTime(),
-//     event: 'gtm.js'
-//   });
-
-//   // Dynamically add GTM script
-//   const script = document.createElement('script');
-//   script.id = 'gtm-script';
-//   script.innerHTML = `
-//       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-//       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-//       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-//       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-//       })(window,document,'script','dataLayer','${gtmId}');
-//     `;
-//   document.head.appendChild(script);
-// };
-
-// // Component to handle GTM page views
-// export const GTMPageView = () => {
-//   const router = useRouter();
-
-//   useEffect(() => {
-//     // Track page views
-//     const handleRouteChange = (url: string) => {
-//       (window as Window).dataLayer?.push({
-//         event: 'pageview',
-//         page: url
-//       });
-//     };
-
-//     router.events.on('routeChangeComplete', handleRouteChange);
-//     return () => {
-//       router.events.off('routeChangeComplete', handleRouteChange);
-//     };
-//   }, [router.events]);
-
-//   return null;
-// };
-
-// export default function App({ Component, pageProps }: AppProps) {
-//   useEffect(() => {
-//     initializeGTM('GTM-5XCQZZ57'); // prasoon
-//     // initializeGTM('GTM-TXBL8KWB'); mine
-//   }, []);
-
-//   return (
-//     <>
-//       <GTMPageView />
-//       <HeaderSection />
-//       <Component {...pageProps} />
-//       <FooterSection />
-//     </>
-//   );
-// }
-
-// // Optional: GTM Event Tracking Function
-// export const trackEvent = (eventName: string, eventData: EventData = {}) => {
-//   if ((window as Window).dataLayer) {
-//     (window as Window).dataLayer?.push({
-//       event: eventName,
-//       ...eventData
-//     });
-//   }
-// };
+};

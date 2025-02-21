@@ -59,17 +59,6 @@ const BlogDetailedSection: React.FC<BlogDetailedSectionProps> = ({ detailedBlog 
         }
     };
 
-    // const handleTitleClick = (id: string) => {
-    //     const element = document.getElementById(id);
-    //     if (element) {
-    //         const offsetPosition = element.getBoundingClientRect().top + window?.scrollY - 70;
-    //         window?.scrollTo({
-    //             top: offsetPosition,
-    //             behavior: 'smooth',
-    //         });
-    //     }
-    // };
-
     return (
         <div className="blog-content-section">
             <Head>

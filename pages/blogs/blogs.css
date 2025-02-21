@@ -624,6 +624,11 @@
   }
 }
 
+h4,
+h5 {
+  font-size: 22px;
+}
+
 .subtitle-content-section ol,
 .subtitle-content-section ul {
   margin-left: 25px;

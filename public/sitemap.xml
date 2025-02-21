@@ -1,0 +1,187 @@
+<!-- public/sitemap.xml -->
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://www.wisbato.com/</loc>
+        <lastmod>2024-06-05T04:36:58+00:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://www.wisbato.com/works</loc>
+        <lastmod>2024-06-05T04:36:58+00:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://www.wisbato.com/works/wisdom</loc>
+        <lastmod>2024-06-05T04:36:58+00:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://www.wisbato.com/works/wintra</loc>
+        <lastmod>2024-06-05T04:36:58+00:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://www.wisbato.com/works/thunderai</loc>
+        <lastmod>2024-06-05T04:36:58+00:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://www.wisbato.com/works/wiscart</loc>
+        <lastmod>2024-06-05T04:36:58+00:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://www.wisbato.com/works/greenday</loc>
+        <lastmod>2024-06-05T04:36:58+00:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://www.wisbato.com/works/logan</loc>
+        <lastmod>2024-06-05T04:36:58+00:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://www.wisbato.com/services/mobile-app-development</loc>
+        <lastmod>2024-06-05T04:36:58+00:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://www.wisbato.com/blogs</loc>
+        <lastmod>2024-06-05T04:36:58+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://www.wisbato.com/blogs/how-to-use-ai-for-the-ux-design-process</loc>
+        <lastmod>2024-06-05T04:36:58+00:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://www.wisbato.com/about</loc>
+        <lastmod>2024-06-05T04:36:58+00:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://www.wisbato.com/careers</loc>
+        <lastmod>2024-06-05T04:36:58+00:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://www.wisbato.com/contact</loc>
+        <lastmod>2024-06-05T04:36:58+00:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://www.wisbato.com/blogs/top-5-web-development-trends-in-2024</loc>
+        <lastmod>2024-06-25T06:27:16+00:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://www.wisbato.com/services/it-support-in-calicut</loc>
+        <lastmod>2024-10-01T03:55:23+00:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://www.wisbato.com/services/web-development-company-in-calicut</loc>
+        <lastmod>2024-10-01T03:55:23+00:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://www.wisbato.com/services/ecommerce-development-company-in-calicut</loc>
+        <lastmod>2024-10-01T03:55:23+00:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://wisbato.com/team</loc>
+        <lastmod>2025-02-19T06:27:14+00:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://wisbato.com/services/branding-agency-in-calicut</loc>
+        <lastmod>2025-02-19T06:29:53+00:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://wisbato.com/services/digital-marketing-agency-in-calicut</loc>
+        <lastmod>2025-02-19T06:30:45+00:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://wisbato.com/services/search-engine-optimization-company-in-calicut</loc>
+        <lastmod>2025-02-19T06:31:45+00:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://www.wisbato.com/blogs/best-ai-tools-for-web-development-in-2025?</loc>
+        <lastmod>2025-02-19T06:35:31+00:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://www.wisbato.com/blogs/benefits-of-digital-marketing-for-hotel-and-resort-businesses</loc>
+        <lastmod>2025-02-19T06:37:45+00:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://www.wisbato.com/blogs/how-to-brand-your-company-properly</loc>
+        <lastmod>2025-02-19T06:39:09+00:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://www.wisbato.com/blogs/top-10-mistakes-developers-make-and-how-to-avoid-them</loc>
+        <lastmod>2025-02-19T06:40:33+00:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://www.wisbato.com/blogs/website-or-mobile-app-which-one-is-better-for-business</loc>
+        <lastmod>2025-02-19T06:42:28+00:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://www.wisbato.com/blogs/top-7-reasons-to-choose-wisbato-for-your-mobile-app-development-needs</loc>
+        <lastmod>2025-02-19T06:43:40+00:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://www.wisbato.com/blogs/top-7-ecommerce-website-building-platforms-in-2025</loc>
+        <lastmod>2025-02-19T06:45:08+00:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://www.wisbato.com/blogs/is-react-js-seo-friendly-an-in-depth-analysis</loc>
+        <lastmod>2025-02-19T06:47:20+00:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://www.wisbato.com/blogs/top-5-mobile-app-development-trends-in-2025</loc>
+        <lastmod>2025-02-19T06:49:16+00:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://www.wisbato.com/blogs/understanding-back-end-development-the-backbone-of-your-website</loc>
+        <lastmod>2025-02-19T06:50:55+00:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://www.wisbato.com/blogs/top-5-ways-a-website-can-increase-sales-overnight</loc>
+        <lastmod>2025-02-19T06:51:52+00:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://www.wisbato.com/blogs/develop-an-ios-app-for-your-business-in-kerala</loc>
+        <lastmod>2025-02-19T06:53:24+00:00</lastmod>
+    </url>
+</urlset>
+
+
+  <!--  
+    <loc>https://yourwebsite.com/</loc>
+    <lastmod>2023-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://yourwebsite.com/about</loc>
+    <lastmod>2023-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url> -->

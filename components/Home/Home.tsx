@@ -23,7 +23,6 @@ import HomeWorks from './_components/HomeWorks';
 const Home = () => {
     useLenis();
     const router = useRouter();
-    // const animateRef = useScrollAnimation();
 
     const handleNavigation = (title: string) => {
         const data = title.replace(/[^\w]+/gi, "-").toLowerCase();
@@ -32,15 +31,9 @@ const Home = () => {
     };
 
     const { works, isLoading } = useFetchWorks({});
-    const { metaTags } = useFetchMetaTags("Home");
 
     return (
         <>
-            <Head>
-                <title>{metaTags?.title}</title>
-                <meta name="description" content={metaTags?.description} />
-                <link rel="canonical" href="https://www.wisbato.com" />
-            </Head>
             <Hero />
             <div className='work-section'>
                 <SectionTitle title='works' />

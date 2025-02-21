@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Skeleton from "react-loading-skeleton";
 
-const RoutesMap = ({ title }: { title: string | string[] | undefined }) => {
+const RoutesMap = ({ title, isLoading }: { title: string | string[] | undefined; isLoading: boolean }) => {
     const [pathname, setPathname] = useState<string | null>(null);
 
     useEffect(() => {
@@ -17,29 +18,48 @@ const RoutesMap = ({ title }: { title: string | string[] | undefined }) => {
     const normalizedTitle = Array.isArray(title) ? title.join(' ') : title || '';
 
     return (
-        <div
-            className="bread-crumps-section"
-            style={{
-                display: "flex",
-                gap: "3px",
-                alignItems: "center",
-                textTransform: "capitalize",
-                whiteSpace: "nowrap",
-            }}
-        >
-            <Link href="/" style={{ cursor: "pointer", textDecoration: "none", color: "#878787" }}>
-                <p style={{ fontSize: "16px" }}>Home /</p>
-            </Link>
+        <>
             {
-                segments.map((segment, index) => (
-                    <span key={index} style={{ fontSize: "16px", color: "#878787" }}>
-                        {segment} /
-                        {/* {segment} / */}
-                    </span>
-                ))
+                isLoading ?
+
+                    <div
+                        className="bread-crumps-section"
+                        style={{
+                            display: "flex",
+                            gap: "3px",
+                            alignItems: "center",
+                            textTransform: "capitalize",
+                            whiteSpace: "nowrap",
+                        }}
+                    >
+                        <Skeleton width={250} />
+                    </div>
+                    :
+
+                    <div
+                        className="bread-crumps-section"
+                        style={{
+                            display: "flex",
+                            gap: "3px",
+                            alignItems: "center",
+                            textTransform: "capitalize",
+                            whiteSpace: "nowrap",
+                        }}
+                    >
+                        <Link href="/" style={{ cursor: "pointer", textDecoration: "none", color: "#878787" }}>
+                            <p style={{ fontSize: "16px" }}>Home /</p>
+                        </Link>
+                        {
+                            segments.map((segment, index) => (
+                                <span key={index} style={{ fontSize: "16px", color: "#878787" }}>
+                                    {segment} /
+                                </span>
+                            ))
+                        }
+                        {/* <span style={{ fontSize: "16px", color: "#000" }}>{normalizedTitle}</span> */}
+                    </div>
             }
-            {/* <span style={{ fontSize: "16px", color: "#000" }}>{normalizedTitle}</span> */}
-        </div >
+        </>
     );
 };
 

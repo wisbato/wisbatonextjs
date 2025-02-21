@@ -396,3 +396,151 @@ export const useFetchContactDetail = () => {
 };
 
 // Footer Contact end
+
+
+
+// Service start
+
+export type Card = {
+    id: number;
+    title: string;
+    description: string;
+};
+
+export type Summary = {
+    id: number;
+    title: string;
+    description: string[];
+};
+
+export type Service = {
+    id: number;
+    icon?: string;
+    slug: string;
+    title: string;
+    peopleTitle: string;
+    description: string;
+    image: string;
+    style: { backgroundColor: string };
+    width: string;
+    metaTitle: string;
+    metaDescription: string;
+
+    context: {
+        mainTitle: string;
+        subTitle: string;
+        content: string;
+    };
+
+    workingProcess: Array<{
+        title: string;
+        image: string;
+        alt: string;
+        list: Array<{
+            id: number;
+            title: string;
+            content: string;
+        }>;
+    }>;
+
+    outcomes: {
+        id: number;
+        title: string;
+        description: string[];
+        servicePlatform: {
+            id: number;
+            icon: string;
+            title: string;
+        }[];
+        subContent: {
+            title: string;
+            description: string[];
+        };
+        advantages: {
+            id: number;
+            title: string;
+            description: string;
+            points: {
+                id: number;
+                title: string;
+                description: string;
+            }[];
+        };
+        disAdvantages: {
+            id: number;
+            title: string;
+            description: string;
+            points: {
+                id: number;
+                title: string;
+                description: string;
+            }[];
+        };
+        question: {
+            title: string;
+            cards: Card[];
+        };
+        summery: Summary;
+    };
+
+    FAQData: Array<{
+        id: number;
+        title: string;
+        content: string;
+    }>;
+};
+
+export const useFetchService = () => {
+    const [service, setService] = useState<Service[]>([]);
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState<any>(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            setIsLoading(true);
+            setError(null);
+
+            try {
+                const response = await axios.get("https://backend.wisbato.com/api/service");
+                setService(response.data.data);
+            } catch (error) {
+                console.error('Error fetching Services:', error);
+                setError(error);
+            } finally {
+                setIsLoading(false);
+            }
+        };
+
+        fetchData();
+    }, []);
+
+    return { service, isLoading, error };
+};
+
+export const useFetchServiceDetail = (slug?: string | string[]) => {
+    const [service, setService] = useState<Service>();
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState<any>(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            setIsLoading(true);
+            setError(null);
+
+            try {
+                const response = await axios.get(`https://backend.wisbato.com/api/service?slug=${slug}`);
+                setService(response.data.data[0]);
+            } catch (error) {
+                console.error('Error fetching Services:', error);
+                setError(error);
+            } finally {
+                setIsLoading(false);
+            }
+        };
+
+        fetchData();
+    }, [slug]);
+
+    return { service, isLoading, error };
+};
+// Service end

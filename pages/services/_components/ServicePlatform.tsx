@@ -1,11 +1,16 @@
-import { servicePlatformData } from "../../../utils/servicesData"
+// import { servicePlatformData } from "../../../utils/servicesData"
 
-const ServicePlatform = () => {
+const ServicePlatform = ({ servicePlatform }: { servicePlatform: { id: number; title: string; icon: string; }[] }) => {
+    console.log("servicePlatform: ", servicePlatform)
+
     return (
         <div className="service-platforms">
             {
-                servicePlatformData.map((item, i) => <div key={i} className='service-platform' >
-                    <div dangerouslySetInnerHTML={{ __html: item.icon }} />
+                servicePlatform?.map((item, i) => <div key={i} className='service-platform' >
+                    {/* <div dangerouslySetInnerHTML={{ __html: item.icon }} /> */}
+                    <div>
+                        <img src={item.icon} alt="" />
+                    </div>
                     <p>{item.title}</p>
                 </div>)
             }

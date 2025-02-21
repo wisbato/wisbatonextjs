@@ -5,8 +5,8 @@ import { useEffect, useState } from 'react';
 
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import { useFetchMetaTags, useFetchNavLinks } from '@/Hooks/useFetchMetaTags';
-import Skeleton from 'react-loading-skeleton';
+import { useFetchNavLinks } from '@/Hooks/useFetchMetaTags';
+// import Skeleton from 'react-loading-skeleton';
 // import { Link, useLocation } from 'react-router-dom';
 
 const NavLinks = () => {
@@ -15,7 +15,7 @@ const NavLinks = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
-  const { navLinks: fetchedNavLinks, isLoading, error } = useFetchNavLinks() as any
+  const { navLinks: fetchedNavLinks, isLoading } = useFetchNavLinks() as any
 
   console.log("navlink: ", fetchedNavLinks)
 
@@ -56,11 +56,11 @@ const NavLinks = () => {
   //   });
 
   const renderLinks = (isDropdown = false) =>
-    fetchedNavLinks.filter((item: { name: string; status: boolean }) => item.name !== "Home" && item.name !== "Contact" && item.status === true).map(({ name }, index) => {
-      const isActive = params?.startsWith(name?.toLowerCase());
+    fetchedNavLinks.filter((item: { name: string; status: boolean }) => item.name !== "Home" && item.name !== "Contact" && item.status === true).map(({ name }: { name: string }, index: number) => {
+      const isActive = params?.startsWith(`/${name?.toLowerCase()}`);
 
       return (
-        <Link onClick={() => window.scrollTo(0, 0)} key={index} href={name.toLowerCase()} className={`nav-link${isDropdown ? "-res" : ""}`} style={{ color: isActive ? "#f7931e" : "" }}>{name}</Link>
+        <Link onClick={() => window.scrollTo(0, 0)} key={index} href={`/${name.toLowerCase()}`} className={`nav-link${isDropdown ? "-res" : ""}`} style={{ color: isActive ? "#f7931e" : "" }}>{name}</Link>
       );
     });
 

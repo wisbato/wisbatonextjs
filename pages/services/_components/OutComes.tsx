@@ -22,22 +22,27 @@ type Outcomes = {
     id: number;
     title: string;
     description: string[];
-    servicePlatform: boolean,
+    // servicePlatform: boolean,
+    servicePlatform: {
+        id: number;
+        title: string;
+        icon: string;
+    }[];
     subContent: {
         title: string;
         description: string[];
-        advantages: {
-            id: number;
-            title: string;
-            description: string;
-            points: Point[];
-        };
-        disAdvantages: {
-            id: number;
-            title: string;
-            description: string;
-            points: Point[];
-        };
+    };
+    advantages: {
+        id: number;
+        title: string;
+        description: string;
+        points: Point[];
+    };
+    disAdvantages: {
+        id: number;
+        title: string;
+        description: string;
+        points: Point[];
     };
     question: {
         title: string;
@@ -48,13 +53,16 @@ type Outcomes = {
 
 const OutComes = ({ outComes }: { outComes?: Outcomes }) => {
 
+    console.log("outComes?.description: ", outComes?.description)
+
     return (
         <div className="outcomes" >
             {/* 1 */}
             <div className="content" >
                 <h1 dangerouslySetInnerHTML={{ __html: outComes?.title || "" }} />
                 <div>
-                    {outComes?.description.map((item, i) => <p className="paragraph" key={i} dangerouslySetInnerHTML={{ __html: item }} />)}
+                    <p className="paragraph" dangerouslySetInnerHTML={{ __html: outComes?.description[0] || "" }} />
+                    {/* {outComes?.description.map((item, i) => <p className="paragraph" key={i} dangerouslySetInnerHTML={{ __html: item }} />)} */}
                 </div>
             </div>
 
@@ -64,23 +72,26 @@ const OutComes = ({ outComes }: { outComes?: Outcomes }) => {
                 <div className="content" >
                     <h2>{outComes?.subContent.title}</h2>
                     <div>
-                        {
+                        <p className="paragraph" dangerouslySetInnerHTML={{ __html: outComes?.subContent.description[0] || "" }} />
+                        {/* {
                             outComes?.subContent.description.map((item, i) => <p className="paragraph" key={i} dangerouslySetInnerHTML={{ __html: item }} />)
-                        }
+                        } */}
                     </div>
                 </div>
 
-                {outComes?.servicePlatform && <ServicePlatform />}
+                {/* {outComes?.servicePlatform?.length > 0 && <ServicePlatform servicePlatform={outComes?.servicePlatform} />} */}
+                <ServicePlatform servicePlatform={outComes?.servicePlatform ?? []} />
 
                 <div className="adv-dis-cards" >
                     <div className="adv-card" >
                         <div className="content">
-                            <h2>{outComes?.subContent.advantages.title}</h2>
-                            <p>{outComes?.subContent.advantages.description}</p>
+                            <h2>{outComes?.advantages?.title}</h2>
+                            <p>{outComes?.advantages?.description}</p>
                         </div>
                         <div className="adv-card-list" >
                             {
-                                outComes?.subContent.advantages.points.map((item, i) => {
+                                // outComes?.subContent.advantages.points.map((item, i) => {
+                                outComes?.advantages?.points?.map((item, i) => {
                                     return (
                                         <div className="card-list-points" key={i} >
                                             <div>
@@ -102,12 +113,12 @@ const OutComes = ({ outComes }: { outComes?: Outcomes }) => {
                     </div>
                     <div className="dis-card" >
                         <div className="content" >
-                            <h2>{outComes?.subContent.disAdvantages.title}</h2>
-                            <p>{outComes?.subContent.disAdvantages.description}</p>
+                            <h2>{outComes?.disAdvantages?.title}</h2>
+                            <p>{outComes?.disAdvantages?.description}</p>
                         </div>
                         <div className="dis-card-list" >
                             {
-                                outComes?.subContent.disAdvantages.points.map((item, i) => {
+                                outComes?.disAdvantages?.points.map((item, i) => {
                                     return (
                                         <div className="card-list-points" key={i} >
                                             <div>
@@ -131,10 +142,10 @@ const OutComes = ({ outComes }: { outComes?: Outcomes }) => {
             </div>
             {/* 3 */}
             <div className="outcomes-question" >
-                <h2>{outComes?.question.title}</h2>
+                <h2>{outComes?.question?.title}</h2>
                 <div className="outcomes-question-cards" >
                     {
-                        outComes?.question.cards.map((item, i) => {
+                        outComes?.question?.cards?.map((item, i) => {
                             return (
                                 <div className="outcomes-question-card" key={i} >
                                     <h2 dangerouslySetInnerHTML={{ __html: item.title }} />
@@ -147,7 +158,7 @@ const OutComes = ({ outComes }: { outComes?: Outcomes }) => {
             </div>
             {/* 4 */}
             <div className="summery-content" >
-                <h2 dangerouslySetInnerHTML={{ __html: outComes?.summery.title || "" }} />
+                <h2 dangerouslySetInnerHTML={{ __html: outComes?.summery?.title || "" }} />
                 <p>
                     {
                         outComes?.summery?.description?.map((item, i) => <span key={i} dangerouslySetInnerHTML={{ __html: item }} />)
