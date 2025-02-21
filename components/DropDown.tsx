@@ -1,5 +1,6 @@
 import { useFetchServicesTitle } from '@/Hooks/useFetchData';
 import { useState } from 'react'
+import Skeleton from 'react-loading-skeleton';
 // import "../pages/globals.css"
 
 const DropDown = ({ onSelectService }: { onSelectService: (service: string) => void }) => {
@@ -9,10 +10,7 @@ const DropDown = ({ onSelectService }: { onSelectService: (service: string) => v
     // const categories = ['web development', 'application development', 'branding', 'ecommerce development', 'socialmedia marketing', 'search engine optimization', 'mobile app development', 'IT suppot'];
 
     const { services, error, isLoading } = useFetchServicesTitle()
-
-    if (error || isLoading) {
-        return <div>Something went wrong</div>
-    }
+    console.log("services: ", services)
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
@@ -35,11 +33,15 @@ const DropDown = ({ onSelectService }: { onSelectService: (service: string) => v
             </button>
 
 
-            <ul className={`dropdown-menu ${isOpen ? "open" : ""}`}>
-                {services?.map((category, index) => (
-                    <li onClick={() => handleSelected(category?.name)} key={index}>{category?.name}</li>
+            {isLoading || error ? <ul className={`dropdown-menu ${isOpen ? "open" : ""}`}>
+                {Array.from({ length: 5 }).map((category, index) => (
+                    <li key={index}><Skeleton width={100} /></li>
                 ))}
-            </ul>
+            </ul> : <ul className={`dropdown-menu ${isOpen ? "open" : ""}`}>
+                {services?.map((category, index) => (
+                    <li onClick={() => handleSelected(category?.title)} key={index}>{category?.title}</li>
+                ))}
+            </ul>}
         </div>
     )
 }

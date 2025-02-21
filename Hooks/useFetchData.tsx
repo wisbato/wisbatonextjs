@@ -278,7 +278,8 @@ export const useFetchTeam = () => {
 
 export type ServiceTitle = {
     id: number;
-    name: string;
+    title: string;
+    name?: string;
 }
 
 export const useFetchServicesTitle = () => {
