@@ -1,5 +1,6 @@
 "use client"
 
+import AnimationComponent from "@/components/AnimationComponent/AnimationComponent";
 // import AnimationComponent from "@/components/AnimationComponent/AnimationComponent";
 import DefaultInput from "@/components/InputFields/DefaultInput";
 import DefaultPhoneInput from "@/components/InputFields/DefaultPhoneInput";
@@ -61,10 +62,10 @@ const ContactPage = () => {
                         <span>
                             <DefaultTextArea value={message} onChange={setMessage} labelName='share more' placeHolder='Share your thoughts' />
                         </span>
-                        <button onClick={handleSubmit} disabled={loading} >submit</button>
-                        {/* {
-                            false ? <button><AnimationComponent /></button> : <button onClick={handleSubmit} >submit</button>
-                        } */}
+                        {/* <button onClick={handleSubmit} disabled={loading} >submit</button> */}
+                        {
+                            loading ? <button><AnimationComponent /></button> : <button onClick={handleSubmit} >submit</button>
+                        }
                     </div>
                 </div>
             </div>

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Skeleton from "react-loading-skeleton";
 
-const RoutesMap = ({ title, isLoading }: { title: string | string[] | undefined; isLoading: boolean }) => {
+const RoutesMap = ({ title, isLoading }: { title: string | string[] | undefined; isLoading?: boolean }) => {
     const [pathname, setPathname] = useState<string | null>(null);
 
     useEffect(() => {

@@ -15,7 +15,6 @@ const CareersRequirement = () => {
     // const careersIdValue = title || "";
 
     const params = useParams();
-    console.log("params: ", params)
     const careersIdValue = params?.careersId || "Default Title";
 
     const [showPopup, setShowPopup] = useState(false);
@@ -86,7 +85,7 @@ const CareersRequirement = () => {
             </Head>
 
             <div className="careers-detailed-text-div page-transition">
-                <RoutesMap title={opening?.name} />
+                <RoutesMap isLoading={isLoading || error} title={opening?.name} />
             </div>
             <div className="careers-job-requirements page-transition">
                 {isLoading || error || !data ?
