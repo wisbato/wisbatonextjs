@@ -38,7 +38,6 @@ export const useFormState = () => {
                 message: message
             };
 
-            console.log("formData", formData);
             const response = await fetch('https://backend.wisbato.com/api/contacts', {
                 method: 'POST',
                 headers: {
@@ -49,7 +48,8 @@ export const useFormState = () => {
 
             if (response.ok) {
                 setStatusMessage({ message: 'Form submitted successfully', color: '#B6F8C4' });
-                console.log('Form submitted successfully');
+                setTimeout(() => setStatusMessage({ message: '', color: '' }), 3000);
+                setSelectedService('');
                 setSelectedService('');
                 setFirstName('');
                 setLastName('');
@@ -58,6 +58,7 @@ export const useFormState = () => {
                 setMessage('');
             } else {
                 setStatusMessage({ message: 'Failed to submit form', color: '#FFB7B7' });
+                setTimeout(() => setStatusMessage({ message: '', color: '' }), 3000);
                 console.error('Failed to submit form');
             }
         } catch (error) {
@@ -117,7 +118,7 @@ export const useResumeUpload = () => {
 
             if (response.ok) {
                 setStatusMessage({ message: 'Submitted Successfully', color: '#B6F8C4' });
-                setTimeout(() => setStatusMessage({ message: '', color: '' }), 2000);
+                setTimeout(() => setStatusMessage({ message: '', color: '' }), 3000);
 
                 setFirstName('');
                 setLastName('');
@@ -129,7 +130,7 @@ export const useResumeUpload = () => {
                 setCv(null);
             } else {
                 setStatusMessage({ message: 'Failed to submit form', color: '#FFB7B7' });
-                setTimeout(() => setStatusMessage({ message: '', color: '' }), 2000);
+                setTimeout(() => setStatusMessage({ message: '', color: '' }), 3000);
             }
         } catch (error) {
             setStatusMessage({ message: 'An error occurred', color: '#FFB7B7' });

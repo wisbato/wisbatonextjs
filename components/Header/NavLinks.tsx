@@ -17,8 +17,6 @@ const NavLinks = () => {
 
   const { navLinks: fetchedNavLinks, isLoading } = useFetchNavLinks() as any
 
-  console.log("navlink: ", fetchedNavLinks)
-
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;

@@ -1,3 +1,5 @@
+"use server"
+
 import Head from "next/head";
 import ContactPage from "./_components/ContactPage"
 import { MetaTags } from "@/Hooks/useFetchMetaTags";
@@ -6,7 +8,7 @@ const Contact = ({ meta }: { meta: MetaTags }) => {
     return (
         <>
             <Head>
-                <title>{meta?.title || "Home | Default Title"}</title>
+                <title>{meta?.title || "Cotact | Default Title"}</title>
                 <meta name="description" content={meta?.description || "Explore our portfolio and past projects."} />
                 <meta property="og:title" content={meta?.title || "Works | Default Title"} />
                 <meta property="og:description" content={meta?.description || "Explore our portfolio and past projects."} />

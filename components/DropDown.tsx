@@ -10,13 +10,11 @@ const DropDown = ({ onSelectService }: { onSelectService: (service: string) => v
     // const categories = ['web development', 'application development', 'branding', 'ecommerce development', 'socialmedia marketing', 'search engine optimization', 'mobile app development', 'IT suppot'];
 
     const { services, error, isLoading } = useFetchServicesTitle()
-    console.log("services: ", services)
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
     }
 
-    console.log("selected: ", selected)
     const handleSelected = (category: string) => {
         onSelectService(category)
         setSelected(category)

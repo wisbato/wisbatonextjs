@@ -3,7 +3,7 @@ import HeaderSection from "@/components/Header/HeaderSection";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 
-import React, { useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Script from "next/script";
 
@@ -28,6 +28,8 @@ import "@/pages/careers/_components/ResumeUpload.css";
 import "@/pages/team/_components/teamcatecard.css";
 import "@/components/Home/_components/homeSections.css";
 import ChatIcon from "@/components/ChatIcon/ChatIcon";
+import ToastMessage from "@/components/ToastMessage";
+import { StatusContext } from "@/Hooks/StatusContext";
 
 interface Window {
   dataLayer?: Array<Record<string, unknown>>;

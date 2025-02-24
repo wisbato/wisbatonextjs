@@ -8,7 +8,7 @@ const Careers = ({ meta }: { meta: MetaTags }) => {
     return (
         <>
             <Head>
-                <title>{meta?.title || "Home | Default Title"}</title>
+                <title>{meta?.title || "Careers | Default Title"}</title>
                 <meta name="description" content={meta?.description || "Explore our portfolio and past projects."} />
                 <meta property="og:title" content={meta?.title || "Works | Default Title"} />
                 <meta property="og:description" content={meta?.description || "Explore our portfolio and past projects."} />

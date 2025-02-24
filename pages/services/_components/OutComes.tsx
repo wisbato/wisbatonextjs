@@ -53,8 +53,6 @@ type Outcomes = {
 
 const OutComes = ({ outComes }: { outComes?: Outcomes }) => {
 
-    console.log("outComes?.description: ", outComes?.description)
-
     return (
         <div className="outcomes" >
             {/* 1 */}

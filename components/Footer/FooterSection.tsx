@@ -21,9 +21,6 @@ const FooterSection = () => {
 
     const { contactDetail, error, isLoading } = useFetchContactDetail()
 
-    // console.log("contactDetail: ", contactDetail)
-    console.log("contactDetail: ", contactDetail)
-
     if (error || isLoading) {
         return <h1>loading</h1>
     }
