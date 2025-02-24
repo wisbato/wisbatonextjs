@@ -76,7 +76,7 @@ const ResumeUpload = ({ onClose }: { onClose: () => void }) => {
                             <ToastMessage message={statusMessage.message} />
                             {
                                 // loading ? <button><AnimationComponent /></button> : <button onClick={handleSubmit} >submit</button>
-                                loading ? <button><AnimationComponent />Submiting...</button> : <button disabled={statusMessage?.message == ''} onClick={handleSubmit} >submit</button>
+                                loading ? <button>Submiting...</button> : <button onClick={handleSubmit} >submit</button>
                             }
                         </div>
                     </div>
