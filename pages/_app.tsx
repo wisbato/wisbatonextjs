@@ -3,7 +3,7 @@ import HeaderSection from "@/components/Header/HeaderSection";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import Script from "next/script";
 
@@ -28,8 +28,6 @@ import "@/pages/careers/_components/ResumeUpload.css";
 import "@/pages/team/_components/teamcatecard.css";
 import "@/components/Home/_components/homeSections.css";
 import ChatIcon from "@/components/ChatIcon/ChatIcon";
-import ToastMessage from "@/components/ToastMessage";
-import { StatusContext } from "@/Hooks/StatusContext";
 
 interface Window {
   dataLayer?: Array<Record<string, unknown>>;
@@ -119,16 +117,41 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       {/* Google Tag Manager (GTM) */}
-      <noscript>
+      {/* <noscript>
         <iframe
           src={`https://www.googletagmanager.com/ns.html?id=GTM-5XCQZZ57`}
           height="0"
           width="0"
           style={{ display: "none", visibility: "hidden" }}
         ></iframe>
+      </noscript> */}
+
+      {/* //////////////////////////////////////// */}
+
+      {/* Google Tag Manager Script (Head) */}
+      <Script
+        id="gtm-script"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5XCQZZ57');
+          `,
+        }}
+      />
+
+      <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5XCQZZ57"
+          height="0" width="0" style={{ display: "none", visibility: "hidden" }} >
+        </iframe>
       </noscript>
 
-      {/* Google Analytics (GA4) */}
+
+      {/* /////////////////////////////////// */}
+
       <Script
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
@@ -146,7 +169,7 @@ export default function App({ Component, pageProps }: AppProps) {
         }}
       />
 
-      <GTMPageView />
+      {/* <GTMPageView /> */}
       <HeaderSection />
       <Component {...pageProps} />
       <ChatIcon />
