@@ -528,15 +528,30 @@ export const useFetchServiceDetail = (slug?: string | string[]) => {
             setIsLoading(true);
             setError(null);
 
+            if (!slug) return;
+
             try {
                 const response = await axios.get(`https://backend.wisbato.com/api/service?slug=${slug}`);
-                setService(response.data.data[0]);
-            } catch (error) {
-                console.error('Error fetching Services:', error);
+                if (response.data && response.data.data.length > 0) {
+                    setService(response.data.data[0]);
+                } else {
+                    throw new Error("Service not found");
+                }
+            } catch (error: any) {
+                console.error("Error fetching Services:", error.response?.data || error.message);
                 setError(error);
-            } finally {
-                setIsLoading(false);
             }
+
+
+            // try {
+            //     const response = await axios.get(`https://backend.wisbato.com/api/service?slug=${slug}`);
+            //     setService(response.data.data[0]);
+            // } catch (error) {
+            //     console.error('Error fetching Services:', error);
+            //     setError(error);
+            // } finally {
+            //     setIsLoading(false);
+            // }
         };
 
         fetchData();
