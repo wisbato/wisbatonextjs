@@ -8,7 +8,6 @@ import DefaultInput from '../../../components/InputFields/DefaultInput';
 import EyeExpand from '../../../components/EyeExpand/EyeExpand';
 import RoutesMap from '../../../components/RoutesMap/BreadCrumb';
 import { useContext, useEffect, useState } from 'react'
-import { Service, services } from '../../../utils/servicesData';
 
 import Skeleton from "react-loading-skeleton"
 import 'react-loading-skeleton/dist/skeleton.css'
@@ -17,7 +16,7 @@ import { StatusContext } from "../../../Hooks/StatusContext";
 import { useFormState } from "../../../Hooks/useFormState";
 import ServicesDropDown from "../../../components/InputFields/ServicesDropDown";
 import AnimationComponent from "../../../components/AnimationComponent/AnimationComponent";
-import { useFetchServiceDetail, useFetchWorks } from "../../../Hooks/useFetchData";
+import { Service, useFetchService, useFetchWorks } from "../../../Hooks/useFetchData";
 import WorksCard from "../../../components/Home/WorksCard";
 import OutComes from "../_components/OutComes";
 import TeamCateCard from "../../team/_components/TeamCateCard";
@@ -42,8 +41,9 @@ const ServiceDetailed = () => {
     const params = useParams();
     const careersIdValue = params?.serviceId || "Default Title";
 
+    const [service, setData] = useState<Service | undefined>();
 
-    const [data, setData] = useState<Service | undefined>(undefined);
+    console.log("serviceData: ", service);
 
     function transformSlug(slug: string) {
         if (!slug) return '';
@@ -54,15 +54,19 @@ const ServiceDetailed = () => {
             .join(' ')
             .toUpperCase();
     }
+
+    const { service: servicesData, isLoading: servicesLoading, error: servicesError } = useFetchService();
+
+
     useEffect(() => {
-        const service = services.find((item: { slug: string }) => item?.slug === careersIdValue);
+        const service = servicesData?.find((item: { slug: string }) => item?.slug === careersIdValue);
 
         if (service) {
             setData(service as Service);
         } else {
             setData(undefined);
         }
-    }, [careersIdValue]);
+    }, [careersIdValue, servicesData, servicesLoading, servicesError]);
 
     const { statusMessage, handleServiceSelection, firstName, setFirstName, lastName, setLastName, email, setEmail, phone, setPhone, message, setMessage, handleSubmit, loading } = useFormState();
 
@@ -86,7 +90,7 @@ const ServiceDetailed = () => {
     //     return <h1>loading</h1>;
     // }
 
-    const { service, isLoading: serviceLoading, error } = useFetchServiceDetail(careersIdValue);
+    // const { service, isLoading: serviceLoading, error } = useFetchServiceDetail(careersIdValue);
 
     // if (serviceLoading || error) {
     //     return <h1>loading servive detail</h1>;
@@ -101,11 +105,10 @@ const ServiceDetailed = () => {
                 <link rel="canonical" href={`https://www.wisbato.com/services/${service?.slug}`} />
             </Head>
             {/* //// header meta tag */}
-
             <div className="services-detailed-banner" >
                 <div className="services-detailed-text-div">
-                    <RoutesMap isLoading={serviceLoading || error} title={careersIdValue} />
-                    {serviceLoading || error ?
+                    <RoutesMap isLoading={servicesLoading || servicesError} title={careersIdValue} />
+                    {servicesLoading || servicesError ?
                         <p className='services-detailed-text'> <Skeleton /> </p> :
                         <p className='services-detailed-text' dangerouslySetInnerHTML={{ __html: service?.context?.mainTitle || "" }}></p>}
                 </div>
@@ -155,7 +158,7 @@ const ServiceDetailed = () => {
             </div>
 
             <div className="services-detailed-content-div">
-                {serviceLoading || error ?
+                {servicesLoading || servicesError ?
                     <div className="services-detailed-content-texts">
                         <p><Skeleton /></p>
                         <p><Skeleton count={3} /></p>
@@ -176,7 +179,7 @@ const ServiceDetailed = () => {
 
             <div className="service-working-process-section">
                 <SectionTitle title='working process' />
-                {serviceLoading || error ?
+                {servicesLoading || servicesError ?
                     <div className='testimonials-qoutes-di'>
                         <div className='testimonials-carouse' style={{ position: "relative" }} >
                             <div className="testimonials-carousel-inne" style={{ transform: `translate(-${activeIndex * 100}%)` }}>
@@ -247,7 +250,7 @@ const ServiceDetailed = () => {
                     </div>}
             </div>
 
-            {isLoading || error ? <div></div> : <div className="outcomes-section" >
+            {isLoading || servicesError ? <div></div> : <div className="outcomes-section" >
                 <OutComes outComes={service?.outcomes} />
             </div>}
 
@@ -258,9 +261,9 @@ const ServiceDetailed = () => {
                             <PeopleCarousel />
                         </div> */}
 
-            {serviceLoading || error ? <div></div> : <TeamCateCard service={service?.title} />}
+            {servicesLoading || servicesError ? <div></div> : <TeamCateCard service={service?.title} />}
 
-            {serviceLoading || error ? <div></div> : <div className="services-faq-section" >
+            {servicesLoading || servicesError ? <div></div> : <div className="services-faq-section" >
                 <SectionTitle title='faq' />
                 {
                     service?.FAQData.map((item) => {
