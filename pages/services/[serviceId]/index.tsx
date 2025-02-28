@@ -106,7 +106,7 @@ const ServiceDetailed = () => {
             <div className="services-detailed-banner" >
 
                 <div className="services-detailed-text-div">
-                    <RoutesMap isLoading={serviceLoading || error} title={careersIdValue} />
+                    <RoutesMap isLoading={serviceLoading || isLoading || error} title={careersIdValue} />
                     {serviceLoading || error ?
                         <p className='services-detailed-text'> <Skeleton /> </p> :
                         <p className='services-detailed-text' dangerouslySetInnerHTML={{ __html: service?.context?.mainTitle || "" }}></p>}
@@ -125,7 +125,7 @@ const ServiceDetailed = () => {
             </div>
 
             <div className='work-section' >
-                {isLoading ? <div className="works-card-list">
+                {isLoading || serviceLoading ? <div className="works-card-list">
                     {Array.from({ length: 2 }).map((_, i) =>
                         <div className="works-card" key={i}>
                             <div className='works-card-img'>
@@ -259,7 +259,7 @@ const ServiceDetailed = () => {
             </div>
 
             {/* {isLoading || servicesError ? <div></div> : <div className="outcomes-section" > */}
-            {isLoading || error ? <div></div> : <div className="outcomes-section" >
+            {isLoading || serviceLoading || error ? <div></div> : <div className="outcomes-section" >
                 <OutComes outComes={service?.outcomes} />
             </div>}
 
