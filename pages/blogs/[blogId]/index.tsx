@@ -18,6 +18,7 @@ import 'react-loading-skeleton/dist/skeleton.css'
 import AnimationComponent from "../../../components/AnimationComponent/AnimationComponent"
 import { useParams } from "next/navigation"
 import Image from "next/image"
+import ToastMessage from '@/components/ToastMessage'
 
 const BlogDetailed = () => {
     // const { blogId: title } = useParams()
@@ -30,7 +31,7 @@ const BlogDetailed = () => {
     const { blogs, isLoading } = useFetchBlogs({});
 
     // const { statusMessage, handleServiceSelection, firstName, setFirstName, lastName, setLastName, email, setEmail, phone, setPhone, message, setMessage, handleSubmit, loading } = useFormState();
-    const { handleServiceSelection, firstName, setFirstName, lastName, setLastName, email, setEmail, phone, setPhone, message, setMessage, handleSubmit, loading } = useFormState();
+    const { handleServiceSelection, firstName, setFirstName, lastName, setLastName, email, setEmail, phone, setPhone, message, setMessage, handleSubmit, loading, statusMessage } = useFormState();
 
     // const { setNotify } = useContext(StatusContext);
 
@@ -150,13 +151,15 @@ const BlogDetailed = () => {
                                 <DefaultTextArea onChange={setMessage} value={message} labelName='share more' placeHolder='Share your thoughts' />
                             </span>
                             {
-                                loading ? <button><AnimationComponent /></button> : <button onClick={handleSubmit} >submit</button>
+                                loading ? <button>Submiting...</button> : <button onClick={handleSubmit} >submit</button>
+                                // loading ? <button><AnimationComponent /></button> : <button onClick={handleSubmit} >submit</button>
                             }
                         </div>
                     </div>
 
                 </div>
             </div>
+            <ToastMessage message={statusMessage.message} />
         </div>
     )
 }

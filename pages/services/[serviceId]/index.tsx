@@ -16,13 +16,14 @@ import { StatusContext } from "../../../Hooks/StatusContext";
 import { useFormState } from "../../../Hooks/useFormState";
 import ServicesDropDown from "../../../components/InputFields/ServicesDropDown";
 import AnimationComponent from "../../../components/AnimationComponent/AnimationComponent";
-import { Service, useFetchService, useFetchServiceDetail, useFetchWorks } from "../../../Hooks/useFetchData";
+import { Service, useFetchService, useFetchWorks } from "../../../Hooks/useFetchData";
 import WorksCard from "../../../components/Home/WorksCard";
 import OutComes from "../_components/OutComes";
 import TeamCateCard from "../../team/_components/TeamCateCard";
 import { useParams } from "next/navigation";
 import Head from "next/head";
 import Image from "next/image";
+import ToastMessage from '@/components/ToastMessage';
 
 
 const ServiceDetailed = () => {
@@ -41,7 +42,7 @@ const ServiceDetailed = () => {
     const params = useParams();
     const careersIdValue = params?.serviceId || "Default Title";
 
-    // const [service, setData] = useState<Service | undefined>();
+    const [service, setData] = useState<Service | undefined>();
 
     function transformSlug(slug: string) {
         if (!slug) return '';
@@ -53,18 +54,18 @@ const ServiceDetailed = () => {
             .toUpperCase();
     }
 
-    // const { service: servicesData, isLoading: servicesLoading, error: servicesError } = useFetchService();
+    const { service: servicesData, isLoading: servicesLoading, error: servicesError } = useFetchService();
 
 
-    // useEffect(() => {
-    //     const service = servicesData?.find((item: { slug: string }) => item?.slug === careersIdValue);
+    useEffect(() => {
+        const service = servicesData?.find((item: { slug: string }) => item?.slug === careersIdValue);
 
-    //     if (service) {
-    //         setData(service as Service);
-    //     } else {
-    //         setData(undefined);
-    //     }
-    // }, [careersIdValue, servicesData, servicesLoading, servicesError]);
+        if (service) {
+            setData(service as Service);
+        } else {
+            setData(undefined);
+        }
+    }, [careersIdValue, servicesData, servicesLoading, servicesError]);
 
     const { statusMessage, handleServiceSelection, firstName, setFirstName, lastName, setLastName, email, setEmail, phone, setPhone, message, setMessage, handleSubmit, loading } = useFormState();
 
@@ -88,7 +89,7 @@ const ServiceDetailed = () => {
     //     return <h1>loading</h1>;
     // }
 
-    const { service, isLoading: serviceLoading, error } = useFetchServiceDetail(careersIdValue);
+    // const { service, isLoading: serviceLoading, error } = useFetchServiceDetail(careersIdValue);
 
     // if (serviceLoading || error) {
     //     return <h1>loading servive detail</h1>;
@@ -106,8 +107,10 @@ const ServiceDetailed = () => {
             <div className="services-detailed-banner" >
 
                 <div className="services-detailed-text-div">
-                    <RoutesMap isLoading={serviceLoading || isLoading || error} title={careersIdValue} />
-                    {serviceLoading || error ?
+                    {/* <RoutesMap isLoading={serviceLoading || isLoading || error} title={careersIdValue} />
+                    {serviceLoading || error ? */}
+                    <RoutesMap isLoading={servicesLoading || isLoading || servicesError} title={careersIdValue} />
+                    {servicesLoading || servicesError ?
                         <p className='services-detailed-text'> <Skeleton /> </p> :
                         <p className='services-detailed-text' dangerouslySetInnerHTML={{ __html: service?.context?.mainTitle || "" }}></p>}
                 </div>
@@ -125,7 +128,8 @@ const ServiceDetailed = () => {
             </div>
 
             <div className='work-section' >
-                {isLoading || serviceLoading ? <div className="works-card-list">
+                {/* {isLoading || serviceLoading ? <div className="works-card-list"> */}
+                {isLoading || servicesLoading ? <div className="works-card-list">
                     {Array.from({ length: 2 }).map((_, i) =>
                         <div className="works-card" key={i}>
                             <div className='works-card-img'>
@@ -164,8 +168,8 @@ const ServiceDetailed = () => {
             </div>
 
             <div className="services-detailed-content-div">
-                {/* {servicesLoading || servicesError ? */}
-                {serviceLoading || error ?
+                {servicesLoading || servicesError ?
+                    // {serviceLoading || error ?
                     <div className="services-detailed-content-texts">
                         <p><Skeleton /></p>
                         <p><Skeleton count={3} /></p>
@@ -186,8 +190,8 @@ const ServiceDetailed = () => {
 
             <div className="service-working-process-section">
                 <SectionTitle title='working process' />
-                {/* {servicesLoading || servicesError ? */}
-                {serviceLoading || error ?
+                {servicesLoading || servicesError ?
+                    // {/* {serviceLoading || error ? */}
                     <div className='testimonials-qoutes-di'>
                         <div className='testimonials-carouse' style={{ position: "relative" }} >
                             <div className="testimonials-carousel-inne" style={{ transform: `translate(-${activeIndex * 100}%)` }}>
@@ -258,8 +262,8 @@ const ServiceDetailed = () => {
                     </div>}
             </div>
 
-            {/* {isLoading || servicesError ? <div></div> : <div className="outcomes-section" > */}
-            {isLoading || serviceLoading || error ? <div></div> : <div className="outcomes-section" >
+            {isLoading || servicesError ? <div></div> : <div className="outcomes-section" >
+                {/* {isLoading || serviceLoading || error ? <div></div> : <div className="outcomes-section" > */}
                 <OutComes outComes={service?.outcomes} />
             </div>}
 
@@ -270,11 +274,11 @@ const ServiceDetailed = () => {
                             <PeopleCarousel />
                         </div> */}
 
-            {/* {servicesLoading || servicesError ? <div></div> : <TeamCateCard service={service?.title} />} */}
-            {serviceLoading || error ? <div></div> : <TeamCateCard service={service?.title} />}
+            {servicesLoading || servicesError ? <div></div> : <TeamCateCard service={service?.title} />}
+            {/* {serviceLoading || error ? <div></div> : <TeamCateCard service={service?.title} />} */}
 
-            {/* {servicesLoading || servicesError ? <div></div> : <div className="services-faq-section" > */}
-            {serviceLoading || error ? <div></div> : <div className="services-faq-section" >
+            {servicesLoading || servicesError ? <div></div> : <div className="services-faq-section" >
+                {/* {serviceLoading || error ? <div></div> : <div className="services-faq-section" > */}
                 <SectionTitle title='faq' />
                 {
                     service?.FAQData.map((item) => {
@@ -316,12 +320,14 @@ const ServiceDetailed = () => {
                                 <DefaultTextArea onChange={setMessage} value={message} labelName='share more' placeHolder='Share your thoughts' />
                             </span>
                             {
-                                loading ? <button><AnimationComponent /></button> : <button onClick={handleSubmit} >submit</button>
+                                loading ? <button>Submiting...</button> : <button onClick={handleSubmit} >submit</button>
+                                // loading ? <button><AnimationComponent /></button> : <button onClick={handleSubmit} >submit</button>
                             }
                         </div>
                     </div>
                 </div>
             </div>
+            <ToastMessage message={statusMessage.message} />
         </div>
     )
 }

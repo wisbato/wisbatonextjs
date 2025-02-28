@@ -518,30 +518,31 @@ export const useFetchService = () => {
     return { service, isLoading, error };
 };
 
-export const useFetchServiceDetail = (slug?: string | string[]) => {
-    const [service, setService] = useState<Service>();
-    const [isLoading, setIsLoading] = useState(false);
-    const [error, setError] = useState<any>(null);
+// export const useFetchServiceDetail = (slug?: string | string[]) => {
+//     const [service, setService] = useState<Service>();
+//     const [isLoading, setIsLoading] = useState(false);
+//     const [error, setError] = useState<any>(null);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            setIsLoading(true);
-            setError(null);
+//     useEffect(() => {
+//         const fetchData = async () => {
+//             setIsLoading(true);
+//             setError(null);
 
-            try {
-                const response = await axios.get(`https://backend.wisbato.com/api/service?slug=${slug}`);
-                setService(response.data.data[0]);
-            } catch (error) {
-                console.error('Error fetching Services:', error);
-                setError(error);
-            } finally {
-                setIsLoading(false);
-            }
-        };
+//             try {
+//                 const response = await axios.get(`https://backend.wisbato.com/api/service?slug=${slug}`);
+//                 setService(response.data.data[0]);
+//             } catch (error) {
+//                 console.error('Error fetching Services:', error);
+//                 setError(error);
+//             } finally {
+//                 setIsLoading(false);
+//             }
+//         };
 
-        fetchData();
-    }, [slug]);
+//         fetchData();
+//     }, [slug]);
 
-    return { service, isLoading, error };
-};
+//     return { service, isLoading, error };
+// };
+
 // Service end
