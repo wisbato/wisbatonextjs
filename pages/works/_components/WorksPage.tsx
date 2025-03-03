@@ -1,7 +1,7 @@
 "use client"
 
 import InnerBanner from "@/components/InnerBanner/InnerBanner";
-import { useFetchWorks } from "@/Hooks/useFetchData";
+import { useFetchWorks, Work } from "@/Hooks/useFetchData";
 import Skeleton from "react-loading-skeleton"
 import 'react-loading-skeleton/dist/skeleton.css'
 import { useState } from "react";
@@ -16,18 +16,30 @@ const WorksPage = () => {
 
     const [selectedService, setSelectedService] = useState("")
 
+    // const [filteredWorks, setFilteredWorks] = useState<Work[]>([])
+
+    console.log("selectedService: ", selectedService)
+
     const onSelectService = (service: string) => {
         setSelectedService(service)
     }
 
     const [currentPage, setCurrentPage] = useState(0);
-    const { works, isLoading } = useFetchWorks({ selectedService });
+    // const { works, isLoading } = useFetchWorks({ selectedService });
+    const { works, isLoading } = useFetchWorks();
+
+    const filteredWorksByService = selectedService
+        ? works?.filter(work => work.servicesProvides.includes(selectedService))
+        : works;
+
+    console.log("filteredWorksByService: ", filteredWorksByService)
 
     // PAGINATION
     const itemsPerPage = 6;
     const indexOfLastItem = (currentPage + 1) * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-    const currentItems = works?.slice(indexOfFirstItem, indexOfLastItem);
+    // const currentItems = works?.slice(indexOfFirstItem, indexOfLastItem);
+    const currentItems = filteredWorksByService?.slice(indexOfFirstItem, indexOfLastItem);
 
     const handlePageChange = (selectedPage: { selected: number }) => {
         setCurrentPage(selectedPage.selected);
@@ -64,6 +76,11 @@ const WorksPage = () => {
                         {currentItems.map((item, i) =>
                             <WorksCard key={i} data={item} />
                         )}
+
+                        {currentItems.length === 0 && <div className="no-works">
+                            <p>No Works Found</p>
+                        </div>}
+
                     </div>}
 
                 <div className='pagination-section'>

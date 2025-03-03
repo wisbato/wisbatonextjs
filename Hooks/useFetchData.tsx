@@ -122,7 +122,35 @@ export interface Work {
 
 export type WorkData = Work;
 
-export const useFetchWorks = ({ selectedService }: { selectedService?: string }) => {
+// export const useFetchWorks = ({ selectedService }: { selectedService?: string }) => {
+//     const [works, setWorks] = useState<WorkData[]>([]);
+//     const [isLoading, setIsLoading] = useState(false);
+//     const [error, setError] = useState<any>(null);
+
+//     useEffect(() => {
+//         const fetchData = async () => {
+//             setIsLoading(true);
+//             setError(null);
+
+//             try {
+//                 const query = selectedService ? `?service_name=${selectedService}` : "";
+//                 const response = await axios.get(`https://backend.wisbato.com/api/works${query}`);
+//                 setWorks(response.data.data);
+//             } catch (error) {
+//                 console.error("Error fetching works:", error);
+//                 setError(error);
+//             } finally {
+//                 setIsLoading(false);
+//             }
+//         };
+
+//         fetchData();
+//     }, [selectedService]);
+
+//     return { works, isLoading, error };
+// };
+
+export const useFetchWorks = () => {
     const [works, setWorks] = useState<WorkData[]>([]);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState<any>(null);
@@ -133,8 +161,8 @@ export const useFetchWorks = ({ selectedService }: { selectedService?: string })
             setError(null);
 
             try {
-                const query = selectedService ? `?service_name=${selectedService}` : "";
-                const response = await axios.get(`https://backend.wisbato.com/api/works${query}`);
+                // const query = selectedService ? `?service_name=${selectedService}` : "";
+                const response = await axios.get(`https://backend.wisbato.com/api/works`);
                 setWorks(response.data.data);
             } catch (error) {
                 console.error("Error fetching works:", error);
@@ -145,7 +173,7 @@ export const useFetchWorks = ({ selectedService }: { selectedService?: string })
         };
 
         fetchData();
-    }, [selectedService]);
+    }, []);
 
     return { works, isLoading, error };
 };

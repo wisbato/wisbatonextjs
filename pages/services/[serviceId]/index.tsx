@@ -15,7 +15,7 @@ import 'react-loading-skeleton/dist/skeleton.css'
 import { StatusContext } from "../../../Hooks/StatusContext";
 import { useFormState } from "../../../Hooks/useFormState";
 import ServicesDropDown from "../../../components/InputFields/ServicesDropDown";
-import AnimationComponent from "../../../components/AnimationComponent/AnimationComponent";
+// import AnimationComponent from "../../../components/AnimationComponent/AnimationComponent";
 import { Service, useFetchService, useFetchWorks } from "../../../Hooks/useFetchData";
 import WorksCard from "../../../components/Home/WorksCard";
 import OutComes from "../_components/OutComes";
