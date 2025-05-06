@@ -408,7 +408,7 @@ export const useFetchContactDetail = () => {
             setError(null);
 
             try {
-                const response = await axios.get('https://backend.wisbato.com/api/contact-detail');
+                const response = await axios.get('https://backend.wisbato.com/api/contactss');
                 setContactDetail(response.data.data);
             } catch (error) {
                 console.error('Error fetching Services:', error);
