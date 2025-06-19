@@ -54,7 +54,7 @@ const NavLinks = () => {
   //   });
 
   const renderLinks = (isDropdown = false) =>
-    fetchedNavLinks.filter((item: { name: string; status: boolean }) => item.name !== "Home" && item.name !== "Contact" && item.status === true).map(({ name }: { name: string }, index: number) => {
+    (fetchedNavLinks ?? []).filter((item: { name: string; status: boolean }) => item.name !== "Home" && item.name !== "Contact" && item.status === true).map(({ name }: { name: string }, index: number) => {
       const isActive = params?.startsWith(`/${name?.toLowerCase()}`);
 
       return (

@@ -20,14 +20,14 @@ const FooterSection = () => {
     }
 
     const { contactDetail, error, isLoading } = useFetchContactDetail()
-
+    console.log(contactDetail)
     if (error || isLoading) {
         return <h1>loading</h1>
     }
 
     return (
         <div className='footer-section'>
-            <h2 className="footer-title" >{contactDetail.title}</h2>
+            <h2 className="footer-title" >{contactDetail?.title}</h2>
 
             <div className="footer-main-contents" >
                 <div className="address-cards">
