@@ -30,7 +30,7 @@ const TeamCateCard = ({ service }: { service?: string }) => {
             {
                 isLoading || error ? <TeamCateCardSkeleton /> : <div className="teamcatecard-container-wrapper">
                     {/* {filteredTeam.map((data: TeamCategory, index: number) => ( */}
-                    {team.filter((item) => item.isActive).map((data: TeamCategory, index: number) => (
+                    {(team ?? []).filter((item) => item.isActive).map((data: TeamCategory, index: number) => (
                         <div key={index} className="teamcatecard-container">
                             <div className="teamcatecard" key={index}>
                                 <h1>{data.department}</h1>
