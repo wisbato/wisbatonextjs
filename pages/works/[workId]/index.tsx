@@ -148,7 +148,7 @@ const WorkDetailed = () => {
                     )}
                 </div> :
                     <div className="works-card-list">
-                        {works.filter?.((item: Work) => item.slug !== worksIdValue).slice(0, 2).map((item: Work, i: number) =>
+                        {works?.filter?.((item: Work) => item.slug !== worksIdValue).slice(0, 2).map((item: Work, i: number) =>
                             <WorksCard key={i} data={item} />
                         )}
                     </div>

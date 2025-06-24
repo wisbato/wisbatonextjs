@@ -41,6 +41,7 @@ export const useFetchBlogs = ({ selectedService }: { selectedService?: string })
             try {
                 const query = selectedService ? `?service_name=${selectedService}` : "";
                 const response = await axios.get(`https://backend.wisbato.com/api/blogs${query}`);
+                console.log("Blogs Response:", response);
                 setBlogs(response.data.data);
             } catch (error) {
                 console.error("Error fetching blogs:", error);

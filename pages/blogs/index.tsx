@@ -25,7 +25,7 @@ export async function getServerSideProps() {
     try {
         const res = await fetch("https://backend.wisbato.com/api/metatags?name=blogs");
         const data = await res.json();
-
+        
         return {
             props: { meta: data.data[0] },
         };

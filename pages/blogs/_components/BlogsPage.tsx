@@ -38,7 +38,7 @@ const BlogsPage = () => {
 
     const [currentPage, setCurrentPage] = useState(0);
     const { blogs, isLoading } = useFetchBlogs({ selectedService });
-
+    console.log("blogs", blogs);
     const itemsPerPage = 6;
     const indexOfLastItem = (currentPage + 1) * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
