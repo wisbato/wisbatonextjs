@@ -189,7 +189,8 @@ const ServiceDetailed = () => {
                 </div>
             )}
 
-            {service?.outcomes && <OutComes outComes={service.outcomes} />}
+
+            {service?.outcomes && <div className='outcomes-section'> <OutComes outComes={service.outcomes} /> </div> }
 
             {service?.title && <TeamCateCard service={service.title} />}
 
