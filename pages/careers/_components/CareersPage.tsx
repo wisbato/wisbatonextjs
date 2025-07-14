@@ -11,11 +11,15 @@ const CareersPage = () => {
     useLenis();
 
     const { careers, isLoading, error } = useFetchCareers();
+    
+    
+    
+
     return (
         <div className='careers-section page-transition' >
             <InnerBanner nextSection={'.openings-section'} text={'join our <br> <span>team</span>'} icons={["careersIcon1", "careersIcon2", "careersIcon3"]} />
             <div className="openings-section">
-                <SectionTitle title='current openings' />
+                {careers.length > 0 && <SectionTitle title="current openings" />}
 
                 {/* BIG SCREEN  */}
                 <OpeningsTabs openings={careers} isLoading={isLoading} error={error} />

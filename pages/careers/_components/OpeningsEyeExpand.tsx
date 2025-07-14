@@ -7,7 +7,8 @@ import { Opening } from '../../../Hooks/useFetchData';
 // import { openings } from '../../../utils/openingsData';
 
 const OpeningsEyeExpand = ({ openings, isLoading, error }: { openings: Opening[], isLoading: boolean, error: string }) => {
-
+    
+    
     const categoriesMap: { [key: string]: number } = {};
 
     openings?.forEach((opening: Opening) => {

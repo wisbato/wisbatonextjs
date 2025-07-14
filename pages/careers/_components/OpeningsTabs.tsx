@@ -8,6 +8,34 @@ import Skeleton from 'react-loading-skeleton';
 // import { openings } from '@/utils/openingsData'
 
 const OpeningsTabs = ({ openings, isLoading, error }: { openings: Opening[], isLoading: boolean, error: string }) => {
+    
+
+     if (!isLoading && !error && openings.length === 0) {
+    return (
+     <div
+  style={{
+    textAlign: "center",
+    padding: "4rem 1rem",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+  }}
+>
+  <h2
+    style={{
+      fontSize: "3rem", // roughly text-5xl
+      fontWeight: "bold",
+      color: "#374151", // roughly Tailwind's gray-700
+      marginBottom: "2.5rem",
+    }}
+  >
+    🔍 No Open Positions Right Now
+  </h2>
+</div>
+
+    )
+    }
 
     const categoriesMap: { [key: string]: number } = {};
 
