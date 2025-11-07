@@ -5,11 +5,13 @@ import useScrollAnimation from '../../Hooks/useScrollAnimation';
 import { WorkData } from '../../Hooks/useFetchData';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-
+import { useState } from 'react';
 
 const WorksCard = ({ data, key }: { data: WorkData; key: number }) => {
     const animateRef = useScrollAnimation();
     const router = useRouter()
+    const [isHover, setIsHover] = useState(false);
+
 
     const handleNavigation = (title: string) => {
         const formattedSlug = title.replace(/[^\w]+/gi, "-").toLowerCase();
@@ -24,14 +26,50 @@ const WorksCard = ({ data, key }: { data: WorkData; key: number }) => {
             ref={animateRef}
             onClick={() => handleNavigation(data.slug)}
         >
-            <div className='works-card-img'>
-                <Image
-                    src={data?.image} className='work-img' alt="wisbato works card"
-                    style={{ borderRadius: "4px", transition: "transform 0.3s ease", width: "100%", height: "auto" }}
-                    width={700}
-                    height={400}
-                />
-            </div>
+            <div
+    className='works-card-img'
+    onMouseEnter={() => setIsHover(true)}
+    onMouseLeave={() => setIsHover(false)}
+>
+    {isHover ? (
+        <video
+    src={data.video}
+    autoPlay
+    muted
+    loop
+    playsInline
+    preload='auto'
+    controls={false}
+    controlsList="nodownload nofullscreen noremoteplayback"
+    disablePictureInPicture
+    className='work-img'
+    style={{
+        borderRadius: "4px",
+        transition: "transform 0.3s ease",
+        width: "100%",
+        height: "auto",
+        objectFit:"cover"
+         // ✅ prevents any browser UI overlays
+    }}
+/>
+
+    ) : (
+        <Image
+            src={data?.image}
+            className='work-img'
+            alt="wisbato works card"
+            style={{
+                borderRadius: "4px",
+                transition: "transform 0.3s ease",
+                width: "100%",
+                height: "auto"
+            }}
+            width={700}
+            height={400}
+        />
+    )}
+</div>
+
             <div className='works-title' >
                 <h1>{data.name} <span> - {data.title}</span> </h1>
             </div>

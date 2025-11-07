@@ -107,6 +107,7 @@ export interface Work {
     name: string;
     title: string;
     image: string;
+    video:string;
     slug: string;
     themes: string;
     industry: string;
